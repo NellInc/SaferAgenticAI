@@ -1,0 +1,488 @@
+/* Psychopathia Machinalis - Custom Styles - ADAPTED FOR SAFER AGENTIC AI */
+
+/* Title spacing */
+.title {
+    line-height: 1.2;
+}
+
+.title-first-line,
+.title-second-line {
+    display: block;
+}
+
+.title-second-line {
+    margin-top: 0.3em;
+}
+
+/* Button styling - light blue theme for header navigation */
+.blog-title .info .button.icon {
+    background-color: #dce5eb !important;
+    color: #2c3e50 !important;
+    border: none;
+}
+
+.blog-title .info .button.icon:hover {
+    background-color: #c8d4db !important;
+    color: #2c3e50 !important;
+    opacity: 1 !important;
+}
+
+.blog-title .info .button.icon:active {
+    background-color: #b4c3cc !important;
+    color: #2c3e50 !important;
+    opacity: 1 !important;
+}
+
+.blog-title .info .button.icon i {
+    color: #2c3e50 !important;
+}
+
+/* Citation box styling */
+pre code.plaintext {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 25px !important;
+    border: 1px solid #3d566f !important;
+}
+
+pre:has(code.plaintext) {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 0 !important;
+    border: 1px solid #3d566f !important;
+}
+
+/* Table-specific styles from original psychopathia-styles - Review if needed for new tables */
+.glossary-table td:first-child { 
+    font-weight: bold; 
+    color: #2c3e50; 
+}
+.abbreviations-table td:first-child { 
+    font-weight: bold; 
+    color: #2c3e50; 
+}
+
+/* General Code blocks styling (if not citation) */
+pre:not(:has(code.plaintext)) {
+    background: linear-gradient(135deg, #f0f2f5 0%, #e6e9ed 100%); /* Lighter for general code */
+    color: #2c3e50; 
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.9em;
+    border: 1px solid #d1d5da;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+pre:not(:has(code.plaintext)) code {
+    background: transparent !important; /* Ensure inner code tag is transparent */
+    color: inherit !important;
+}
+
+
+/* Dysfunction category intro boxes (Navy boxes for Driver/Inhibitor Titles) */
+.dysfunction-intro {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #f8f8f2;
+    padding: 20px 30px; /* Adjusted padding */
+    border-radius: 8px;
+    margin: 30px 0 10px 0; /* Margin adjusted: more top, less bottom */
+    border: 1px solid #3d566f;
+}
+
+.dysfunction-intro h1 {
+    color: #f8f8f2 !important;
+    border-bottom: none !important; /* No border for title in navy box */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; /* No bottom margin for title in navy box */
+    padding-bottom: 0 !important;
+    font-size: 1.8em; /* Slightly smaller for section titles if needed */
+}
+
+/* Individual disorder alternating backgrounds (for G.X.Y items) */
+.disorder-white {
+    background-color: #ffffff;
+    padding: 25px; /* Reduced padding */
+    border-radius: 10px;
+    margin: 20px 0; /* Reduced margin */
+    border: 1px solid #e8e9ea;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: all 0.3s ease;
+}
+
+.disorder-grey {
+    background-color: #fbfcfd; /* Slightly off-white */
+    padding: 25px; /* Reduced padding */
+    border-radius: 10px;
+    margin: 20px 0; /* Reduced margin */
+    border: 1px solid #e8e9ea;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: all 0.3s ease;
+}
+
+.disorder-white h3,
+.disorder-grey h3 {
+    color: #2c3e50 !important;
+    font-size: 1.3em; /* Adjusted size */
+    font-weight: 700;
+    margin-bottom: 10px; /* Reduced margin */
+    padding-bottom: 10px; /* Reduced padding */
+    border-bottom: 2px solid #dde5eb; /* Lighter border */
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    /* Removed background gradient from original disorder H3 */
+}
+
+/* Definition paragraph after H3 inside disorder-white/grey */
+.disorder-white > h3 + p,
+.disorder-grey > h3 + p {
+    font-style: italic;
+    color: #555;
+    margin-top: 5px; /* Space after H3 */
+    margin-bottom: 15px; /* Space before table */
+    padding: 10px 0px; /* Minimal padding, rely on parent box */
+    background: none; /* No distinct background for this p */
+    border-radius: 0;
+    border: none;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+
+/* Table styling for G.X.Y items */
+.disorder-white table,
+.disorder-grey table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 0.78em; /* Smaller text for tables */
+    line-height: 1.45;
+    box-shadow: none; 
+    border-radius: 0;
+    border: 1px solid #dde5eb; /* Light border around table */
+}
+
+.disorder-white table th,
+.disorder-grey table th {
+    background-color: #f0f4f8; 
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 10px; 
+    border: 1px solid #dde5eb;
+    font-size: 0.95em; 
+}
+
+.disorder-white table td,
+.disorder-grey table td {
+    padding: 8px 10px; 
+    border: 1px solid #e0e6ec;
+    vertical-align: top;
+    word-break: break-word; 
+}
+
+.disorder-white table td ul,
+.disorder-grey table td ul,
+.disorder-white table td ol,
+.disorder-grey table td ol {
+    margin: 5px 0 5px 0; /* Adjusted margins */
+    padding-left: 18px; 
+    font-size: 1em; /* Relative to td font size */
+}
+
+.disorder-white table td ul li,
+.disorder-grey table td ul li,
+.disorder-white table td ol li,
+.disorder-grey table td ol li {
+    margin-bottom: 4px; 
+}
+
+/* Ensure p tags inside td don't inherit large padding from general rules */
+.disorder-white table td p,
+.disorder-grey table td p {
+    padding: 0 !important; 
+    margin: 0 0 5px 0 !important; 
+    background: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    max-width: none !important; 
+    hyphens: none !important;
+    word-spacing: normal !important;
+    font-size: 1em !important; 
+    line-height: 1.45 !important;
+    font-style: normal !important; /* Override italic from definition p if needed */
+    color: #333 !important; /* Ensure good contrast */
+}
+
+
+/* Responsive improvements (Review if needed for tables) */
+@media (max-width: 768px) {
+    .disorder-white,
+    .disorder-grey {
+        padding: 20px 15px;
+        margin: 15px 0;
+    }
+    
+    .disorder-white h3,
+    .disorder-grey h3 {
+        font-size: 1.2em;
+    }
+
+    .disorder-white table,
+    .disorder-grey table {
+        font-size: 0.75em; /* Further reduce for mobile if very cramped */
+    }
+    .disorder-white table th, .disorder-grey table th,
+    .disorder-white table td, .disorder-grey table td {
+        padding: 6px 8px;
+    }
+}
+
+/* Hover effects for interactivity */
+.disorder-white:hover,
+.disorder-grey:hover {
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.12);
+    transform: translateY(-2px);
+    border-color: #d0d1d2;
+}
+
+/* Subtle entrance animations */
+.disorder-white,
+.disorder-grey {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Beautiful scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Form Styling (from original, seems fine) */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(44, 62, 80, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    color: #353535;
+    font-size: 16px;
+    font-family: "Poppins", serif;
+    line-height: 1.6;
+}
+
+.contact-form label:first-child {
+    margin-top: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 18px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(44, 62, 80, 0.15);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Charter", sans-serif;
+    line-height: 1.6;
+    color: #353535;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+    background: #fafbfc;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(53, 53, 53, 0.6);
+    font-family: "Charter", sans-serif;
+    font-size: 16px;
+}
+
+.send-button {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #3d5a73 100%);
+    color: white;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins", serif;
+    line-height: 1.6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);
+}
+
+.send-button:hover {
+    background: linear-gradient(135deg, #34495e 0%, #3d5a73 50%, #465c7a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+.send-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 6px rgba(44, 62, 80, 0.2);
+}
+
+.send-button i {
+    margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+    
+    .contact-form label {
+        font-size: 15px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+    
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        font-size: 15px;
+    }
+    
+    .send-button {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}
+
+
+/* --- Header Image Glow Effect & Box Fix --- */
+
+/* Target the container in the header that holds the blog cover image area.
+   This is typically a direct child of .blog-title in the Clarity template. */
+.container.blog#first-content div.blog-title > div.blog-cover {
+    background: none !important; /* Attempt to remove any background image or complex background */
+    background-color: transparent !important; /* Force transparent background */
+    padding: 0 !important; /* Remove any padding that would show the parent's background */
+    border: none !important; /* Ensure no border is creating a box */
+    box-shadow: none !important; /* Ensure no shadow is creating a box effect */
+    
+    /* Flex properties to control the inner image container.
+       Adjust justify-content if the image should be left/right aligned in its slot. */
+    display: flex !important;
+    align-items: center !important; /* Vertically center content */
+    justify-content: center !important; /* Horizontally center content */
+    
+    /* If the template gives this slot a fixed size that's too large, try to override */
+    min-height: auto !important;
+    height: auto !important; /* Let content determine height */
+    
+    /* Adjust flex properties if it's taking up too much space or not enough */
+    /* Example: allow it to shrink, and set a basis - this depends heavily on original template */
+    flex-shrink: 1 !important; 
+    flex-grow: 0 !important; /* Don't let it grow unnecessarily */
+    /* flex-basis: 40%; */ /* Remove or adjust: Let content size dictate or set specific %/px */
+    /* If the image should be on the right and text on left, this div might have margin-left: auto or similar */
+}
+
+/* Your inner container that actually holds the two images (foreground and background) for the glow */
+/* This class "blog-cover" is the one you are adding to your div inside the template's slot */
+.container.blog#first-content div.blog-title > div.blog-cover > div.blog-cover {
+    position: relative !important;
+    display: inline-block !important; /* So it sizes to the image */
+    max-width: 100%; /* It will be constrained by the parent .blog-title > .blog-cover's width/flex-basis */
+                     /* You can set an explicit max-width in pixels here if you want to cap logo size, e.g., max-width: 350px; */
+    line-height: 0 !important; /* Prevents extra space below inline-block images */
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important; /* Ensure this inner one is also transparent */
+}
+
+/* Styles for the actual <img> tags */
+/* Targeting any image inside your glow div.blog-cover */
+.container.blog#first-content div.blog-title > div.blog-cover > div.blog-cover img {
+    display: block !important;
+    width: 100% !important; /* Images fill their immediate parent (your inner div.blog-cover) */
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    /* If your logo image has rounded corners, add: */
+    /* border-radius: 8px; */
+}
+
+/* Background image creating the glow */
+.container.blog#first-content div.blog-title > div.blog-cover > div.blog-cover img.background {
+    filter: blur(20px) brightness(1.3) contrast(1.1) !important;
+    opacity: 0.5 !important;
+    animation: glow-pulse 3s ease-in-out infinite alternate !important;
+    transform: scale(1.15) !important; /* Make blurred bg slightly larger */
+}
+
+/* Foreground image (the sharp one) */
+.container.blog#first-content div.blog-title > div.blog-cover > div.blog-cover img.foreground {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 2 !important; /* On top of the background image */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25) !important; /* Drop shadow */
+}
+
+/* Glow pulse animation */
+@keyframes glow-pulse {
+    0% {
+        filter: blur(20px) brightness(1.3) contrast(1.1) !important;
+        opacity: 0.5 !important;
+        transform: scale(1.15) !important;
+    }
+    100% {
+        filter: blur(21px) brightness(1.4) contrast(1.15) !important;
+        opacity: 0.6 !important;
+        transform: scale(1.20) !important; /* Slightly larger pulse for background */
+    }
+}
+
+/* --- End of Header Image Glow Effect & Box Fix --- */

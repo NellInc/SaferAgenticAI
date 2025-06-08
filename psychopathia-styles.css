@@ -486,3 +486,67 @@ html {
 }
 
 /* --- End of Header Image Glow Effect & Box Fix --- */
+
+/* Style for the 'b' in inhibitor G-numbers like G1.1b */
+.inhibitor-char {
+    text-decoration: underline;
+    /* Optional: if you want it to stand out more */
+    /* font-weight: bold; */
+    /* display: inline-block; */ /* if you need more control over its spacing */
+    /* margin-left: -2px; */ /* example for kerning */
+}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = [
+                'Driver G1 – Goal Alignment', 
+                'Driver G2 – Epistemic Hygiene'
+                // Add other Driver/Inhibitor H1 titles here
+            ];
+            
+            sections.forEach(function(sectionTitle) {
+                const heading = Array.from(document.querySelectorAll('h1')).find(h => h.textContent.trim() === sectionTitle.trim());
+                if (heading) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'dysfunction-intro';
+                    heading.parentNode.insertBefore(wrapper, heading);
+                    wrapper.appendChild(heading); 
+                }
+            });
+            
+            const disorderHeadings = document.querySelectorAll('h3');
+            let disorderIndex = 0; 
+            disorderHeadings.forEach(function(heading) {
+                // Updated Regex: Matches G<num>(.<num>b?)? (optional space – title)?
+                // This catches: G1 – Title, G1.1 – Title, G1.1b – Title
+                if (heading.textContent.match(/^G\d+(\.\d+b?)?(\s*–.*)?$/i)) { 
+                    const wrapper = document.createElement('div');
+                    wrapper.className = disorderIndex % 2 === 0 ? 'disorder-white' : 'disorder-grey';
+                    disorderIndex++;
+                    
+                    let current = heading;
+                    const elementsToWrap = [heading];
+                    
+                    while (current.nextElementSibling && 
+                           current.nextElementSibling.tagName !== 'H3' &&
+                           !current.nextElementSibling.classList.contains('dysfunction-intro') &&
+                           current.nextElementSibling.tagName !== 'H1') { 
+                        current = current.nextElementSibling;
+                        elementsToWrap.push(current);
+                    }
+                    
+                    heading.parentNode.insertBefore(wrapper, heading);
+                    elementsToWrap.forEach(function(el) {
+                        wrapper.appendChild(el);
+                    });
+                }
+            });
+        });
+    </script>
+
+.disorder-white h3 .sub-num-underline,
+.disorder-grey h3 .sub-num-underline {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+}

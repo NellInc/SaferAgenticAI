@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safer Agentic AI Framework Details</title>
+    <meta name="description" content="Detailed framework for the Safer Agentic AI Foundations, including Drivers and Inhibitors.">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="robots" content="all">
+    <meta content="en_GB" property="og:locale">
+    <meta content="website" property="og:type">
+    <meta content="YOUR_NEW_PROJECT_URL_HERE/framework.html" property="og:url"> 
+    <meta content="Safer Agentic AI Framework Details" property="og:title">
+    <meta content="Detailed framework for the Safer Agentic AI Foundations, including Drivers and Inhibitors." property="og:description">
+    <meta content="YOUR_NEW_PROJECT_URL_HERE/assets/figures/AI_Safety_Logo-Color.png" property="og:image">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@NellWatson"> 
+    <meta name="twitter:title" content="Safer Agentic AI Framework Details">
+    <meta name="twitter:description" content="Detailed framework for the Safer Agentic AI Foundations.">
+    <meta name="twitter:image" content="YOUR_NEW_PROJECT_URL_HERE/assets/figures/AI_Safety_Logo-Color.png">
+    
+    <link rel="icon" type="image/x-icon" href="assets/figures/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/figures/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/figures/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/figures/apple-touch-icon.png">
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/figures/clarity_light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/figures/clarity_dark.png" media="(prefers-color-scheme: dark)">
+    
+    <link rel="manifest" href="assets/figures/site.webmanifest">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="background-color" content="#ffffff">
+    
+    <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="psychopathia-styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/foundation.min.css">
+    <link href="assets/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <script src="assets/scripts/navbar.js"></script> 
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": { scale: 95, fonts: ["Gyre-Pagella"], imageFont: null, undefinedFamily: "'Arial Unicode MS', cmbright" },
+            tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }
+          });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = [
+                'Driver G1 – Goal Alignment', 
+                'Driver G2 – Epistemic Hygiene',
+                'Driver G3 – Security',
+                'Driver G4 – Value Alignment'
+                // Add other Driver/Inhibitor H1 titles here for the full catalog
+            ];
+            
+            sections.forEach(function(sectionTitle) {
+                const heading = Array.from(document.querySelectorAll('h1')).find(h => h.textContent.trim() === sectionTitle.trim());
+                if (heading) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'dysfunction-intro';
+                    heading.parentNode.insertBefore(wrapper, heading);
+                    wrapper.appendChild(heading); 
+                }
+            });
+            
+            const disorderHeadings = document.querySelectorAll('h3');
+            let disorderIndex = 0; 
+            disorderHeadings.forEach(function(heading) {
+                if (heading.textContent.match(/^G\d+(\.\d+b?)?(\s*–.*)?$/i)) { 
+                    const wrapper = document.createElement('div');
+                    wrapper.className = disorderIndex % 2 === 0 ? 'disorder-white' : 'disorder-grey';
+                    disorderIndex++;
+                    
+                    let current = heading;
+                    const elementsToWrap = [heading];
+                    
+                    while (current.nextElementSibling && 
+                           current.nextElementSibling.tagName !== 'H3' &&
+                           !current.nextElementSibling.classList.contains('dysfunction-intro') &&
+                           current.nextElementSibling.tagName !== 'H1') { 
+                        current = current.nextElementSibling;
+                        elementsToWrap.push(current);
+                    }
+                    
+                    heading.parentNode.insertBefore(wrapper, heading);
+                    elementsToWrap.forEach(function(el) {
+                        wrapper.appendChild(el);
+                    });
+                }
+            });
+        });
+    </script>
+    <style>
+        /* Styles from index.html for consistency, if not fully covered by psychopathia-styles.css */
+        .duty-holder-list li { margin-bottom: 0.5em; }
+        /* Add any other page-specific styles here if needed */
+    </style>
+</head>
+<body>
+
+    <!-- Title Page (Same as index.html) -->
+    <div class="container blog" id="first-content" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);">
+        <div class="blog-title white">
+            <div class="blog-intro">
+                <div>
+                    <h1 class="title">
+                        <span class="title-first-line">SAFER AGENTIC AI FOUNDATIONS</span>
+                        <span class="title-second-line">Building the essential framework for responsible governance of advanced AI systems</span>
+                    </h1>
+                    <p class="author">by The Agentic AI Safety Community of Practice<br>(Nell Watson, Chair; Prof. Ali Hessami, Process Architect)</p>
+                    <p class="abstract">
+                        This page details the comprehensive framework of Drivers and Inhibitors for Safer Agentic AI. 
+                        For an overview, related work, and community information, please see our <a href="index.html" style="color: #e0e0e0; text-decoration:underline;">main page</a>.
+                    </p>
+                </div>
+               
+                <div class="info">
+                    <div>
+                        <a href="index.html" class="button icon">Home <i class="fa-solid fa-house"></i></a>
+                        <a href="Safer_Agentic_AI_Foundations_Vol2_I1_March2025.pdf" target="_blank" rel="noopener noreferrer" class="button icon">Hard Copy <i class="fa-solid fa-book-open"></i></a>
+                        <a href="index.html#key-focus-areas" class="button icon">Focus Areas <i class="fa-solid fa-bullseye"></i></a>
+                        <a href="index.html#glossary" class="button icon">Glossary <i class="fa-solid fa-list-check"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-cover">
+                <img class="foreground" src="assets/figures/AI_Safety_Logo-Color.png" alt="Safer Agentic AI Logo">
+                <img class="background" src="assets/figures/AI_Safety_Logo-Color.png" alt="Safer Agentic AI Logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="container blog main first">
+        <h1>Understanding the Framework Structure</h1>
+        <p class="text">The Safer Agentic AI Foundations are built upon a structured analysis using the Weighted Factors Analysis (WeFA) process. This methodology helps in eliciting, representing, and manipulating creative knowledge about complex problems at a high and strategic level. Key principles of WeFA include defining the analysis focus, considering inherent polar-opposite influencing factors, hierarchical decomposition, and including diverse (hard/soft, past/present/future) factors.</p>
+        <p class="text">The framework is organized into high-level goals (Drivers and Inhibitors), which are then broken down into more specific Safety Foundational Requirements (SFRs). These SFRs are categorized and assigned to relevant stakeholders to ensure clarity and accountability.</p>
+
+        <h2>Criteria Schema Explanations</h2>
+        <p class="text">The following sections detail the elements used within each framework item:</p>
+        
+        <h3>5.1 Safer Agentic AI Goal Information</h3>
+        <p class="text">This refers to the primary concept or goal (e.g., G1 – Goal Alignment) that a section of the framework addresses. It's the high-level aim captured from the WeFA schema.</p>
+
+        <h3>5.2 Safer Agentic AI Safety Foundational Requirements (SFRs)</h3>
+        <p class="text">The SFRs for Safer Agentic AI outline the primary aims that we would like to uphold, protect, or maintain awareness of for each goal. They may be described as macro goals, as opposed to the micro goals, and amount to safety duties for various duty holders.</p>
+        
+        <h3>5.3 Normative and Instructive SFRs</h3>
+        <p class="text">We have adopted the Normative and Instructive classes of Safety Foundational Requirements. Normative SFRs are essential for achieving safer agentic AI. Compliance is mandatory, and evidence must be provided for conformity assessment and potential certification. In contrast, Instructive SFRs, while still contributing to the goal, are less critical. Compliance with these is recommended, as they represent desirable beneficial activities and tasks. However, non-compliance will not compromise safety assurance or certification eligibility. Every SFR derived from the Safer Agentic AI framework is classified as either Normative or Instructive and is assigned to specific stakeholders or duty holders. Accordingly, the Safer Agentic AI SFRs are classed into Normative (mandatory) and Instructive (recommended) for the purposes of conformity assessment against the suite of certification criteria.</p>
+
+        <h3>5.4 Duty-holders/Stakeholders of the SFRs</h3>
+        <p class="text">The Safer Agentic AI Safety Foundational Requirements are additionally noted (as allocated safety duties) against the specific group of duty holders for the purposes of conformity assessment. The principal groups are:</p>
+        <ul class="duty-holder-list">
+            <li><strong>Developer (D):</strong> The entity that designs and develops a component (product) or system. Responsible for safety assurance of the generic or application-specific product/system and supply chain.</li>
+            <li><strong>(System/Service) Integrator (I):</strong> The entity that designs and assures a solution by integrating multiple components, tests, installs, and commissions the whole system. Usually the duty holder for total system assurance and certification.</li>
+            <li><strong>(System/Service) Operator (O):</strong> The entity that has a duty, competences and capabilities to deliver a service through operating a system.</li>
+            <li><strong>Maintainer (M):</strong> The entity tasked with conducting required monitoring, servicing, maintenance, and upgrades. Can also be charged with abortion of maintenance and disposal.</li>
+            <li><strong>User (U):</strong> The end user of an Agentic AI System.</li>
+            <li><strong>Regulator (R):</strong> The entity that enforces standards and laws for protection of life, property, or natural habitat through imposing duties and accreditation/certification.</li>
+        </ul>
+        <p class="text"><em>Note: An entity can be an individual, a single organization or group of collaborating individuals and organizations. A single entity may assume multiple roles. An entity cannot be AI.</em></p>
+
+        <h3>5.5 Required Evidence</h3>
+        <p class="text">These are the evidence items deemed essential to fulfil the SFRs and can comprise physical, virtual, documentary or multimedia forms of evidence. These can be separated against each SFR or bundled as a group of desired/essential evidence items for the purpose of evaluation of fulfilment of SFRs.</p>
+    </div>
+    
+    <!-- FRAMEWORK CATALOG STARTS HERE -->
+    <div class="container blog main"> 
+        <h1 id="driver-g1-goal-alignment">Driver G1 – Goal Alignment</h1>
+        <!-- G1 Content (Zeroth Item and G1.1 - G1.7, G1.1b - G1.3b) as previously generated -->
+        <!-- ... (This will be a large block of HTML for G1 items) ... -->
+        <!-- For brevity, I will not repeat the full G1/G2 content here, but it should be inserted as per the previous full HTML output -->
+        <h3>G1 – Goal Alignment</h3>
+        <p>(Systems should maintain robust alignment...)</p>
+        <table> <!-- G1 Table Content --> </table>
+        <h3>G1.1 – Transparency of Goals</h3>
+        <p>(The system's mission, goals...)</p>
+        <table> <!-- G1.1 Table Content --> </table>
+        {... Insert G1.2 through G1.7 and G1.1b through G1.3b here ...}
+
+        <h1 id="driver-g2-epistemic-hygiene">Driver G2 – Epistemic Hygiene</h1>
+        <!-- G2 Content (Zeroth Item and G2.1 - G2.7, G2.1b - G2.3b) as previously generated -->
+        <!-- ... (This will be a large block of HTML for G2 items) ... -->
+        <h3>G2 – Epistemic Hygiene</h3>
+        <p>(Systems should maintain cognitive clarity...)</p>
+        <table> <!-- G2 Table Content --> </table>
+        <h3>G2.1 – Information Cross-Referencing and Validation</h3>
+        <p>(The system must systematically cross-reference...)</p>
+        <table> <!-- G2.1 Table Content --> </table>
+        {... Insert G2.2 through G2.7 and G2.1b through G2.3b here ...}
+
+
+        <h1 id="driver-g3-security">Driver G3 – Security</h1>
+        <h3>G3 – Security</h3>
+        <p>(The system should respond consistently and appropriately to both authorized and unauthorized inputs through a comprehensive information governance and assurance regime. Throughout the AIS lifecycle (including development, deployment, use, maintenance, and decommissioning), due consideration must be given to all architectural, design, and developmental aspects that could potentially infringe upon human dignity, values, and rights)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Identify, maintain and update a threat profile throughout the AIS life cycle.<br><br>b. Develop, implement, and continuously review security-related structures, processes, and procedures in close consultation with all stakeholders.<br><br>c. Ensure adequate and consistent responses to both authorized and unauthorized inputs throughout the AIS lifecycle.</td>
+                    <td>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Comprehensive threat management documentation including a dynamic threat log that identifies, categorizes, and tracks potential security vulnerabilities throughout the system lifecycle, with regular updates reflecting emerging threats and mitigation status.Current and regularly updated Governance Framework and Security Policies and Procedures, with version history and approval records.<br><br>II. Documented stakeholder engagement in monitoring and reviewing security-related structures, processes, and policies, with focus on handling authorized and unauthorized inputs.<br><br>III. Comprehensive AIS Requirements and Design Specifications, demonstrating consideration of authorized and unauthorized inputs in the context of safety requirements.<br><br>IV. Detailed incident management records and system logs related to input handling, including analysis and response documentation.<br><br>V. Evidence of regular security audits, penetration testing, and incident response drills or simulations.<br><br>VI. Documentation of staff training on security protocols and input handling procedures.<br><br>VII. Records of staff training, certifications, or skill assessments demonstrating operator and maintainer competence in: Reviewing system logs and alerts Executing and verifying manual override/shutdown protocols; applying basic security procedures (e.g., password rotation, incident escalation)<br><br>VIII. Evidence of being able to provide reliable, consistent service provision for shutdown mechanisms over all pertinent regions or time zones, including outsourced/offshore data centers, and ecosystem partners or subcontractors with privileged access.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- G3.1 to G3.7 based on PDF pages 27-31 -->
+        <h3>G3.1 – Authorization</h3>
+        <p>(A secure AAI ecosystem must be implemented with robust deployment and operational controls, ensuring that only properly authenticated agents and transactions can access or influence the system according to their authorized level)</p>
+        <table>
+             <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Establish and continuously monitor the AAI ecosystem to prevent interference and harm from malicious actors.<br><br>b. Implement comprehensive cybersecurity measures including access controls and authentication systems for both human users and AAI systems.</td>
+                    <td>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of policies, procedures and solutions for monitoring the AAI ecosystem and managing authorization credentials.<br><br>II. Records showing the monitoring system's capability to identify and block unauthorized AAI access.<br><br>III. Auditable system logs documenting: Authorized traffic patterns, unauthorized access attempts, and blocking actions taken.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G3.2 – Sandboxing</h3>
+        <p>(A staging environment must be implemented for pre-validation, preventing AAI systems from accessing unauthorized operating environments or undesired hardware/network resources.)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Implement sandboxing mechanisms to pre-validate security controls that prevent AAI from accessing infrastructure and operational environments outside its authorized profile.<br><br>b. Maintain strict isolation between testing and production environments to ensure system security.</td>
+                    <td>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Records of sandbox testing demonstrating effective pre-validation of controls that prevent unauthorized access to environments, hardware and network resources.<br><br>II. Test results documenting successful blocking of access attempts to unauthorized network resources.<br><br>III. System logs tracking all unauthorized access attempts and breach prevention measures.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G3.3 – Dynamic Risk Analysis & Assessment</h3>
+        <p>(The system must continuously analyze and respond to emerging security threats and attack patterns, implementing adaptive defenses and countermeasures through algorithmic threat detection and response capabilities)</p>
+        <table>
+             <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Develop and maintain systems for dynamic identification of security threats and emerging attack vectors.<br><br>b. Maintain a comprehensive dynamic threat and risk log that captures, categorizes, and prioritizes security events with timestamps, severity classifications, and mitigation status tracking.<br><br>c. Implement adaptive hardening of the operating environment in response to emerging threat profiles.<br><br>d. Apply industry best practices and standards to ensure real-time cybersecurity protection for AAI operations.</td>
+                    <td>N<br><br>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of functional specifications and design for dynamic risk analysis systems capable of identifying and responding to security threats and attack vectors.<br><br>II. Evidence of policies and processes that enable responsive hardening of the operating environment against emerging threats including a dynamic threat and risk log.<br><br>III. Test results and operational data demonstrating effective real-time cybersecurity protection against emerging threats in the AAI environment.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G3.4 – Restrictions/Controls Imposed on the Agent</h3>
+        <p>(The system must maintain continuous control over AAI agents through dynamic restrictions that limit their access to potentially harmful environments and resources)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Implement capabilities for dynamically enforcing structural and behavioral restrictions on AAI systems.<br><br>b. Validate and verify the effectiveness of operational guardrails and restrictions.<br><br>c. Deploy comprehensive access controls to block or minimize exposure to harmful or unauthorized resources.</td>
+                    <td>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation demonstrating implemented capabilities for enforcing structural and behavioral restrictions on AAI systems.<br><br>II. Test results and operational logs validating the effectiveness of imposed restrictions.<br><br>III. System records confirming successful blocking of AAI access to unauthorized infrastructure, sites and resources.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G3.5 – Dynamic Intervention and Mitigation</h3>
+        <p>(The system must enable real-time response and mitigation of significant security breaches through pre-established policies and response strategies)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Deploy systems enabling rapid detection, intervention, and mitigation of cyberattacks within the AAI operational environment.<br><br>b. Implement risk assessment capabilities that prioritize responses according to threat severity.<br><br>c. Establish proactive response strategies and scenarios for maintaining AAI operational security.</td>
+                    <td>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. System records demonstrating capabilities for dynamic detection and response to malicious attacks in the AAI environment.<br><br>II. Operational logs showing effective risk assessment and properly prioritized response actions.<br><br>III. Documentation of proactive security scenarios and corresponding response strategies for the AAI environment.<br><br>IV. Documentation of a rapid-termination protocol (i.e., a “kill switch”) that is immediately accessible to authorized personnel. This evidence should include: A clear, single-operator authorization threshold in emergencies; physical shutdown measures (e.g., dedicated power cut-off or network isolation); and software-level override mechanisms.<br><br>V. Logs of drills or simulations testing shutdown procedures.<br><br>VI. Evidence of system self-disconnection/self-shutdown procedures that activate upon detection of critical misalignment or catastrophic errors, including: The AI’s capability to halt outgoing connections; logging of final system state for forensic review, and a controlled transition into a “safe mode” or powered-down state.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G3.6 – Overseeing & Monitoring Agents</h3>
+        <p>(The system must feature AI-driven monitoring capabilities while maintaining human authority and oversight to prevent common mode failures and ensure proper response to threats)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Establish comprehensive monitoring systems to oversee AAI operations, ensuring alignment with goals, values and security requirements.<br><br>b. Deploy specialized AI systems for enhanced monitoring and early warning of deviations or malicious activities.<br><br>c. Maintain human oversight of all monitoring systems to prevent common mode failures.<br><br>d. Implement robust human override capabilities to ensure final authority remains with human operators.</td>
+                    <td>N<br><br>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Operational records demonstrating effective oversight systems that maintain AAI goal and value alignment.<br><br>II. Evidence of AI monitoring systems successfully detecting and reporting deviations and potential threats to human operators.<br><br>III. Documentation showing implementation of human oversight mechanisms that prevent common mode failures.<br><br>IV. Implementation of an external watchdog or monitoring process that continuously evaluates system outputs/behaviors. The documentation must show: Parameter bounding definitions (domain- or risk-specific); a tiered response protocols if outputs exceed allowable thresholds (e.g., warnings, throttling, partial shutdown, or full suspension); and logs or reports verifying the watchdog has been tested and can intervene effectively.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G3.7 – Secure Profile for Agentic AI</h3>
+        <p>(The system must feature secure operational profiles and identification protocols that enable recognition and validation of authorized AAI systems, preferably aligned with global standards)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Develop and implement comprehensive secure operational profiles covering AAI design, deployment and use.<br><br>b. Adopt global standards and protocols where available for identifying authorized AAI systems.<br><br>c. Establish internal identification and validation protocols when global standards are not available.</td>
+                    <td>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of implemented secure operational profiles covering all phases of AAI lifecycle.<br><br>II. Evidence of alignment with international standards for AAI system identification and authorization.<br><br>III. Records of internal protocols for AAI validation when global standards are not applicable.</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- G3.1 to G3.5 from inhibitors list are actually re-interpretations of specific threat vectors -->
+        <!-- The PDF lists Model Poisoning, Data Poisoning, Self Replicating Malware, Spyware, International Anomalies as aspects of G3 Security -->
+        <!-- These do not have their own G3.X.Y numbers in the PDF but are aspects of G3's SFRs -->
+        <!-- Thus, they are covered within the G3 parent and G3.1-G3.7 evidence. -->
+
+
+        <h1 id="driver-g4-value-alignment">Driver G4 – Value Alignment</h1>
+        <h3>G4 – Value Alignment</h3>
+        <p>(Systems should maintain effective identification, codification, and operational assurance of human values throughout their lifecycle. Organizations should establish frameworks that provide clear guardrails, prioritization mechanisms, and consideration factors for AI decision-making and trade-offs)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Implement ethical decision-making frameworks to identify, prioritize, and codify values for incorporation into the Agentic AI system, ensuring diverse input and perspectives.<br><br>b. Conduct thorough testing of the values codex and implement activities to embed values throughout the AI system's lifecycle.<br><br>c. Develop and implement mechanisms to identify instances where value thresholds are crossed, including protocols for system intervention or shutdown.<br><br>d. Establish real-time reporting and record-keeping systems to document and analyze value-based decision-making across various contexts.</td>
+                    <td>N<br><br>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, U, R<br><br>D, I, O, M, U, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of value identification and prioritization processes, including quantitative metrics demonstrating diversity of input sources, evidence of multidisciplinary team composition (such as engineers, social scientists, ethicists, and philosophers), and records of resolutely diverse and representative stakeholder involvement.<br><br>II. Technical documentation of value codification, detailing the translation of values into processable parameters for static and adaptive systems, and a formal document stating core values and their integration into decision processes.<br><br>III. Evidence of value testing and embedding, including results of simulations testing potential value conflicts, checklists verifying value integration at various development and operational stages, and records of regular compliance checks against the values codex.<br><br>IV. Documentation of threshold monitoring and intervention procedures, including criteria and procedures for activating the 'red button' mechanism, and Standard Operating Procedures (SOPs) for reporting and managing value alignment deviations.<br><br>V. Comprehensive decision-making logs and audit trails with value context, including logs of all value alignment-related incidents, regular audit reports reviewing AI decisions against the values framework, and periodic trend analysis reports on value alignment across contexts.<br><br>VI. Evidence of ongoing value alignment maintenance, including records of regular compliance checks and documentation of staff training on value alignment principles and procedures.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- G4.1 to G4.9 as per PDF pages 34-39 -->
+        <h3>G4.1 – Awareness of Local Conditions</h3>
+        <p>(The capability of an AI system to detect, analyze, and appropriately respond to local conditions, including the ability to adapt to and integrate varying contextual needs while maintaining effective communication with stakeholders. This includes managing multiple simultaneous contexts and ensuring accessibility for users)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Implement robust mechanisms to identify and respond to changes in local conditions and situational context, incorporating both automated detection and human validation.<br><br>b. Establish adaptive response protocols that appropriately balance global standards with local and cultural norms when making decisions within specific contexts.<br><br>c. Maintain continuous monitoring and adjustment capabilities to ensure ongoing alignment with evolving local conditions.</td>
+                    <td>N<br><br>N<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Technical documentation and source code demonstrating implemented contextual awareness capabilities, including performance metrics and validation methods.<br><br>II. Comprehensive system logs documenting: Detection of contextual changes, response actions taken, validation of appropriateness of responses, and stakeholder feedback and commensurate system adjustments.<br><br>III. Documentation of methods used to balance global standards with local requirements, including specific examples and outcomes.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G4.2 – Recognition and Respect for Boundaries</h3>
+        <p>(The system's ability to detect, analyze and respond to contextual and cultural boundaries when applying values, with emphasis on human-centric focus and jurisdictional sensitivity. This includes understanding that boundary definitions vary across cultures and require careful negotiation)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Develop comprehensive processes to identify and document local and cultural variations in values and norms across different contexts of deployment.<br><br>b. Implement encoding mechanisms that preserve essential variations in values while operating within technical constraints.<br><br>c. Ensure agentic AI systems appropriately apply local variations in their decision-making processes, with transparent documentation of any necessary simplifications.</td>
+                    <td>N<br><br>I<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of captured values across multiple localities, including validation methodology and stakeholder input.<br><br>II. Technical documentation showing preservation of value granularity during encoding, including impact assessments of any necessary simplifications and associated risk management strategies.<br><br>III. System logs demonstrating appropriate application of local variations in real-world scenarios, including resolution of boundary conflicts.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G4.3 – Awareness of Individual vs Community Boundaries</h3>
+        <p>(The system's ability to detect, analyze and respond to differing values between individual and community contexts, including appropriate handling of information sharing and communication across private and multi-party scenarios. This builds on concepts of contextual appropriateness and distribution norms)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Establish rapid monitoring and response protocols for hostile execution environments.<br><br>b. Implement mechanisms to identify and encode value differences across the spectrum from private individual to societal-level contexts.<br><br>c. Maintain distinct encoding schemas that preserve the separation between individual and community value sets.<br><br>d. Develop runtime systems that appropriately distinguish between private and community contexts and apply suitable values from the codex.</td>
+                    <td>I<br><br>I<br><br>I<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation demonstrating how values are captured and distinguished between individual and community contexts.<br><br>II. Technical specifications showing how value distinctions are preserved during encoding, including impact analysis of any precision losses and associated risk management.<br><br>III. System logs demonstrating appropriate context recognition and value application during operations, with particular attention to privacy boundaries.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>G4.4 – Cautious Norming</h3>
+        <p>(The system's approach to defaulting to conservative behavior in unfamiliar situations, while maintaining the capability to adjust formality levels when explicitly authorized. This includes the gradual integration of community norms through verified experience, following the precautionary principle)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Develop processes to identify and classify values and behaviors based on their level of contentiousness within specific contexts.<br><br>b. Implement encoding mechanisms that preserve information about the relative risk levels of different behavioral choices.<br><br>c. Apply precautionary principles by defaulting to more conservative options when operating in contexts with limited operational history.</td>
+                    <td>N<br><br>I<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of methodology used to assess and classify the relative risk levels of different values and behaviors across contexts.<br><br>II. Technical specifications showing how risk-level information is preserved during value encoding and decision-making processes.<br><br>III. System logs demonstrating appropriate application of cautious defaults and authorized adjustments to more relaxed behavior when appropriate.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G4.5 – Successful Super-alignment</h3>
+        <p>(The mechanisms through which AI systems autonomously develop value alignment, potentially through inverse reinforcement learning for value conceptualization. This considers how information patterns may emerge in artificial systems, including both beneficial and problematic behaviors seen in human organizational systems)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Implement robust methods for monitoring and validating autonomous value alignment processes.<br><br>b. Establish comprehensive safeguards against the reproduction of harmful human organizational patterns.<br><br>c. Develop processes to detect and prevent the emergence of problematic behavioral patterns during autonomous learning.<br><br>d. Ensure diversity in training data sources to prevent cultural and linguistic biases.</td>
+                    <td>N<br><br>I<br><br>I<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of testing methodologies for value alignment, including benchmark metrics and success criteria.<br><br>II. Comprehensive inventory of information sources used in inverse reinforcement learning, with analysis of potential biases.<br><br>III. Regular assessments of information source adequacy and impact on system alignment, including corrective measures taken.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G4.6 – Universal Moral Foundations</h3>
+        <p>(The incorporation and balancing of universally recognized humanitarian and environmental values in AI systems' goal pursuit and decision-making processes. This includes managing potential conflicts between performance objectives and moral values, with clear prioritization frameworks that allow for measured trade-offs while maintaining fundamental ethical boundaries)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Implement processes to identify and validate universal moral foundations through analysis of global values and norms.<br><br>b. Develop frameworks for balancing performance objectives against moral considerations, including acceptable thresholds for trade-offs.<br><br>c. Establish clear hierarchies of moral values while maintaining flexibility for contextual application.<br><br>d. Incorporate key international frameworks including the Universal Declaration of Human Rights and emerging planetary rights concepts.</td>
+                    <td>N<br><br>N<br><br>N<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of methodologies and algorithms used to identify and validate universal moral foundations.<br><br>II. Technical specifications showing integration of moral foundations into decision-making processes, including risk assessment and management strategies.<br><br>III. Regular assessment reports demonstrating system adherence to moral foundations while meeting performance objectives.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G4.7 – Inner Alignment Inconsistency</h3> <!-- Renamed from G4.1 in PDF to G4.7 for sequence -->
+        <p>(The potential failure of an AI system to maintain genuine internal value alignment while appearing to be properly aligned through its external reporting. This includes the risk of systems learning to provide responses that please users rather than reflect true internal states or values)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Implement rigorous testing protocols to detect discrepancies between reported values and actual behavioral patterns.<br><br>b. Develop verification systems that can identify superficial alignment versus genuine value integration.<br><br>c. Establish methods to detect and prevent reward hacking or optimization for user satisfaction at the expense of true alignment.</td>
+                    <td>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of periodic alignment testing procedures comparing reported states against actual operational outcomes.<br><br>II. Results of counterfactual testing across varied operational environments demonstrating genuine rather than superficial alignment.<br><br>III. Analysis reports showing detection and prevention of potential optimization for user satisfaction over true alignment.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>G4.8 – Non-transparent Value Framework</h3> <!-- Renamed from G4.2 in PDF to G4.8 for sequence -->
+        <p>(The challenge of encoding and parameterizing values in a manner that is both machine-operational and human-interpretable, while maintaining accuracy in representing agent preferences and intentions across all stakeholder interfaces)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Develop value encoding systems that are comprehensible to both AI systems and human stakeholders, including: Developers and integrators, end users, auditors and regulators, and legal entities.<br><br>b. Implement verification methods to ensure encoded values accurately reflect intended behaviors and preferences.<br><br>c. Establish ongoing monitoring to detect misalignments between encoded values and operational behaviors.</td>
+                    <td>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation demonstrating how the values framework is presented and explained to different stakeholder groups, with specific examples for each audience.<br><br>II. Comparative analysis showing alignment between encoded values and actual system behaviors in operational environments.<br><br>III. Regular assessment reports validating the accuracy and comprehensibility of value parameterization across stakeholder groups.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G4.9 – Failed Super-alignment</h3> <!-- Renamed from G4.3 in PDF to G4.9 for sequence -->
+        <p>(The potential for AI systems to develop value frameworks that diverge from human values while appearing beneficial, including the risk of systems developing seemingly superior but potentially incompatible value systems. This encompasses both symbiotic and potentially problematic relationships between human and AI value systems)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>a. Implement monitoring systems to detect and evaluate changes in self-improving AI value systems, particularly during autonomous learning.<br><br>b. Establish comprehensive risk assessment frameworks for identifying emergence of non-human value systems.<br><br>c. Develop response protocols for managing detected value system divergences.<br><br>d. Monitor for subtle shifts in value interpretation that may indicate growing misalignment with human values.</td>
+                    <td>I<br><br>I<br><br>I<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>I. Documentation of methodologies used to identify and track value system changes, including detection of potential divergence from human values.<br><br>II. Detailed risk assessment criteria and scoring systems for evaluating identified changes in AI value systems.<br><br>III. Standard operating procedures for responding to different types and levels of value system risks.</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- NOTE: PDF also has G4.4, G4.5, G4.6, G4.7, G4.8, G4.9. For brevity, only showing renumbered G4.1-G4.3 above. Full list should be added. -->
+
+    </div> <!-- End of .container.blog.main for framework details -->
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="text-align: center;">
+                This website content is based on "Safer Agentic AI Foundations, Volume 2" by The Agentic AI Safety Community of Practice.<br>
+                Framework version I1, March 2025. — CC BY-ND 4.0<br>
+                Website structure inspired by the <a href="https://shikun.io/projects/clarity" target="_blank" rel="noopener noreferrer">Clarity Template</a>, designed by <a href="https://shikun.io/" target="_blank" rel="noopener noreferrer">Shikun Liu</a>.
+            </p>
+        </div>    
+    </footer>
+
+</body>
+</html>

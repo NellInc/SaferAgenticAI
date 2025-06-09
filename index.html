@@ -52,7 +52,28 @@
 
     <style>
         .expert-profile { display: flex; align-items: flex-start; margin-bottom: 30px; }
-        .expert-profile img { width: 120px; height: 120px; border-radius: 50%; margin-right: 20px; object-fit: cover; border: 2px solid #dde5eb; }
+        .expert-profile .profile-image { 
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            margin-right: 20px; 
+            border: 3px solid #2c3e50; 
+            flex-shrink: 0; 
+            overflow: hidden;
+            position: relative;
+            min-width: 120px;
+            max-width: 120px;
+            min-height: 120px;
+            max-height: 120px;
+            aspect-ratio: 1/1;
+        }
+        .expert-profile .profile-image img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center; 
+            display: block;
+        }
         .expert-profile div { flex: 1; }
         .expert-profile h4 { margin-top: 0; color: #2c3e50; margin-bottom: 0.5em;}
         .expert-profile h4 a { color: #2c3e50; text-decoration: none; }
@@ -75,11 +96,11 @@
         .section-spacer { margin-top: 2em; }
         .big-framework-button {
             display: inline-block; padding: 15px 30px; font-size: 1.2em; font-weight: bold; color: white;
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); border: none; border-radius: 8px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); border: none; border-radius: 8px;
             text-decoration: none; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-top: 20px;
         }
         .big-framework-button:hover {
-            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3); transform: translateY(-2px);
         }
         .big-framework-button i { margin-right: 10px; }
@@ -246,18 +267,15 @@
             <div class="blog-intro">
                 <div>
                     <h1 class="title">
-                        <span class="title-first-line">SAFER AGENTIC AI FOUNDATIONS</span>
-                        <span class="title-second-line">Building the essential framework for responsible governance of advanced AI systems</span>
+                        <span class="title-first-line">SAFER AGENTIC AI FOUNDATIONS:</span>
+                        <span class="title-second-line">A Framework for Responsible Governance of Agentic AI</span>
                     </h1>
                     <p class="author">by The Agentic AI Safety Community of Practice<br>(Nell Watson, Chair; Prof. Ali Hessami, Process Architect)</p>
-                    <p class="abstract">
-                        Welcome to this second, full volume of our Safer Agentic AI Foundations, guidelines and best practices 
-                        for AI systems capable of significant independent action at arm’s length human influence. Our Working Group of 25 experts has 
-                        employed a Weighted Factors Methodology to ideate, define, analyze and map the factors which can drive or inhibit 
-                        safety in agentic systems, based on fundamental principles. While this document primarily addresses agentic AI, many 
-                        underlying principles should also have value for non-agentic systems. We hope this exploration provides a strengthened 
-                        awareness of the complexities involved in safer agentic AI.
-                    </p>
+                    <ul class="abstract-bullets" style="margin-top: 0.5em; margin-bottom: 0.8em;">
+                        <li>This framework provides a multidisciplinary foundation for governing Agentic AI systems—prioritizing human meaning, autonomy, and collective well-being.</li>
+                        <li>Empower AI systems to act with initiative—while ensuring their goals remain transparent, corrigible, and accountable to legitimate human oversight.</li>
+                        <li>Intended for policymakers, developers, ethicists, and oversight bodies shaping the future of powerful machine agents. </li>
+                    </ul>
                 </div>
                
                 <div class="info">
@@ -278,17 +296,28 @@
     </div>
 
     <div class="container blog main first" id="blog-main">
-        <h1>ABOUT THE AGENTIC AI SAFETY COMMUNITY</h1>
-        <p class="text">The Safer Agentic AI Community of Practice brings together leading experts from diverse fields to establish comprehensive safety guidelines for AI systems capable of independent action and decision-making.</p>
-        <p class="text">As artificial intelligence evolves toward greater autonomy, our mission becomes increasingly significant: to develop robust, implementable frameworks that ensure agentic AI systems remain aligned with human values and operate safely across all contexts.</p>
+        <h1>About the Safer Agentic AI Community</h1>
+        <p class="text">The Safer Agentic AI Community is a global network of experts working to build practical safety guidelines for AI systems with independent decision-making capabilities. As AI becomes more autonomous, ensuring these systems remain aligned with human values is more important than ever.</p>
         
-        <h1>WHAT IS AGENTIC AI?</h1>
-        <p class="text">Agentic AI refers to an important intermediate category: AI systems that can autonomously pursue goals, adapt to new situations, and reason flexibly about the world, but still operate in bounded domains. The key characteristic of agentic AI is a capacity for independent initiative—the ability to take sequences of actions in complex environments to achieve objectives. This can include breaking down high-level goals into subtasks, engaging in open-ended exploration and experimentation, and adapting creatively to novel challenges. By scaffolding capabilities like reasoning, planning, and self-checking on top of large language models, researchers are creating powerful agentic AI systems that can independently make and execute multi-step plans flexibly adjusting strategies based on experience and environmental feedback to achieve objectives.</p>
-        <p class="text">Examples of Agentic AI include autonomous driving systems that continuously adapt to changing road conditions, or complex supply chain management systems that autonomously optimize resource allocation in dynamic environments.</p>
+        <h1>What Is Agentic AI?</h1>
+        <p class="text">Agentic AI systems can set and pursue goals, adapt to new situations, and make complex decisions on their own. They operate within defined boundaries but show initiative—breaking down tasks, experimenting, and adjusting to feedback. Examples include self-driving cars or AI systems managing logistics in real time.</p>
 
-        <h1>OUR WORK</h1>
-        <p class="text">In September 2024, our Working Group of 25 experts released Volume 1 of the “Safer Agentic AI Foundations” Recommended Practices as a preliminary Creative Commons publication.</p>
-        <p class="text">After completion of the extensive ideation sessions and research, we are now publishing the Volume 2—a comprehensive framework of recommended practices which address the drivers and inhibitors of safety in agentic systems. Our Working Group has employed a Weighted Factors Methodology to ideate, define, analyze and map the factors which can drive or inhibit safety in agentic systems, based on fundamental principles. We have used this same process many times previously to generate a range of global standards, certifications, and guidelines for improving ethical qualities in AI systems.</p>
+        <h1>Our Work</h1>
+        <p class="text">In 2024, our 25-member Working Group released the Safer Agentic AI Foundations—a living set of recommended practices. The second volume introduces a structured framework for understanding what makes these systems safe or unsafe. Developed using a rigorous weighted-factors approach, this framework builds on years of experience creating standards and certifications for ethical AI.</p>
+    </div>
+
+    <div class="container blog main gray" id="key-focus-areas">
+        <h1>KEY FOCUS AREAS</h1>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            <div class="key-focus-area"><h4>Goal Alignment</h4><p>Ensuring robust alignment between operational goals and human values.</p></div>
+            <div class="key-focus-area"><h4>Value Alignment</h4><p>Identifying, codifying, and maintaining human values in AI systems.</p></div>
+            <div class="key-focus-area"><h4>Safe Operations</h4><p>Ensuring safe operations throughout the system lifecycle.</p></div>
+            <div class="key-focus-area"><h4>Epistemic Hygiene</h4><p>Maintaining cognitive clarity and accurate information management.</p></div>
+            <div class="key-focus-area"><h4>Transparency</h4><p>Creating clear, interpretable rationales for AI reasoning processes.</p></div>
+            <div class="key-focus-area"><h4>Goal Termination</h4><p>Implementing proper protocols for task completion and system sunsetting.</p></div>
+            <div class="key-focus-area"><h4>Security</h4><p>Implementing comprehensive protection against threats and vulnerabilities.</p></div>
+            <div class="key-focus-area"><h4>Contextual Understanding</h4><p>Establishing robust control mechanisms across operational contexts.</p></div>
+        </div>
     </div>
 
     <!-- CAROUSEL SECTION -->
@@ -331,38 +360,23 @@
         <div style="text-align: center; margin: 30px 0;">
              <a href="framework.html" class="big-framework-button"><i class="fa-solid fa-sitemap"></i> Explore the Full Framework</a>
         </div>
-        <h1>VISUALIZING THE FRAMEWORK</h1>
-        <img src="assets/figures/diagram3_v3-1677x2048.webp" alt="Diagram of Safer Agentic AI Foundations: Drivers and Inhibitors">
-        <p class="caption" style="text-align: center;">
-            Figure 1: Weighted Drivers and Inhibitors for Achieving Safer Agentic AI Systems. 
-        </p>
-    </div>
-
-    <div class="container blog main gray" id="key-focus-areas">
-        <h1>KEY FOCUS AREAS</h1>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-            <div class="key-focus-area"><h4>Goal Alignment</h4><p>Ensuring robust alignment between operational goals and human values.</p></div>
-            <div class="key-focus-area"><h4>Value Alignment</h4><p>Identifying, codifying, and maintaining human values in AI systems.</p></div>
-            <div class="key-focus-area"><h4>Safe Operations</h4><p>Ensuring safe operations throughout the system lifecycle.</p></div>
-            <div class="key-focus-area"><h4>Epistemic Hygiene</h4><p>Maintaining cognitive clarity and accurate information management.</p></div>
-            <div class="key-focus-area"><h4>Transparency</h4><p>Creating clear, interpretable rationales for AI reasoning processes.</p></div>
-            <div class="key-focus-area"><h4>Goal Termination</h4><p>Implementing proper protocols for task completion and system sunsetting.</p></div>
-            <div class="key-focus-area"><h4>Security</h4><p>Implementing comprehensive protection against threats and vulnerabilities.</p></div>
-            <div class="key-focus-area"><h4>Contextual Understanding</h4><p>Establishing robust control mechanisms across operational contexts.</p></div>
-        </div>
     </div>
     
     <div class="container blog main gray" id="our-experts">
         <h1>OUR EXPERTS</h1>
         <div class="expert-profile">
-            <img src="assets/figures/Nell-Watson.webp" alt="Nell Watson">
+            <div class="profile-image">
+                <img src="assets/figures/Nell-Watson.webp" alt="Nell Watson">
+            </div>
             <div>
                 <h4><a href="https://www.linkedin.com/in/nellwatson/" target="_blank" rel="noopener noreferrer">Nell Watson, PhD(c)</a><a href="https://www.linkedin.com/in/nellwatson/" target="_blank" rel="noopener noreferrer" class="linkedin-icon"><i class="fab fa-linkedin"></i></a> - Chair, Agentic AI Safety Experts Focus Group</h4>
                 <p class="text">Nell Watson is a respected expert in AI ethics and safety, with a longstanding focus on aligning emerging technologies to human values. As Chair of our initiative, she applies her deep interdisciplinary background—spanning engineering, philosophy, and social sciences—to shape responsible innovation strategies. Nell has contributed to multiple international standards efforts, including the IEEE 7000 series, and regularly advises organizations on trustworthy AI development and policy.</p>
             </div>
         </div>
         <div class="expert-profile">
-            <img src="assets/figures/Ali-Hessami.webp" alt="Prof. Ali Hessami">
+            <div class="profile-image">
+                <img src="assets/figures/Ali-Hessami.webp" alt="Prof. Ali Hessami">
+            </div>
             <div>
                 <h4><a href="https://www.linkedin.com/in/ali-hessami-84557111/" target="_blank" rel="noopener noreferrer">Prof. Ali Hessami</a><a href="https://www.linkedin.com/in/ali-hessami-84557111/" target="_blank" rel="noopener noreferrer" class="linkedin-icon"><i class="fab fa-linkedin"></i></a> – Process Architect, Agentic AI Safety Experts Focus Group</h4>
                 <p class="text">Ali Hessami is a leading authority in systems engineering and risk management. Serving as our Process Architect, he draws on decades of experience in safety and security engineering, assurance, and certification to ensure robust governance frameworks for advanced AI. Ali has played a key role in global standardization and ethics certification initiatives, helping to create transparent, secure, and ethically informed processes for responsible technology adoption.</p>
@@ -387,7 +401,7 @@
         <ul class="contributor-list">
             <li>Aisha Gurung</li><li>Leonie Koessler</li><li>Pramod Misra</li>
             <li>Aleksander Jevtic</li><li>McKenna Fitzgerald</li><li>Pranav Gade</li>
-            <li>Alina Holcroft</li><li>Michael O’Grady</li><li>Rebecca Hawkins</li>
+            <li>Alina Holcroft</li><li>Michael O'Grady</li><li>Rebecca Hawkins</li>
             <li>Md Atiqur R. Ahad</li><li>Mrinal Karvir</li><li>Sai Joseph</li>
             <li>Chantell Murphy</li><li>Nikita Tiwari</li><li>Tim Schreier</li>
             <li>Katherine Evans</li><li>Patricia Shaw</li>

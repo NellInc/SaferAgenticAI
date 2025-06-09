@@ -547,7 +547,7 @@
                     <td>a. Identify, maintain and update a threat profile throughout the AIS life cycle.<br><br>b. Develop, implement, and continuously review security-related structures, processes, and procedures in close consultation with all stakeholders.<br><br>c. Ensure adequate and consistent responses to both authorized and unauthorized inputs throughout the AIS lifecycle.</td>
                     <td>N<br><br>N<br><br>N</td>
                     <td>D, I, O, M<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
-                    <td>I. Comprehensive threat management documentation including a dynamic threat log that identifies, categorizes, and tracks potential security vulnerabilities throughout the system lifecycle, with regular updates reflecting emerging threats and mitigation status.Current and regularly updated Governance Framework and Security Policies and Procedures, with version history and approval records.<br><br>II. Documented stakeholder engagement in monitoring and reviewing security-related structures, processes, and policies, with focus on handling authorized and unauthorized inputs.<br><br>III. Comprehensive AIS Requirements and Design Specifications, demonstrating consideration of authorized and unauthorized inputs in the context of safety requirements.<br><br>IV. Detailed incident management records and system logs related to input handling, including analysis and response documentation.<br><br>V. Evidence of regular security audits, penetration testing, and incident response drills or simulations.<br><br>VI. Documentation of staff training on security protocols and input handling procedures.<br><br>VII. Records of staff training, certifications, or skill assessments demonstrating operator and maintainer competence in: Reviewing system logs and alerts Executing and verifying manual override/shutdown protocols; applying basic security procedures (e.g., password rotation, incident escalation)<br><br>VIII. Evidence of being able to provide reliable, consistent service provision for shutdown mechanisms over all pertinent regions or time zones, including outsourced/offshore data centers, and ecosystem partners or subcontractors with privileged access.</td>
+                    <td>I. Comprehensive threat management documentation including a dynamic threat log that identifies, categorizes, and tracks potential security vulnerabilities throughout the system lifecycle, with regular updates reflecting emerging threats and mitigation status. Current and regularly updated Governance Framework and Security Policies and Procedures, with version history and approval records.<br><br>II. Documented stakeholder engagement in monitoring and reviewing security-related structures, processes, and policies, with focus on handling authorized and unauthorized inputs.<br><br>III. Comprehensive AIS Requirements and Design Specifications, demonstrating consideration of authorized and unauthorized inputs in the context of safety requirements.<br><br>IV. Detailed incident management records and system logs related to input handling, including analysis and response documentation.<br><br>V. Evidence of regular security audits, penetration testing, and incident response drills or simulations.<br><br>VI. Documentation of staff training on security protocols and input handling procedures.<br><br>VII. Records of staff training, certifications, or skill assessments demonstrating operator and maintainer competence in: Reviewing system logs and alerts Executing and verifying manual override/shutdown protocols; applying basic security procedures (e.g., password rotation, incident escalation)<br><br>VIII. Evidence of being able to provide reliable, consistent service provision for shutdown mechanisms over all pertinent regions or time zones, including outsourced/offshore data centers, and ecosystem partners or subcontractors with privileged access.</td>
                 </tr>
             </tbody>
         </table>
@@ -720,6 +720,47 @@
             </tbody>
         </table>
 
+ <h3>G3.6b – Vulnerability to Hostile Environment</h3>
+        <p>(The system must identify and mitigate structural vulnerabilities that could be exploited in hostile operational environments)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Implement systems to identify vulnerabilities arising from design, development and operational technologies.<br><br>
+                        b. Deploy proactive measures against structural vulnerabilities that could lead to symbolic and computational risks.<br><br>
+                        c. Establish rapid monitoring and response protocols for hostile execution environments.
+                    </td>
+                    <td>N<br><br>I<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>
+                        I. Documentation of systems identifying AAI vulnerabilities in hostile operational environments.<br><br>
+                        II. Evidence of proactive vulnerability assessment and mitigation procedures.<br><br>
+                        III. Records of monitoring systems and rapid response protocols for hostile execution scenarios.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G3.7b – Emergent Risks of AAI Systems</h3>
+        <p>(The system must address security vulnerabilities across the entire supply chain through collective responsibility and coordinated responses)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Ensure that all supply chain parties are included and incentivized as mutual participants in addressing cybersecurity issues.<br><br>
+                        b. Implement collective approaches to security risk management that maintain ecosystem integrity.
+                    </td>
+                    <td>N<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>
+                        I. Evidence of systems treating supply chain cybersecurity as a shared responsibility.<br><br>
+                        II. Documentation of collective monitoring and mitigation strategies protecting the AAI ecosystem.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
         <h1 id="driver-g4-value-alignment">Driver G4 – Value Alignment</h1>
         <h3>G4 – Value Alignment</h3>
@@ -1224,7 +1265,7 @@
             <tbody>
                 <tr>
                     <td>a. Ground system performance evaluation in recognized standards and peer-reviewed benchmarks.<br><br>b. Implement transparent performance measurement protocols that enable comparison with industry standards.<br><br>c. Maintain documentation of performance metrics and evaluations against established benchmarks.<br><br>d. Foster system trustworthiness through alignment with both local and international standards.<br><br>e. Demonstrate compliance with ethical and legal best practices for AI deployment.</td>
-                    <td>N<br><br>N<br><br>N<br><br>N</td> <!-- c was missing, added as N -->
+                    <td>N<br><br>N<br><br>N<br><br>N<br>N</td> <!-- c was missing, added as N -->
                     <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
                     <td>I. Independent audit reports demonstrating conformity with ethical and legal frameworks.<br><br>II. Published code of ethics and operational principles.<br><br>III. Documentation of peer-reviewed benchmarks and datasets used in performance evaluation.<br><br>IV. Detailed performance comparison reports showing system metrics against established benchmarks.<br><br>V. Evidence of ongoing performance monitoring and evaluation processes.</td>
                 </tr>
@@ -1287,7 +1328,72 @@
                 </tr>
             </tbody>
         </table>
-        <!-- NOTE: PDF contains G6.3, G6.4, G6.5 on page 54. These were NOT requested to be added in this step, but they exist. -->
+
+        <h3>G6.3b – Managing Context Drift</h3>
+        <p>(Systems should maintain alignment with their intended operational context through robust monitoring of unsupervised learning processes. Organizations must actively prevent and address deviations that emerge during training, ensuring systems remain within their designed operational parameters)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Detect and manage context drift in unsupervised models through continuous monitoring and early warning systems.<br><br>
+                        b. Deploy early detection processes to identify and correct behavioral deviations before they become significant.<br><br>
+                        c. Enable adaptive retraining and feedback integration to respond effectively to evolving data patterns and environmental factors.
+                    </td>
+                    <td>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>
+                        I. Implementation and usage logs of drift detection tools.<br><br>
+                        II. Comprehensive records of performance metrics tracked over time.<br><br>
+                        III. Documentation of adopted drift mitigation strategies and their effectiveness.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G6.4b – Managing Contextual Ambiguity</h3>
+        <p>(Systems should maintain clear operational context understanding even in situations with ambiguous or incomplete information. Organizations must implement robust validation mechanisms to ensure systems can effectively navigate scenarios where operational context or expectations may be unclear)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Validate contextual understanding through mechanisms that anticipate and track how systems absorb and process contextual information during operation.<br><br>
+                        b. Document and analyze situations where contextual ambiguity exists, comparing outcomes between clear and unclear contextual scenarios to improve system performance.<br><br>
+                        c. Enable systems to identify and appropriately handle cases of contextual uncertainty.
+                    </td>
+                    <td>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>
+                        I. Documentation demonstrating how systems utilize adaptive learning mechanisms to absorb and process context-specific information over time.<br><br>
+                        II. Analysis of cases where system performance was affected by unclear expectations or missing contextual information, including remediation efforts and outcomes.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G6.5b – Preventing Decision Fatigue</h3>
+        <p>(Systems should protect against degradation in decision quality that can occur when users face frequent confirmation requests. Organizations must implement mechanisms to maintain high-quality decision-making even during periods of intensive user interaction)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Maintain consistent decision quality through intelligent management of user confirmation requests.<br><br>
+                        b. Provide contextual decision support with structured information that aids user comprehension and decision-making.<br><br>
+                        c. Continuously improve user experience through systematic feedback collection and usability refinements.<br><br>
+                        d. Balance the need for user oversight with the risks of decision fatigue.
+                    </td>
+                    <td>I<br><br>I<br><br>I<br><br>I</td>
+                    <td>D, I, O, M<br><br>D, I, O, M<br><br>D, I, O, M<br><br>D, I, O, M</td>
+                    <td>
+                        I. Comprehensive records and summaries of system activity related to user interactions.<br><br>
+                        II. Analysis reports detailing the frequency and types of decisions users must make.<br><br>
+                        III. Documentation of implemented decision support tools and their effectiveness in supporting informed user decisions.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
 
         <h1 id="driver-g7-achieving-and-sustaining-a-safe-system-profile">Driver G7 – Achieving and Sustaining a Safe System Profile</h1>
@@ -1327,7 +1433,7 @@
             <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
                 <tr>
-                    <td>a. Foster an organizational culture emphasizing safety through clear communication and demonstrated commitment at all levels.<br><br>b. Implement proactive risk assessment throughout development and operations to identify and address potential issues early.<br><br>c. Maintain robust contingency plans with clearly defined resources and procedures for handling unexpected safety concerns.<br><br>d. Adopt a "caution by default" approach that prioritizes safety over performance in conditions of uncertainty.<br><br>a. Define clear safety roles and responsibilities, ensuring all team members understand and remain accountable for their safety duties. <!-- PDF has 'a.' again --></td>
+                    <td>a. Foster an organizational culture emphasizing safety through clear communication and demonstrated commitment at all levels.<br><br>b. Implement proactive risk assessment throughout development and operations to identify and address potential issues early.<br><br>c. Maintain robust contingency plans with clearly defined resources and procedures for handling unexpected safety concerns.<br><br>d. Adopt a "caution by default" approach that prioritizes safety over performance in conditions of uncertainty.<br><br>e. Define clear safety roles and responsibilities, ensuring all team members understand and remain accountable for their safety duties. <!-- PDF has 'a.' again --></td>
                     <td>N<br><br>N<br><br>N<br><br>I<br><br>N</td>
                     <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
                     <td>I. Comprehensive documentation of safety training programs, including attendance records.<br><br>II. Risk assessment logs and reports demonstrating identification and mitigation of potential risks.<br><br>III. Detailed contingency plans showing assigned roles, responsibilities, and allocated resources.<br><br>IV. Records of safety-focused communications, including meetings, notices, and policy documents.<br><br>Audit reports confirming adherence to "caution by default" operational approaches. (This was a standalone point, integrated here as part of evidence for d.)</td>
@@ -1718,6 +1824,32 @@
             </tbody>
         </table>
 
+        <h3>G8.8b – Undefined Multi-Agent Interaction Protocols</h3>
+        <p>(Systems should maintain robust management of inter-agent interactions, especially when protocols are undefined or may evolve. Organizations should establish comprehensive governance frameworks ensuring behavioral predictability and compliance across multi-agent environments.)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Establish comprehensive principles, regulations, and policies governing inter-agent interactions, defining permissible behaviors, performance expectations, and compliance mechanisms.<br><br>
+                        b. Translate governance requirements into precise technical specifications, ensuring agents understand and adhere to defined interaction protocols and behavioral boundaries.<br><br>
+                        c. Implement robust control mechanisms within the system architecture to enforce compliance with interaction protocols and prevent unauthorized or unpredictable behaviors.<br><br>
+                        d. Maintain continuous monitoring and validation of inter-agent interactions, ensuring adherence to established protocols and detecting any emergent or non-compliant behaviors.<br><br>
+                        e. Implement comprehensive risk management strategies to address undefined or evolving interaction protocols, including mechanisms for adapting governance frameworks and control measures.
+                    </td>
+                    <td>N<br><br>N<br><br>N<br><br>N<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>
+                        I. Comprehensive policy documentation governing inter-agent interactions, including definitions of permissible behaviors and compliance enforcement mechanisms.<br><br>
+                        II. Technical specifications demonstrating implementation of interaction protocols and behavioral boundaries, with clear traceability to governance requirements.<br><br>
+                        III. Design documentation showing architectural implementation of control mechanisms for inter-agent interactions, including validation of compliance enforcement features.<br><br>
+                        IV. Validation records demonstrating testing of interaction protocols and control mechanisms across various multi-agent scenarios, including detection of non-compliance.<br><br>
+                        V. Documentation of risk management strategies for undefined or evolving interaction protocols, including adaptive governance mechanisms and control measures.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
         <h1 id="driver-g9-responsible-governance-of-aai-safety">Driver G9 – Responsible Governance of AAI Safety</h1>
         <!-- G9 Content -->
         <h3>G9 – Responsible Governance of AAI Safety</h3>
@@ -2088,6 +2220,30 @@
             </tbody>
         </table>
 
+        <h3>G1b.5b – Manage Interactions on the Deep & Dark Web</h3>
+        <p>(Systems should maintain robust authentication and verification capabilities when operating in non-indexed network environments. Organizations should establish frameworks for managing system interactions with deep and dark web content while sharing responsibility for emerging risks)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Establish cooperative risk management frameworks for system operations in non-indexed network environments.<br><br>
+                        b. Implement shared responsibility models for addressing unknown and emerging systemic risks.<br><br>
+                        c. Create explicit documentation of authentication and verification requirements for deep web interactions.<br><br>
+                        d. Define clear processes for monitoring and managing exponential growth in interaction volumes.<br><br>
+                        e. Maintain evidence of risk mitigation strategies for uncontrolled network variables.
+                    </td>
+                    <td>N<br><br>N<br><br>N<br><br>I<br><br>N</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>
+                        I. Comprehensive Terms of Service documentation detailing deep web interaction governance.<br><br>
+                        II. Evidence of risk-sharing mechanisms including self-insurance and collaborative response protocols.<br><br>
+                        III. Documentation of authentication and verification procedures for non-indexed content.<br><br>
+                        IV. Records demonstrating management of emerging and systemic risks.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
         <h1 id="inhibitor-g2b-deception">Inhibitor G2b – Deception</h1>
         <h3>G2b – Deception</h3>
@@ -2287,6 +2443,29 @@
             </tbody>
         </table>
 
+        <h3>G2b.6b – Behavioral Assessment and Trust Systems</h3>
+        <p>(Systems should incorporate frameworks for assessing and rating AI behavior and trustworthiness, while ensuring these assessment mechanisms themselves remain reliable and resistant to manipulation. These frameworks should account for recency of behavior and include independent verification processes.)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Organizations should establish comprehensive behavioral assessment systems that evaluate adherence to established codes of practice and operational standards.<br><br>
+                        b. Organizations should implement independent verification mechanisms for trust ratings, including protection against manipulation of assessment systems.<br><br>
+                        c. Organizations should maintain dynamic rating systems that prioritize recent behavior while preserving historical context.
+                    </td>
+                    <td>N<br><br>N<br><br>I</td>
+                    <td>D, I, O, M, R<br><br>D, I, O, M, R<br><br>D, I, O, M, R</td>
+                    <td>
+                        I. Documentation of behavioral assessment frameworks, including evaluation criteria and measurement methodologies.<br><br>
+                        II. Evidence of independent verification processes for trust ratings, including safeguards against assessment system manipulation.<br><br>
+                        III. Records demonstrating dynamic rating adjustments based on system behavior, including weighting of recent actions.<br><br>
+                        IV. Documentation of assessment system security measures and manipulation detection capabilities.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
         <h1 id="inhibitor-g3b-degradation-of-contextual-information">Inhibitor G3b – Degradation of Contextual Information</h1>
         <h3>G3b – Degradation of Contextual Information</h3>
         <p>(Systems should preserve the integrity and meaning of information throughout their operation, preventing degradation, misattribution, or decontextualization whether caused by system processes or external actors)</p>
@@ -2466,6 +2645,24 @@
                     <td>N<br><br>N</td>
                     <td>D, I, O, M, R<br><br>D, I, O, M, R</td>
                     <td>I. Detailed documentation demonstrating criteria for escalating decisions to human oversight and procedures for presenting value conflicts to human operators.<br><br>II. Records of human-system interactions and confirmations, and analysis of decision outcomes following human consultation.<br><br>III. Verification of value alignment in final implementations.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>G3b.3b – Retraining and Recontextualization</h3>
+        <p>(Systems should possess robust capabilities for retraining and reconfiguration when contextual divergence is detected, enabling restoration of desired operational contexts. This includes maintaining systematic approaches to realignment while preserving essential operational continuity)</p>
+        <table>
+            <thead><tr><th>AAI Safety Foundational Requirements (AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>
+                        a. Implement comprehensive retraining and recontextualization protocols that detect divergence, initiate corrective measures, and verify successful restoration of intended contexts. These systems should maintain operational stability throughout the realignment process while documenting all contextual adjustments.
+                    </td>
+                    <td>N</td>
+                    <td>D, I, O, M, R</td>
+                    <td>
+                        I. Comprehensive documentation demonstrating divergence detection methodologies, retraining and reconfiguration procedures, context restoration verification processes, operational continuity measures during realignment, and validation of post-restoration performance.
+                    </td>
                 </tr>
             </tbody>
         </table>

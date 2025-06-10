@@ -476,56 +476,38 @@
         <h1>SUBSCRIBE FOR UPDATES</h1>
         <p class="text" style="text-align:center; margin-bottom: 40px;">Stay informed about the latest developments in our Safer Agentic AI research and frameworks.</p>
         
-        <!-- Begin Mailchimp Signup Form -->
+        <!-- Mailchimp Embedded Form -->
         <div id="mc_embed_signup" style="max-width: 1000px; margin: 0 auto; background-color: #f0f4f7; padding: 30px; border-radius: 10px;">
-            <form action="https://saferagenticai.us2.list-manage.com/subscribe/post?u=af8e6f0b260333a1061972ccf2d04cfd&amp;id=49a30bbcde" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll" style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: center;">
+            <!-- GitHub Pages version of Mailchimp form (direct from Mailchimp) -->
+            <form action="https://saferagenticai.us2.list-manage.com/subscribe/post?u=af8e6f0b260333a1061972ccf2d04cfd&id=49a30bbcde" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: center;">
                     <!-- Name field -->
-                    <input type="text" value="" name="FNAME" id="mce-FNAME" placeholder="Your name" style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
+                    <input type="text" value="" name="FNAME" placeholder="Your name" style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
                     
                     <!-- Email field -->
-                    <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
+                    <input type="email" value="" name="EMAIL" placeholder="Your Email" required style="flex: 1; min-width: 250px; padding: 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
                     
-                    <!-- Submit button -->
-                    <input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="action-button" style="min-width: 180px;">
+                    <!-- Submit button with inline styling to ensure it displays correctly -->
+                    <button type="submit" name="subscribe" style="min-width: 180px; background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; border: none; padding: 15px 40px; border-radius: 6px; font-size: 16px; text-transform: uppercase; font-weight: 700; font-family: 'Poppins', sans-serif; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1); letter-spacing: 1px;">SUBSCRIBE</button>
                     
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
                         <input type="text" name="b_af8e6f0b260333a1061972ccf2d04cfd_49a30bbcde" tabindex="-1" value="">
                     </div>
-                    
-                    <!-- Success message for local testing only -->
-                    <div id="local-success-msg" style="display:none; margin-top: 15px; width: 100%; text-align: center; color: #006633; padding: 10px; background-color: #eeffee; border-radius: 6px;">
-                        <span style="font-weight: bold;">✓ Form submitted successfully (local testing mode)</span>
-                    </div>
                 </div>
             </form>
         </div>
         
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
         <script type='text/javascript'>
-            (function($) {
-                window.fnames = new Array(); 
-                window.ftypes = new Array();
-                fnames[0]='EMAIL';ftypes[0]='email';
-                fnames[1]='FNAME';ftypes[1]='text';
-                
-                // Only intercept for local testing
-                $('#mc-embedded-subscribe-form').on('submit', function(e) {
-                    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === '' || window.location.protocol === 'file:') {
-                        e.preventDefault();
-                        $('#local-success-msg').show();
-                        setTimeout(function() {
-                            $('#mc-embedded-subscribe-form')[0].reset();
-                            $('#local-success-msg').hide();
-                        }, 3000);
-                        return false;
-                    }
-                    // For live site, let it submit normally to Mailchimp
-                });
-            }(jQuery));
+            // Simple local testing support - add message for local testing only
+            $(document).ready(function() {
+                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:') {
+                    $('#mc-embedded-subscribe-form').on('submit', function(e) {
+                        alert("In local testing mode. On the live site, this will connect to Mailchimp.");
+                    });
+                }
+            });
         </script>
-        <!--End Mailchimp Signup Form-->
     </div>
 
     <div class="container blog main gray" id="get-involved">

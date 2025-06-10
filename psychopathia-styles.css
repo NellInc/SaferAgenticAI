@@ -171,7 +171,7 @@ pre:not(:has(code.plaintext)) code {
     background-color: #f0f4f8; 
     color: #2c3e50;
     font-weight: 600;
-    text-align: left;
+    text-align: center !important;
     padding: 8px 10px; 
     border: 1px solid #dde5eb;
     font-size: 0.95em; 
@@ -549,4 +549,207 @@ html {
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
     text-underline-offset: 2px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2c3e50;
+}
+
+.send-button {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.send-button:hover {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+.send-button i {
+    margin-left: 8px;
+}
+
+/* Abbreviations and Glossary Table Styles */
+.abbreviations-table,
+.glossary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+}
+
+.abbreviations-table td,
+.glossary-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.abbreviations-table td:first-child,
+.glossary-table td:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+    width: 25%;
+    background-color: #f8f9fa;
+}
+
+.abbreviations-table td:last-child,
+.glossary-table td:last-child {
+    width: 75%;
+    line-height: 1.6;
+}
+
+.abbreviations-table tr:hover,
+.glossary-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Code block styling for citation */
+pre code.plaintext {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85em;
+    line-height: 1.4;
+    color: #333;
+    display: block;
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 0 20px;
+    }
+    
+    .abbreviations-table td:first-child,
+    .glossary-table td:first-child {
+        width: 30%;
+    }
+    
+    .abbreviations-table td:last-child,
+    .glossary-table td:last-child {
+        width: 70%;
+    }
+}
+
+/* Framework Table Alignment - Make N/I and stakeholder codes align with each SFR paragraph */
+table thead tr th {
+    vertical-align: middle;
+    text-align: center !important;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+}
+
+table tbody tr td {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    vertical-align: top;
+}
+
+/* Remove zebra striping from framework tables */
+table tbody tr:nth-child(odd),
+table tbody tr:nth-child(even) {
+    background-color: transparent !important;
+}
+
+/* SFR column styling - establish baseline for paragraph spacing */
+table tbody tr td:nth-child(1) {
+    line-height: 1.6em;
+    padding-right: 20px;
+}
+
+/* This class will be added to the cells that need vertical alignment. */
+table tbody td.sfr-align {
+    vertical-align: middle !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Column width controls for framework tables - UPDATED FOR STAKEHOLDER COLUMN WIDTH */
+/* SFR column - needs substantial space */
+table thead tr th:nth-child(1),
+table tbody tr td:nth-child(1),
+.disorder-white table thead tr th:nth-child(1),
+.disorder-white table tbody tr td:nth-child(1),
+.disorder-grey table thead tr th:nth-child(1),
+.disorder-grey table tbody tr td:nth-child(1) {
+    width: 32% !important;
+    min-width: 32% !important;
+    max-width: 32% !important;
+}
+
+/* Normative/Instructive column - minimal space */
+table thead tr th:nth-child(2),
+table tbody tr td:nth-child(2),
+.disorder-white table thead tr th:nth-child(2),
+.disorder-white table tbody tr td:nth-child(2),
+.disorder-grey table thead tr th:nth-child(2),
+.disorder-grey table tbody tr td:nth-child(2) {
+    width: 12% !important;
+    min-width: 12% !important;
+    max-width: 12% !important;
+}
+
+/* Stakeholder column - MORE SPACE for D, I, O, M, U, R to fit on 2 lines */
+table thead tr th:nth-child(3),
+table tbody tr td:nth-child(3),
+.disorder-white table thead tr th:nth-child(3),
+.disorder-white table tbody tr td:nth-child(3),
+.disorder-grey table thead tr th:nth-child(3),
+.disorder-grey table tbody tr td:nth-child(3) {
+    width: 25% !important;
+    min-width: 25% !important;
+    max-width: 25% !important;
+}
+
+/* Evidence column - substantial space */
+table thead tr th:nth-child(4),
+table tbody tr td:nth-child(4),
+.disorder-white table thead tr th:nth-child(4),
+.disorder-white table tbody tr td:nth-child(4),
+.disorder-grey table thead tr th:nth-child(4),
+.disorder-grey table tbody tr td:nth-child(4) {
+    width: 31% !important;
+    min-width: 31% !important;
+    max-width: 31% !important;
 }

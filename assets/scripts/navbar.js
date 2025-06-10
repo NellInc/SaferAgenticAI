@@ -507,7 +507,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             nav.classList.add('has-active');
             
-            // Auto-scroll navigation to keep active item visible
+            // Smart auto-scroll to keep active item visible without rollover
             const activeItem = nav.querySelector('.nav-item.active');
             if (activeItem) {
                 const navList = nav.querySelector('.nav-list');
@@ -515,27 +515,36 @@ document.addEventListener('DOMContentLoaded', function() {
                     const navListRect = navList.getBoundingClientRect();
                     const activeItemRect = activeItem.getBoundingClientRect();
                     
-                    // Calculate if the active item is outside the visible area
+                    // Calculate positions relative to the nav list
                     const itemTop = activeItemRect.top - navListRect.top + navList.scrollTop;
                     const itemBottom = itemTop + activeItemRect.height;
                     const visibleTop = navList.scrollTop;
                     const visibleBottom = visibleTop + navListRect.height;
                     
-                    // Add some padding for better visibility
-                    const padding = 60;
+                    // Get scroll boundaries
+                    const maxScrollTop = Math.max(0, navList.scrollHeight - navList.clientHeight);
+                    const currentScrollTop = navList.scrollTop;
                     
-                    if (itemTop < visibleTop + padding) {
-                        // Item is above visible area, scroll up
-                        navList.scrollTo({
-                            top: Math.max(0, itemTop - padding),
-                            behavior: 'smooth'
-                        });
-                    } else if (itemBottom > visibleBottom - padding) {
-                        // Item is below visible area, scroll down
-                        navList.scrollTo({
-                            top: itemBottom - navListRect.height + padding,
-                            behavior: 'smooth'
-                        });
+                    // Only scroll if there's actually content to scroll and item is outside visible area
+                    if (maxScrollTop > 0) {
+                        const padding = 30; // Reduced padding to be more conservative
+                        
+                        // Check if item is above visible area AND we can scroll up
+                        if (itemTop < visibleTop + padding && currentScrollTop > 0) {
+                            const targetScrollTop = Math.max(0, itemTop - padding);
+                            // Only scroll if it's a meaningful change and won't cause issues
+                            if (targetScrollTop < currentScrollTop) {
+                                navList.scrollTop = targetScrollTop;
+                            }
+                        }
+                        // Check if item is below visible area AND we can scroll down
+                        else if (itemBottom > visibleBottom - padding && currentScrollTop < maxScrollTop) {
+                            const targetScrollTop = Math.min(maxScrollTop, itemBottom - navListRect.height + padding);
+                            // Only scroll if it's a meaningful change and won't cause issues  
+                            if (targetScrollTop > currentScrollTop) {
+                                navList.scrollTop = targetScrollTop;
+                            }
+                        }
                     }
                 }
             }

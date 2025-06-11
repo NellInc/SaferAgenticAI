@@ -737,9 +737,9 @@ table tbody tr td:nth-child(3),
 .disorder-white table tbody tr td:nth-child(3),
 .disorder-grey table thead tr th:nth-child(3),
 .disorder-grey table tbody tr td:nth-child(3) {
-    width: 25% !important;
-    min-width: 25% !important;
-    max-width: 25% !important;
+    width: 20% !important;
+    min-width: 20% !important;
+    max-width: 20% !important;
 }
 
 /* Evidence column - substantial space */
@@ -749,7 +749,7 @@ table tbody tr td:nth-child(4),
 .disorder-white table tbody tr td:nth-child(4),
 .disorder-grey table thead tr th:nth-child(4),
 .disorder-grey table tbody tr td:nth-child(4) {
-    width: 31% !important;
-    min-width: 31% !important;
-    max-width: 31% !important;
+    width: 36% !important;
+    min-width: 36% !important;
+    max-width: 36% !important;
 }

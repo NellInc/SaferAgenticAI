@@ -179,83 +179,12 @@
             background-color: #2c3e50;
         }
 
-        /* LIGHTBOX STYLES */
-        body.lightbox-open {
-            overflow: hidden; 
-        }
-        body.lightbox-open #table-of-contents {
-            display: none !important; 
-        }
-        .lightbox {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .lightbox.show {
-            display: flex;
-            opacity: 1;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            box-shadow: 0 0 25px rgba(0,0,0,0.5);
-        }
-        .lightbox .close-lightbox {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 2.5em;
-            color: white;
-            cursor: pointer;
-            line-height: 1;
-        }
-        .lightbox .lightbox-nav {
-             position: absolute;
-             top: 50%;
-             left: 15px; 
-             right: 15px;
-             transform: translateY(-50%);
-             z-index: 1001;
-             display: flex;
-             justify-content: space-between;
-        }
-        .lightbox .lightbox-nav a {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-        .lightbox .lightbox-nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
+
     </style>
 </head>
 <body>
 
-    <!-- LIGHTBOX CONTAINER -->
-    <div class="lightbox" id="lightbox">
-        <span class="close-lightbox">×</span>
-        <div class="lightbox-nav">
-            <a id="lightbox-prev"><i class="fa-solid fa-arrow-left"></i></a>
-            <a id="lightbox-next"><i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <img src="" alt="Lightbox image" id="lightbox-img">
-    </div>
+
 
     <!-- Title Page -->
     <div class="container blog" id="first-content" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);">
@@ -277,7 +206,7 @@
                 <div class="info">
                     <div>
                         <a href="framework.html" class="button icon">Framework <i class="fa-solid fa-sitemap"></i></a>
-                        <a href="Safer_Agentic_AI_Foundations_Vol2_I1_March2025.pdf" target="_blank" rel="noopener noreferrer" class="button icon">Hard Copy <i class="fa-solid fa-book-open"></i></a>
+                        <a href="assets/figures/Safer_Agentic_AI_Foundations_Vol2_I1_March2025.pdf" target="_blank" rel="noopener noreferrer" class="button icon">Hard Copy <i class="fa-solid fa-book-open"></i></a>
                         <a href="#forthcoming-book" class="button icon">Book <i class="fa-solid fa-book"></i></a>
                     </div>
                 </div>
@@ -419,7 +348,7 @@
     
     <div class="container blog main">
         <div style="text-align: center; margin: 30px 0;">
-             <a href="framework.html" class="big-framework-button">Explore the Full Framework <i class="fa-solid fa-sitemap"></i></a>
+             <a href="framework.html" style="padding:15px 25px;border:none;border-radius:6px;background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);color:#fff;font-size:16px;font-weight:600;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:1px;text-decoration:none;display:inline-block;" onmouseover="this.style.background='linear-gradient(135deg, #4a5f7a 0%, #5a6f8a 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #2c3e50 0%, #34495e 100%)'">EXPLORE THE FULL FRAMEWORK <i class="fa-solid fa-sitemap"></i></a>
         </div>
     </div>
     
@@ -508,8 +437,10 @@
       <button type="submit"
               style="padding:15px 25px;border:none;border-radius:6px;
                      background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);
-                     color:#fff;font-size:16px;font-weight:600;cursor:pointer;">
-        Subscribe
+                     color:#fff;font-size:16px;font-weight:600;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:1px;"
+              onmouseover="this.style.background='linear-gradient(135deg, #4a5f7a 0%, #5a6f8a 100%)'" 
+              onmouseout="this.style.background='linear-gradient(135deg, #2c3e50 0%, #34495e 100%)'">
+        SUBSCRIBE
       </button>
     </div>
   </form>
@@ -570,7 +501,7 @@
         <h1>GET INVOLVED</h1>
         <p class="text" style="text-align:center;">Join our growing community of practitioners committed to ensuring the safe and beneficial development of agentic AI systems.</p>
         <div style="text-align: center; margin-top: 20px;">
-            <a href="https://www.linkedin.com/groups/12966081/" target="_blank" rel="noopener noreferrer" class="big-framework-button">Join the Community <i class="fa-solid fa-users"></i></a>
+                         <a href="https://www.linkedin.com/groups/12966081/" target="_blank" rel="noopener noreferrer" style="padding:15px 25px;border:none;border-radius:6px;background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);color:#fff;font-size:16px;font-weight:600;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:1px;text-decoration:none;display:inline-block;" onmouseover="this.style.background='linear-gradient(135deg, #4a5f7a 0%, #5a6f8a 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #2c3e50 0%, #34495e 100%)'">JOIN THE COMMUNITY <i class="fa-solid fa-users"></i></a>
         </div>
     </div>
     
@@ -607,7 +538,7 @@
             <textarea id="message" name="message" placeholder="Write something..." style="height: 200px;" required></textarea>
 
             <div style="text-align: center;">
-                <button type="submit" class="send-button">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                <button type="submit" style="padding:15px 25px;border:none;border-radius:6px;background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%);color:#fff;font-size:16px;font-weight:600;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:1px;" onmouseover="this.style.background='linear-gradient(135deg, #4a5f7a 0%, #5a6f8a 100%)'" onmouseout="this.style.background='linear-gradient(135deg, #2c3e50 0%, #34495e 100%)'">SEND MESSAGE <i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </form>
     </div>
@@ -640,7 +571,7 @@
         </div>    
     </footer>
 
-    <!-- SWIPER CAROUSEL & LIGHTBOX JAVASCRIPT -->
+    <!-- SWIPER CAROUSEL JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Initialize Swiper carousel
@@ -671,67 +602,6 @@
                     enabled: true,
                     onlyInViewport: true,
                 },
-            });
-
-            // Lightbox functionality
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxPrevBtn = document.getElementById('lightbox-prev');
-            const lightboxNextBtn = document.getElementById('lightbox-next');
-            const closeBtn = lightbox.querySelector('.close-lightbox');
-
-            function openLightbox() {
-                const activeSlide = document.querySelector('.framework-carousel .swiper-slide-active img');
-                if (activeSlide) {
-                document.body.classList.add('lightbox-open');
-                    lightboxImg.src = activeSlide.src;
-                lightbox.classList.add('show');
-                }
-            }
-
-            function closeLightbox() {
-                document.body.classList.remove('lightbox-open');
-                lightbox.classList.remove('show');
-            }
-
-            // Lightbox event listeners
-            document.querySelector('.framework-carousel').addEventListener('click', openLightbox);
-            closeBtn.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) closeLightbox();
-            });
-
-            lightboxPrevBtn.addEventListener('click', (e) => { 
-                e.stopPropagation(); 
-                frameworkSwiper.slidePrev();
-                // Update lightbox image to match new active slide
-                setTimeout(() => {
-                    const activeSlide = document.querySelector('.framework-carousel .swiper-slide-active img');
-                    if (activeSlide) lightboxImg.src = activeSlide.src;
-                }, 100);
-            });
-
-            lightboxNextBtn.addEventListener('click', (e) => { 
-                e.stopPropagation(); 
-                frameworkSwiper.slideNext();
-                // Update lightbox image to match new active slide
-                setTimeout(() => {
-                    const activeSlide = document.querySelector('.framework-carousel .swiper-slide-active img');
-                    if (activeSlide) lightboxImg.src = activeSlide.src;
-                }, 100);
-            });
-
-            // Keyboard navigation for lightbox
-            document.addEventListener('keydown', (e) => {
-                if (lightbox.classList.contains('show')) {
-                    if (e.key === 'Escape') {
-                        closeLightbox();
-                    } else if (e.key === 'ArrowLeft') {
-                        lightboxPrevBtn.click();
-                    } else if (e.key === 'ArrowRight') {
-                        lightboxNextBtn.click();
-                    }
-                }
             });
         });
     </script>

@@ -1106,6 +1106,9 @@ code {
 
 pre {
   font-family: "Fira Code", monospace;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 pre code {
@@ -1113,6 +1116,9 @@ pre code {
   display: block;
   padding: 1.5vh 1.5vw !important;
   overflow-x: auto;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* ======================== Selection ===================== */

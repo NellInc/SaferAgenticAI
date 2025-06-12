@@ -44,6 +44,11 @@ pre code.plaintext {
     border-radius: 12px !important;
     padding: 25px !important;
     border: 1px solid #3d566f !important;
+    display: block !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
 }
 
 pre:has(code.plaintext) {
@@ -52,6 +57,22 @@ pre:has(code.plaintext) {
     border-radius: 12px !important;
     padding: 0 !important;
     border: 1px solid #3d566f !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    left: 0 !important;
+    position: relative !important;
+}
+
+/* Override any container padding that might affect the citation box */
+.container pre:has(code.plaintext) {
+    left: 0 !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 /* Table-specific styles from original psychopathia-styles - Review if needed for new tables */

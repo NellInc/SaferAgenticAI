@@ -1,0 +1,28 @@
+/* ======================== Code ===================== */
+code {
+  background-color: rgba(230, 235, 237, 0.25);
+  border-radius: 10px;
+  border: solid 1px #c6c6c6;
+  font-family: "Fira Code", monospace;
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em;
+  color: #666667;
+  font-size: 75% !important;
+}
+
+pre {
+  font-family: "Fira Code", monospace;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+pre code {
+  background-color: #fafafa !important;
+  display: block;
+  padding: 1.5vh 1.5vw !important;
+  overflow-x: auto;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+} 

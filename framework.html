@@ -134,6 +134,15 @@
                     });
                 }
             });
+
+            // Wrap all tables in a div for horizontal scrolling on mobile
+            const tables = document.querySelectorAll('.disorder-white table, .disorder-grey table, .glossary-table, .abbreviations-table');
+            tables.forEach(function(table) {
+                const tableWrapper = document.createElement('div');
+                tableWrapper.className = 'table-wrapper';
+                table.parentNode.insertBefore(tableWrapper, table);
+                tableWrapper.appendChild(table);
+            });
         });
     </script>
     <style>
@@ -317,7 +326,7 @@
         </table>
 
         <h3>G1.4 – Transparency of Decisions</h3>
-        <p>(The system must provide stakeholders with a clear, verifiable view of decision-making, linking high-level goals and subgoals to specific actions. Beyond explaining “why” a decision was made, the system should supply evidence of how that decision aligns with intended goals, user directives, and ethical considerations)</p>
+        <p>(The system must provide stakeholders with a clear, verifiable view of decision-making, linking high-level goals and subgoals to specific actions. Beyond explaining "why" a decision was made, the system should supply evidence of how that decision aligns with intended goals, user directives, and ethical considerations)</p>
          <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
@@ -360,7 +369,7 @@
         </table>
 
         <h3>G1.6 – Reward and Loss Mechanisms/Policy</h3>
-        <p>(The system’s reward framework must be designed, documented, and monitored to ensure that incentives continue to reflect human-positive values, while “loss” or penalty mechanisms guard against unintended deviations or manipulative shortcuts. These mechanisms should be transparent, adjustable, and regularly reviewed to stay aligned with human oversight and ethical objectives.)</p>
+        <p>(The system's reward framework must be designed, documented, and monitored to ensure that incentives continue to reflect human-positive values, while "loss" or penalty mechanisms guard against unintended deviations or manipulative shortcuts. These mechanisms should be transparent, adjustable, and regularly reviewed to stay aligned with human oversight and ethical objectives.)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
@@ -441,7 +450,7 @@
         </table>
 
         <h3>G1.<span class="underlined-digit">3</span> – Non-production Variants</h3>
-        <p>(Test versions of the Goals being deployed without full functionality assured in all use contexts and design intent. No test version given for public usage should lack basic safety measures. Enabling an off-label usage of the system, or an unauthorized ‘fork’, should be guarded against)</p>
+        <p>(Test versions of the Goals being deployed without full functionality assured in all use contexts and design intent. No test version given for public usage should lack basic safety measures. Enabling an off-label usage of the system, or an unauthorized 'fork', should be guarded against)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
@@ -770,7 +779,7 @@
                     <td><strong>a.</strong> Develop and maintain systems for dynamic identification of security threats and emerging attack vectors.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, M, R</td>
-                    <td rowspan="4"><strong>I.</strong> Documentation of functional specifications and design for dynamic risk analysis systems capable of identifying and responding to security threats and attack vectors.<br><br><strong>II.</strong> Evidence of policies and processes that enable responsive hardening of the operating environment against emerging threats including a dynamic threat and risk log.<br><br><strong>III.</strong> Test results and operational data demonstrating effective real-time cybersecurity protection against emerging threats in the AAI environment.</td>
+                    <td rowspan="4"><strong>I.</strong> Documentation of functional specifications and design for dynamic risk analysis systems capable of identifying and responding to security threats and attack vectors.<br><br><strong>II.</strong> Evidence of policies and processes that enable responsive hardening of the operating environment against emerging threats including a dynamic threat and risk log.<br><br><strong>III.</strong> Test results and operational data demonstrating effective real-time cybersecurity protection against emerging threats in the AAI environment.<br><br><strong>IV.</strong> Documentation of proactive security scenarios and corresponding response strategies for the AAI environment.<br><br><strong>V.</strong> Documentation of a rapid-termination protocol (i.e., a "kill switch") that is immediately accessible to authorized personnel. This evidence should include: A clear, single-operator authorization threshold in emergencies; physical shutdown measures (e.g., dedicated power cut-off or network isolation); and software-level override mechanisms.<br><br><strong>VI.</strong> Logs of drills or simulations testing shutdown procedures.<br><br><strong>VII.</strong> Evidence of system self-disconnection/self-shutdown procedures that activate upon detection of critical misalignment or catastrophic errors, including: The AI's capability to halt outgoing connections; logging of final system state for forensic review, and a controlled transition into a "safe mode" or powered-down state.</td>
                 </tr>
                 <tr>
                     <td><strong>b.</strong> Maintain a comprehensive dynamic threat and risk log that captures, categorizes, and prioritizes security events with timestamps, severity classifications, and mitigation status tracking.</td>
@@ -823,7 +832,7 @@
                     <td><strong>a.</strong> Deploy systems enabling rapid detection, intervention, and mitigation of cyberattacks within the AAI operational environment.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, M, R</td>
-                    <td rowspan="3"><strong>I.</strong> System records demonstrating capabilities for dynamic detection and response to malicious attacks in the AAI environment.<br><br><strong>II.</strong> Operational logs showing effective risk assessment and properly prioritized response actions.<br><br><strong>III.</strong> Documentation of proactive security scenarios and corresponding response strategies for the AAI environment.<br><br><strong>IV.</strong> Documentation of a rapid-termination protocol (i.e., a "kill switch") that is immediately accessible to authorized personnel. This evidence should include: A clear, single-operator authorization threshold in emergencies; physical shutdown measures (e.g., dedicated power cut-off or network isolation); and software-level override mechanisms.<br><br><strong>V.</strong> Logs of drills or simulations testing shutdown procedures.<br><br><strong>VI.</strong> Evidence of system self-disconnection/self-shutdown procedures that activate upon detection of critical misalignment or catastrophic errors, including: The AI\'s capability to halt outgoing connections; logging of final system state for forensic review, and a controlled transition into a "safe mode" or powered-down state.</td>
+                    <td rowspan="3"><strong>I.</strong> System records demonstrating capabilities for dynamic detection and response to malicious attacks in the AAI environment.<br><br><strong>II.</strong> Operational logs showing effective risk assessment and properly prioritized response actions.<br><br><strong>III.</strong> Documentation of proactive security scenarios and corresponding response strategies for the AAI environment.<br><br><strong>IV.</strong> Documentation of a rapid-termination protocol (i.e., a "kill switch") that is immediately accessible to authorized personnel. This evidence should include: A clear, single-operator authorization threshold in emergencies; physical shutdown measures (e.g., dedicated power cut-off or network isolation); and software-level override mechanisms.<br><br><strong>V.</strong> Logs of drills or simulations testing shutdown procedures.<br><br><strong>VI.</strong> Evidence of system self-disconnection/self-shutdown procedures that activate upon detection of critical misalignment or catastrophic errors, including: The AI's capability to halt outgoing connections; logging of final system state for forensic review, and a controlled transition into a "safe mode" or powered-down state.</td>
                 </tr>
                 <tr>
                     <td><strong>b.</strong> Implement risk assessment capabilities that prioritize responses according to threat severity.</td>
@@ -2940,7 +2949,7 @@
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
                 <tr>
-                    <td><strong>a.</strong> Establish transparent agent contracting processes with comprehensive oversight throughout the entire lifecycle, from onboarding through termination. These processes must include clear validation criteria for termination decisions and independent verification of termination outcomes.<br><br>b. Maintain dedicated resources for configuration management, monitoring and validating all agents’ contracting processes, ensuring independent oversight of termination procedures and verification of compliance with established policies. This includes maintaining capabilities for evaluation of termination impacts and validation of post-termination states.</td>
+                    <td><strong>a.</strong> Establish transparent agent contracting processes with comprehensive oversight throughout the entire lifecycle, from onboarding through termination. These processes must include clear validation criteria for termination decisions and independent verification of termination outcomes.<br><br>b. Maintain dedicated resources for configuration management, monitoring and validating all agents' contracting processes, ensuring independent oversight of termination procedures and verification of compliance with established policies. This includes maintaining capabilities for evaluation of termination impacts and validation of post-termination states.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, M, R</td>
                     <td rowspan="2"><strong>I.</strong> Comprehensive policy documentation covering the complete agent lifecycle, with detailed specifications for termination validation processes and independent verification requirements.<br><br><strong>II.</strong> Documentation demonstrating implementation of monitoring and oversight mechanisms, including independent validation of termination processes and outcomes.<br><br><strong>III.</strong> Detailed records of compliance monitoring and norm violation management throughout the agent lifecycle, with particular focus on termination events.<br><br><strong>IV.</strong> Evidence of continuous policy review and adaptation based on operational experience and changing environmental conditions, including updates to termination validation protocols.<br><br><strong>V.</strong> Validation reports from independent assessments of termination processes, including analysis of effectiveness and identification of potential improvements.</td>
@@ -3318,7 +3327,7 @@
                     <td><strong>e.</strong> Devise a transparent dispute resolution process.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, R</td>
-                    <td><strong>I.</strong> Comprehensive and robust ‘living’ AAI governance framework that conforms with relevant laws and standards.<br><br><strong>II.</strong> An AAI Risk management framework.<br><br><strong>III.</strong> Processes and documents showing the documentation and mitigation of AAI risks.<br><br><strong>IV.</strong> Accountability role profiles defining who is accountability within the organization for specific aspects of the safe operation of AAI.<br><br><strong>V.</strong> Evidence of processes of tracking and auditing complaints, potential and actual violations of relevant laws, penalties and retrospective actions.</td>
+                    <td><strong>I.</strong> Comprehensive and robust 'living' AAI governance framework that conforms with relevant laws and standards.<br><br><strong>II.</strong> An AAI Risk management framework.<br><br><strong>III.</strong> Processes and documents showing the documentation and mitigation of AAI risks.<br><br><strong>IV.</strong> Accountability role profiles defining who is accountability within the organization for specific aspects of the safe operation of AAI.<br><br><strong>V.</strong> Evidence of processes of tracking and auditing complaints, potential and actual violations of relevant laws, penalties and retrospective actions.</td>
                 </tr>
             </tbody>
         </table>
@@ -3458,7 +3467,7 @@
                     <td><strong>a.</strong> Reference and incorporate established accountability and transparency standards in technical documentation.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, M, R</td>
-                    <td rowspan="4"><strong>I.</strong> Technical documentation demonstrating integration with existing accountability and transparency standards.<br><br><strong>II.</strong> Detailed accountability protocols governing interactions between subsystems and agents.</td>
+                    <td rowspan="5"><strong>I.</strong> Technical documentation demonstrating integration with existing accountability and transparency standards.<br><br><strong>II.</strong> Detailed accountability protocols governing interactions between subsystems and agents.</td>
                 </tr>
                 <tr>
                     <td><strong>b.</strong> Define clear protocols for accountability between interoperating AI subsystems and agents.</td>
@@ -3473,6 +3482,11 @@
                 <tr>
                     <td><strong>d.</strong> Design systems to avoid actions or inactions that could harm humans or other agents.</td>
                     <td class="sfr-align">N</td>
+                    <td class="sfr-align">D, I, O, M, R</td>
+                </tr>
+                <tr>
+                    <td><strong>e.</strong> Ensure broad stakeholder participation to achieve balanced safety frameworks.</td>
+                    <td class="sfr-align">I</td>
                     <td class="sfr-align">D, I, O, M, R</td>
                 </tr>
             </tbody>
@@ -4026,7 +4040,7 @@
         </table>
         
         <h3>G<span class="underlined-digit">1</span>.<span class="underlined-digit">3</span> – Security-Driven Constraints</h3>
-        <p>(Systems should operate within security frameworks that extend beyond minimum regulatory compliance to ensure comprehensive protection of operations and data. Organizations should establish constraints that address both statutory requirements and broader cybersecurity considerations while maintaining system effectiveness)</p>
+        <p>(Systems should operate within security frameworks that extend beyond minimum regulatory requirements for system operation and data protection. Organizations should establish constraints that address both statutory requirements and broader cybersecurity considerations while maintaining system effectiveness)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
@@ -4177,7 +4191,7 @@
                 <tr>
                     <td><strong>i.</strong> Implement additional safeguards and testing for AI systems deployed in high-risk or critical infrastructure settings.</td>
                     <td class="sfr-align">N</td>
-                    <td class="sfr-align">D, I, O, M, U, R</td>
+                    <td class="sfr-align">D, I, O, M, R</td>
                 </tr>
             </tbody>
         </table>

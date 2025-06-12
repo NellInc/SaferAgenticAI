@@ -10,16 +10,16 @@
     <meta name="robots" content="all">
     <meta content="en_GB" property="og:locale">
     <meta content="website" property="og:type">
-    <meta content="YOUR_NEW_PROJECT_URL_HERE" property="og:url"> 
+    <meta content="https://www.SaferAgenticAI.org" property="og:url"> 
     <meta content="Safer Agentic AI Foundations: A Framework for Responsible Governance" property="og:title">
     <meta content="A comprehensive framework for the responsible governance and safety of advanced Agentic AI systems." property="og:description">
-    <meta content="YOUR_NEW_PROJECT_URL_HERE/assets/figures/AI_Safety_Logo-Color.png" property="og:image">
+    <meta content="https://www.SaferAgenticAI.org/assets/figures/AI_Safety_Logo-Color.png" property="og:image">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@NellWatson"> 
     <meta name="twitter:title" content="Safer Agentic AI Foundations: A Framework for Responsible Governance">
     <meta name="twitter:description" content="A comprehensive framework for the responsible governance and safety of advanced Agentic AI systems.">
-    <meta name="twitter:image" content="YOUR_NEW_PROJECT_URL_HERE/assets/figures/AI_Safety_Logo-Color.png">
+    <meta name="twitter:image" content="https://www.SaferAgenticAI.org/assets/figures/AI_Safety_Logo-Color.png">
     
     <link rel="icon" type="image/x-icon" href="assets/figures/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="assets/figures/favicon.svg">

@@ -1538,17 +1538,4 @@ select {
 .before figcaption,
 .after figcaption {
   font-size: 70%;
-}
-
-/* Center citation boxes properly */
-div.container.blog pre {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-    width: 100% !important;
-}
-
-div.container.blog pre code {
-    text-align: left !important;
-    display: inline-block !important;
 }/*# sourceMappingURL=main_free.css.map */

@@ -240,6 +240,27 @@ pre:not(:has(code.plaintext)) code {
     .disorder-white table td, .disorder-grey table td {
         padding: 6px 8px;
     }
+
+    /* Make all framework and glossary tables horizontally scrollable on mobile */
+    .container.blog table,
+    .disorder-white table,
+    .disorder-grey table,
+    .glossary-table,
+    .abbreviations-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100% !important; /* Let table take full viewport width */
+    }
+
+    /* Override rigid column widths on small screens */
+    .container.blog table th,
+    .container.blog table td {
+        min-width: unset !important;
+        max-width: unset !important;
+        width: auto !important;
+        white-space: nowrap; /* Prevent text wrapping but allow horizontal scroll */
+    }
 }
 
 /* Hover effects for interactivity */

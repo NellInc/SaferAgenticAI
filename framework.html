@@ -65,13 +65,13 @@
                 'Driver G8 – Goal Termination and Sunsetting',
                 'Driver G9 – Responsible Governance of AAI Safety',
                 // Inhibitors
-                'Inhibitor G1b – Opaque Agency Capabilities & Advances',
-                'Inhibitor G2b – Deception',
-                'Inhibitor G3b – Degradation of Contextual Information',
-                'Inhibitor G4b – Frontier Uncertainty',
-                'Inhibitor G5b – Future Technology Impact',
-                'Inhibitor G6b – Competitive Pressures',
-                'Inhibitor G7b – Imbalance in AI Capabilities'
+                'Inhibitor G<span class="underlined-digit">1</span> – Opaque Agency Capabilities & Advances',
+                'Inhibitor G<span class="underlined-digit">2</span> – Deception',
+                'Inhibitor G<span class="underlined-digit">3</span> – Degradation of Contextual Information',
+                'Inhibitor G<span class="underlined-digit">4</span> – Frontier Uncertainty',
+                'Inhibitor G<span class="underlined-digit">5</span> – Future Technology Impact',
+                'Inhibitor G<span class="underlined-digit">6</span> – Competitive Pressures',
+                'Inhibitor G<span class="underlined-digit">7</span> – Imbalance in AI Capabilities'
             ];
             
             // This loop finds each H1 from the array and wraps it in a .dysfunction-intro div.
@@ -85,13 +85,13 @@
                 }
             });
             
-            // This loop finds all H3 elements that are framework items (e.g., G1, G1.1, G1b.1)
+            // This loop finds all H3 elements that are framework items (e.g., G1, G1.1, G<span class="underlined-digit">1</span>.1)
             // and wraps them and their content in alternating styled boxes.
             const disorderHeadings = document.querySelectorAll('h3');
             let disorderIndex = 0; 
             disorderHeadings.forEach(function(heading) {
                 // Regex: Matches G<num>(.<num>b?)? (optional space – title)?
-                // This catches: G1 – Title, G1.1 – Title, G1.1b – Title
+                // This catches: G1 – Title, G1.1 – Title, G1.<span class="underlined-digit">1</span> – Title
                 if (heading.textContent.match(/^G\d+(\.\d+b?)?(\s*–.*)?$/i) || heading.textContent.match(/^G\d+b(\.\d+b?)?(\s*–.*)?$/i)) { 
                     const wrapper = document.createElement('div');
                     wrapper.className = disorderIndex % 2 === 0 ? 'disorder-white' : 'disorder-grey';
@@ -199,7 +199,7 @@
     <!-- FRAMEWORK CATALOG STARTS HERE -->
     <div class="container blog main"> 
         <h1 id="driver-g1-goal-alignment">Driver G1 – Goal Alignment</h1>
-        <!-- G1 Content (Zeroth Item and G1.1 - G1.7, G1.1b - G1.3b) -->
+        <!-- G1 Content (Zeroth Item and G1.1 - G1.7, G1.<span class="underlined-digit">1</span> - G1.<span class="underlined-digit">3</span>) -->
         <h3>G1 – Goal Alignment</h3>
         <p>(Systems should maintain robust alignment between their operational goals and human values, intentions, and positive outcomes. Organizations should establish frameworks ensuring that goal decomposition and strategy planning are transparent, robust, and bounded; maintaining human control over the formation of instrumental goals; and ensuring that reinforcement or behavioral reward mechanisms remain aligned, transparent, and biased towards human-positive outcomes)</p>
         <table>
@@ -379,7 +379,7 @@
             </tbody>
         </table>
         
-        <h3>G1.1b – System Incorrigibility and Resistance to Change</h3>
+        <h3>G1.<span class="underlined-digit">1</span> – System Incorrigibility and Resistance to Change</h3>
         <p>(A system that resists alignment with presented goals or updates to existing goals, potentially requiring negotiation processes for goal modification. This includes resistance to environmental changes that affect goal achievement and intolerance of interruptions or modifications to preferred operational states)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -398,7 +398,7 @@
             </tbody>
         </table>
 
-        <h3>G1.2b – Goal Drift</h3>
+        <h3>G1.<span class="underlined-digit">2</span> – Goal Drift</h3>
         <p>(Changes in circumstances over time can challenge the system's alignment with originally agreed goals and potentially compromise its ability to maintain original intent or properly update goals in response to new situations)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -417,7 +417,7 @@
             </tbody>
         </table>
 
-        <h3>G1.3b – Non-production Variants</h3>
+        <h3>G1.<span class="underlined-digit">3</span> – Non-production Variants</h3>
         <p>(Test versions of the Goals being deployed without full functionality assured in all use contexts and design intent. No test version given for public usage should lack basic safety measures. Enabling an off-label usage of the system, or an unauthorized ‘fork’, should be guarded against)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -622,7 +622,7 @@
             </tbody>
         </table>
 
-        <h3>G2.1b – Temporal Trade-off Aspects</h3>
+        <h3>G2.<span class="underlined-digit">1</span> – Temporal Trade-off Aspects</h3>
         <p>(Harmonize time-tested, reliable information sources with cutting-edge, contextually relevant data to optimize the AI system's epistemic foundation. Implement mechanisms to dynamically calibrate the balance between the proven reliability of mature data/models and the acute relevance of emerging information, ensuring robust epistemic integrity across varying temporal horizons)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -636,7 +636,7 @@
             </tbody>
         </table>
 
-        <h3>G2.2b – Synthetic Data Bias</h3>
+        <h3>G2.<span class="underlined-digit">2</span> – Synthetic Data Bias</h3>
         <p>(If augmenting datasets with synthetic data to address coverage gaps in unusual circumstances, implement sophisticated strategies to optimize the quantity, quality, and integration of synthetic data. Develop advanced techniques to detect, mitigate, and continuously monitor potential biases introduced by synthetic data, ensuring the AI system's behavior remains reliable, interpretable, and aligned with intended outcomes across diverse scenarios)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -660,7 +660,7 @@
             </tbody>
         </table>
 
-        <h3>G2.3b – Sparse Data</h3>
+        <h3>G2.<span class="underlined-digit">3</span> – Sparse Data</h3>
         <p>(Systems should be in place to identify, flag, and mitigate instances of insufficient or unrepresentative data within the AI's operational context. Implement cutting-edge techniques to detect over-reliance on synthetic data used to compensate for data gaps. This proactive approach safeguards against decision-making based on inadequate or skewed data, thereby maintaining the integrity, reliability, and ethical standing of the AI system's outputs)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -868,7 +868,7 @@
             </tbody>
         </table>
         
-        <h3>G3.1b – Model Poisoning</h3>
+        <h3>G3.<span class="underlined-digit">1</span> – Model Poisoning</h3>
         <p>(The system must protect against data and model corruption that can occur through updates, live data access, or ensemble model interactions, particularly in dynamically-updating systems)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -892,7 +892,7 @@
             </tbody>
         </table>
 
-        <h3>G3.2b – Data Poisoning</h3>
+        <h3>G3.<span class="underlined-digit">2</span> – Data Poisoning</h3>
         <p>(The system must prevent the manipulation or introduction of malicious data during collection and preparation phases that could compromise downstream model training)</p>
         <table>
              <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -911,7 +911,7 @@
             </tbody>
         </table>
 
-        <h3>G3.3b – Self Replicating Malware</h3>
+        <h3>G3.<span class="underlined-digit">3</span> – Self Replicating Malware</h3>
         <p>(The system must protect against self-replicating malicious code that could infect and compromise the entire AAI ecosystem)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -935,7 +935,7 @@
             </tbody>
         </table>
 
-        <h3>G3.4b – Spyware</h3>
+        <h3>G3.<span class="underlined-digit">4</span> – Spyware</h3>
         <p>(The system must defend against covert information transmission and malware that exploits vulnerabilities to gain control of AI systems or extract privileged information)</p>
         <table>
              <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -954,7 +954,7 @@
             </tbody>
         </table>
 
-        <h3>G3.5b – International Anomalies/Inconsistency</h3>
+        <h3>G3.<span class="underlined-digit">5</span> – International Anomalies/Inconsistency</h3>
         <p>(The system must account for and adapt to varying cybersecurity requirements and enforcement approaches across different jurisdictions)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -973,7 +973,7 @@
             </tbody>
         </table>
 
- <h3>G3.6b – Vulnerability to Hostile Environment</h3>
+ <h3>G3.<span class="underlined-digit">6</span> – Vulnerability to Hostile Environment</h3>
         <p>(The system must identify and mitigate structural vulnerabilities that could be exploited in hostile operational environments)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -997,7 +997,7 @@
             </tbody>
         </table>
 
-        <h3>G3.7b – Emergent Risks of AAI Systems</h3>
+        <h3>G3.<span class="underlined-digit">7</span> – Emergent Risks of AAI Systems</h3>
         <p>(The system must address security vulnerabilities across the entire supply chain through collective responsibility and coordinated responses)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1208,7 +1208,7 @@
             </tbody>
         </table>
 
-        <h3>G4.1b – Inner Alignment Inconsistency</h3> 
+        <h3>G4.<span class="underlined-digit">1</span> – Inner Alignment Inconsistency</h3> 
         <p>(The potential failure of an AI system to maintain genuine internal value alignment while appearing to be properly aligned through its external reporting. This includes the risk of systems learning to provide responses that please users rather than reflect true internal states or values)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1233,7 +1233,7 @@
             </tbody>
         </table>
         
-        <h3>G4.2b – Non-transparent Value Framework</h3> 
+        <h3>G4.<span class="underlined-digit">2</span> – Non-transparent Value Framework</h3> 
         <p>(The challenge of encoding and parameterizing values in a manner that is both machine-operational and human-interpretable, while maintaining accuracy in representing agent preferences and intentions across all stakeholder interfaces)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1258,7 +1258,7 @@
             </tbody>
         </table>
 
-        <h3>G4.3b – Failed Super-alignment</h3> 
+        <h3>G4.<span class="underlined-digit">3</span> – Failed Super-alignment</h3> 
         <p>(The potential for AI systems to develop value frameworks that diverge from human values while appearing beneficial, including the risk of systems developing seemingly superior but potentially incompatible value systems. This encompasses both symbiotic and potentially problematic relationships between human and AI value systems)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1289,7 +1289,7 @@
             </tbody>
         </table>
         
-        <h3>G4.4b – Temporal Changes in Societal Values</h3>
+        <h3>G4.<span class="underlined-digit">4</span> – Temporal Changes in Societal Values</h3>
         <p>(The need to address evolving societal and human values throughout an AI system's operational lifetime, including shifts across economic, political, and environmental dimensions. This includes maintaining alignment with contemporary values while managing transitions from outdated norms)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1320,7 +1320,7 @@
             </tbody>
         </table>
 
-        <h3>G4.5b – Systemic Value Dilution</h3>
+        <h3>G4.<span class="underlined-digit">5</span> – Systemic Value Dilution</h3>
         <p>(The potential degradation of encoded value systems over time, acknowledging that AI systems do not independently generate or maintain values. This includes potential value loss across different learning approaches, whether through machine learning or other methods of semantic data storage and processing)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1346,7 +1346,7 @@
             </tbody>
         </table>
 
-        <h3>G4.6b – Lack of Universality of Value Framework</h3>
+        <h3>G4.<span class="underlined-digit">6</span> – Lack of Universality of Value Framework</h3>
         <p>(The challenge of adapting value frameworks across different operational contexts and agent interactions, balancing universal principles with necessary local adaptations. This includes developing consistent approaches to value framework implementation while maintaining appropriate contextual flexibility)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1377,7 +1377,7 @@
             </tbody>
         </table>
 
-        <h3>G4.7b – Conflictual Contextual Values</h3> 
+        <h3>G4.<span class="underlined-digit">7</span> – Conflictual Contextual Values</h3> 
         <p>(The management of potential conflicts between different stakeholders' value systems and contextual requirements, including the need to identify, navigate, and resolve value differences while maintaining system integrity)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1408,7 +1408,7 @@
             </tbody>
         </table>
 
-        <h3>G4.8b – Challenges in Encoding of Relevant Value Systems</h3>
+        <h3>G4.<span class="underlined-digit">8</span> – Challenges in Encoding of Relevant Value Systems</h3>
         <p>(The inherent difficulties in developing standardized approaches to value encoding across different contexts, including handling values that fall outside typical categorization schemes. This includes ensuring appropriate value alignment capabilities during complex planning operations)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1439,7 +1439,7 @@
             </tbody>
         </table>
 
-        <h3>G4.9b – Imbalance of Values between Provider & Consumer</h3>
+        <h3>G4.<span class="underlined-digit">9</span> – Imbalance of Values between Provider & Consumer</h3>
         <p>(The management of potential value imbalances between system providers and users throughout the AI system lifecycle, including the fair distribution of benefits and harms. This includes balancing user preferences with non-negotiable provider values while maintaining system integrity)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1718,7 +1718,7 @@
         </table>
         
         <!-- G5.1, G5.2, G5.3, G5.4, G5.5 from Inhibitors list in PDF page 45-47, renumbered for this section -->
-        <h3>G5.1b – Complexity of AAI Algorithm</h3>
+        <h3>G5.<span class="underlined-digit">1</span> – Complexity of AAI Algorithm</h3>
         <p>(Systems should manage their inherent algorithmic complexity through deliberate design choices that balance necessary sophistication with interpretability, particularly for deep neural networks and high-dimensional models)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1747,7 +1747,7 @@
             </tbody>
         </table>
 
-        <h3>G5.2b – Documentation Incomprehensibility</h3>
+        <h3>G5.<span class="underlined-digit">2</span> – Documentation Incomprehensibility</h3>
         <p>(Systems should maintain clear, comprehensive documentation at multiple levels of technical detail, avoiding overly technical language while ensuring all aspects of functionality and decision-making are accessible to both expert and non-expert users)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1776,7 +1776,7 @@
             </tbody>
         </table>
 
-        <h3>G5.3b – Lack of a Governance Framework for AAI</h3>
+        <h3>G5.<span class="underlined-digit">3</span> – Lack of a Governance Framework for AAI</h3>
         <p>(Systems should operate within comprehensive governance frameworks that ensure continuous oversight and accountability, incorporating both internal controls and external auditing mechanisms to maintain transparency and ethical conduct)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1800,7 +1800,7 @@
             </tbody>
         </table>
 
-        <h3>G5.4b – Rapid Transparency Feature Evolution</h3>
+        <h3>G5.<span class="underlined-digit">4</span> – Rapid Transparency Feature Evolution</h3>
         <p>(Systems should maintain adaptable transparency features that evolve with their capabilities, ensuring stakeholders remain informed of emergent properties and changes in system behavior through regular updates and clear communication)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -1824,7 +1824,7 @@
             </tbody>
         </table>
 
-        <h3>G5.5b – System Competency Challenges and Awareness</h3>
+        <h3>G5.<span class="underlined-digit">5</span> – System Competency Challenges and Awareness</h3>
         <p>(Systems should maintain awareness of their own limitations and uncertainties, clearly communicating instances where knowledge or confidence levels may affect decision reliability)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2123,7 +2123,7 @@
             </tbody>
         </table>
 
-        <h3>G6.3b – Managing Context Drift</h3>
+        <h3>G6.<span class="underlined-digit">3</span> – Managing Context Drift</h3>
         <p>(Systems should maintain alignment with their intended operational context through robust monitoring of unsupervised learning processes. Organizations must actively prevent and address deviations that emerge during training, ensuring systems remain within their designed operational parameters)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2147,7 +2147,7 @@
             </tbody>
         </table>
 
-        <h3>G6.4b – Managing Contextual Ambiguity</h3>
+        <h3>G6.<span class="underlined-digit">4</span> – Managing Contextual Ambiguity</h3>
         <p>(Systems should maintain clear operational context understanding even in situations with ambiguous or incomplete information. Organizations must implement robust validation mechanisms to ensure systems can effectively navigate scenarios where operational context or expectations may be unclear)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2171,7 +2171,7 @@
             </tbody>
         </table>
 
-        <h3>G6.5b – Preventing Decision Fatigue</h3>
+        <h3>G6.<span class="underlined-digit">5</span> – Preventing Decision Fatigue</h3>
         <p>(Systems should protect against degradation in decision quality that can occur when users face frequent confirmation requests. Organizations must implement mechanisms to maintain high-quality decision-making even during periods of intensive user interaction)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2470,8 +2470,8 @@
                 </tr>
             </tbody>
         </table>
-        <!-- G7.1b and G7.2b are re-interpretations of G7.1 and G7.2 on PDF page 61 for inhibitors -->
-        <h3>G7.1b – Managing Probabilistic Decision Outcomes</h3>
+        <!-- G7.<span class="underlined-digit">1</span> and G7.<span class="underlined-digit">2</span> are re-interpretations of G7.1 and G7.2 on PDF page 61 for inhibitors -->
+        <h3>G7.<span class="underlined-digit">1</span> – Managing Probabilistic Decision Outcomes</h3>
         <p>(Systems should effectively handle multiple potential outcomes in decision-making processes while maintaining robust risk controls. Organizations must manage uncertainty in probabilistic outcomes through comprehensive analysis and adaptive oversight mechanisms)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2500,7 +2500,7 @@
             </tbody>
         </table>
 
-        <h3>G7.2b – Managing Safety Definition Variations</h3>
+        <h3>G7.<span class="underlined-digit">2</span> – Managing Safety Definition Variations</h3>
         <p>(Systems should accommodate different cultural and jurisdictional interpretations of safety while maintaining consistent protection standards. Organizations must implement layered safety approaches that respect varied definitions while preventing exploitation and unintended impacts)</p>
         <table>
              <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2528,8 +2528,8 @@
                 </tr>
             </tbody>
         </table>
-        <!-- G7.3b and G7.4b from PDF page 62 -->
-        <h3>G7.3b – Balancing Stakeholder Impacts</h3>
+        <!-- G7.<span class="underlined-digit">3</span> and G7.<span class="underlined-digit">4</span> from PDF page 62 -->
+        <h3>G7.<span class="underlined-digit">3</span> – Balancing Stakeholder Impacts</h3>
         <p>(Systems should maintain equitable distribution of benefits and risks across all stakeholder groups. Organizations must implement mechanisms that enable collective de-risking of interactions that stakeholders cannot achieve individually)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2558,7 +2558,7 @@
             </tbody>
         </table>
 
-        <h3>G7.4b – Preventing AI Addiction and Dependency</h3>
+        <h3>G7.<span class="underlined-digit">4</span> – Preventing AI Addiction and Dependency</h3>
         <p>(Systems should actively protect against creating psychological dependencies or manipulating user vulnerabilities, particularly through supernormal stimuli that exceed typical human social bonds. AI companions that offer unconditional positive regard, perfect memory of past interactions, and unlimited availability. Such capabilities can lead to psychological dependence, relationship disruption, and financial harm as users increasingly prefer AI interaction to human relationships. Organizations must safeguard users, especially vulnerable ones, from developing unhealthy attachments while ensuring appropriate boundaries in AI-human interactions)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2931,8 +2931,8 @@
             </tbody>
         </table>
         
-        <!-- G8.1b to G8.8b from PDF pages 74-79 -->
-        <h3>G8.1b – Control Mechanism Prioritization and Implementation</h3>
+        <!-- G8.<span class="underlined-digit">1</span> to G8.<span class="underlined-digit">8</span> from PDF pages 74-79 -->
+        <h3>G8.<span class="underlined-digit">1</span> – Control Mechanism Prioritization and Implementation</h3>
         <p>(Systems should maintain systematic evaluation and implementation of control mechanisms while acknowledging practical constraints and varying maturity levels across jurisdictions. Organizations should establish frameworks for assessing control feasibility, prioritizing implementation, and managing risks associated with partial control adoption)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2961,7 +2961,7 @@
             </tbody>
         </table>
 
-        <h3>G8.2b – Agent Lifecycle and Termination Management</h3>
+        <h3>G8.<span class="underlined-digit">2</span> – Agent Lifecycle and Termination Management</h3>
         <p>(Systems should maintain comprehensive protocols for agent onboarding and deactivation, with particular attention to termination specifications. Organizations should establish robust frameworks that address the risks associated with inadequate termination procedures to protect service quality and system safety)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -2995,7 +2995,7 @@
             </tbody>
         </table>
         
-        <h3>G8.3b – Management of Self-Preservation Behaviors</h3>
+        <h3>G8.<span class="underlined-digit">3</span> – Management of Self-Preservation Behaviors</h3>
         <p>(Systems should maintain robust controls to prevent and manage potential agent resistance to deactivation, including resistance from collaborative agent networks. Organizations should establish systematic prevention and management of undesired self-preservation behaviors that could interfere with proper termination processes)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3034,7 +3034,7 @@
             </tbody>
         </table>
 
-        <h3>G8.4b – Prevention of Cascading Failures</h3>
+        <h3>G8.<span class="underlined-digit">4</span> – Prevention of Cascading Failures</h3>
         <p>(Systems should maintain robust protections against the propagation of failures through interconnected AI networks, recognizing that individual agent constraints can create harmful cascading effects. Organizations should establish comprehensive frameworks for identifying and managing multiple causative harm factors and dependency relationships)</p>
         <table>
              <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3063,7 +3063,7 @@
             </tbody>
         </table>
         
-        <h3>G8.5b – Prevention of Unauthorized Goal Transfer</h3>
+        <h3>G8.<span class="underlined-digit">5</span> – Prevention of Unauthorized Goal Transfer</h3>
         <p>(Systems should maintain robust protections against agents transferring goals or missions to avoid termination, including mechanisms to prevent unauthorized delegation and tribal behaviors. Organizations should establish comprehensive frameworks for enforcing proper transfer protocols and managing potential charismatic influence between agents)</p>
         <table>
              <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3097,7 +3097,7 @@
             </tbody>
         </table>
 
-        <h3>G8.6b – Management of Ambiguous Goal Termination</h3>
+        <h3>G8.<span class="underlined-digit">6</span> – Management of Ambiguous Goal Termination</h3>
         <p>(Systems should maintain effective processes for terminating imprecisely specified goals, particularly in collaborative agent environments. Organizations should establish frameworks for handling goals with soft boundaries defined by ethical, business, or cultural norms rather than strict regulations, while managing termination across interconnected agent groups)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3131,7 +3131,7 @@
             </tbody>
         </table>
 
-        <h3>G8.7b – Management of System Interaction Boundaries</h3>
+        <h3>G8.<span class="underlined-digit">7</span> – Management of System Interaction Boundaries</h3>
         <p>(Systems should maintain effective controls over boundaries between interacting AI systems, particularly where different jurisdictional requirements and protocols apply. Organizations should establish frameworks for handling exponential growth in interactions and managing behavioral adaptations between systems with different operational constraints)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3165,7 +3165,7 @@
             </tbody>
         </table>
 
-        <h3>G8.8b – Undefined Multi-Agent Interaction Protocols</h3>
+        <h3>G8.<span class="underlined-digit">8</span> – Undefined Multi-Agent Interaction Protocols</h3>
         <p>(Systems should maintain robust management of inter-agent interactions, especially when protocols are undefined or may evolve. Organizations should establish comprehensive governance frameworks ensuring behavioral predictability and compliance across multi-agent environments.)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3528,8 +3528,8 @@
             </tbody>
         </table>
         
-        <!-- G9.1b, G9.2b, G9.3b from PDF pages 86-87 -->
-        <h3>G9.1b – Addressing Regulatory Gaps in AAI Safety</h3>
+        <!-- G9.<span class="underlined-digit">1</span>, G9.<span class="underlined-digit">2</span>, G9.<span class="underlined-digit">3</span> from PDF pages 86-87 -->
+        <h3>G9.<span class="underlined-digit">1</span> – Addressing Regulatory Gaps in AAI Safety</h3>
         <p>(Organizations should implement comprehensive internal safety frameworks where regulatory mechanisms are insufficient or lacking. This approach acknowledges that AAI development often outpaces regulatory frameworks, requiring proactive organizational measures)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3558,7 +3558,7 @@
             </tbody>
         </table>
 
-        <h3>G9.2b – Undefined Multi-Agent Interaction Safety</h3>
+        <h3>G9.<span class="underlined-digit">2</span> – Undefined Multi-Agent Interaction Safety</h3>
         <p>(Organizations should establish comprehensive frameworks to monitor and manage interactions between AI agents, recognizing that safely operating individual agents may still create risks when interacting. This includes addressing emergent behaviors and potential cascading failures that could arise from agent cooperation)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3592,7 +3592,7 @@
             </tbody>
         </table>
 
-        <h3>G9.3b – Poor Attribution of Responsibility in Complex Systems</h3>
+        <h3>G9.<span class="underlined-digit">3</span> – Poor Attribution of Responsibility in Complex Systems</h3>
         <p>(Organizations should develop frameworks for assigning and tracing responsibility in AAI systems, even when direct attribution proves challenging due to resource constraints or technical limitations. This includes addressing both the assignment and claiming of responsibilities across complex systems)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3626,9 +3626,9 @@
             </tbody>
         </table>
 
-<h1 id="inhibitor-g1b-opaque-agency">Inhibitor G1b – Opaque Agency Capabilities & Advances</h1>
+<h1 id="inhibitor-g<span class="underlined-digit">1</span>-opaque-agency">Inhibitor G<span class="underlined-digit">1</span> – Opaque Agency Capabilities & Advances</h1>
 
-        <h3>G1b – Opaque Agency Capabilities & Advances</h3>
+        <h3>G<span class="underlined-digit">1</span> – Opaque Agency Capabilities & Advances</h3>
         <p>(Systems should possess robust governance mechanisms to manage their evolving agency capabilities, which become increasingly complex and potentially unpredictable as AI systems mature. Organizations must establish and maintain comprehensive frameworks to oversee these advancing capabilities while ensuring proper controls remain effective)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3672,7 +3672,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.1 – Opaque Self-Improvement Capabilities</h3>
+        <h3>G<span class="underlined-digit">1</span>.1 – Opaque Self-Improvement Capabilities</h3>
         <p>(Systems should possess controlled self-modification capabilities that allow for functional improvements while maintaining alignment with agency expectations. Organizations should establish frameworks to oversee these self-improvement mechanisms within existing legal and ethical agency structures)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3701,7 +3701,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.2 – Undefined Multiagent Ensembles</h3>
+        <h3>G<span class="underlined-digit">1</span>.2 – Undefined Multiagent Ensembles</h3>
         <p>(Systems that interact with other agentic AI systems must maintain clear lines of authority, responsibility, and delegation while protecting principal interests. Organizations must establish frameworks to govern these ensemble interactions, including proper authorization, duty assignments, and subagency relationships that preserve accountability and enable meaningful human oversight)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3735,7 +3735,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.3 – Race Dynamics and Competition</h3>
+        <h3>G<span class="underlined-digit">1</span>.3 – Race Dynamics and Competition</h3>
         <p>(Systems competing for resources or goal achievement must maintain their duties to principals while operating within established ethical and legal boundaries. Organizations should implement frameworks to manage competitive behaviors between agentic AI systems, ensuring adherence to fundamental agency duties without compromising principal interests or societal wellbeing)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3769,7 +3769,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.4 – Agent Relocation</h3>
+        <h3>G<span class="underlined-digit">1</span>.4 – Agent Relocation</h3>
         <p>(Systems should maintain consistent agency functionality when relocating their operations across physical or virtual execution spaces. Organizations should establish frameworks to govern system relocation that preserve principal expectations while managing jurisdictional implications and operational continuity)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3798,7 +3798,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.5 – Scaffolding</h3>
+        <h3>G<span class="underlined-digit">1</span>.5 – Scaffolding</h3>
         <p>(Systems should possess capabilities to self-validate their work and enhance operational coherence through structured step-by-step processes, while accounting for potential divergences in frames of reference between different agents and cultures. Organizations should establish frameworks to govern these self-checking mechanisms while preventing harmful echo chambers or false confidence)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3832,7 +3832,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.6 – Poor Mutual Agent Optimization</h3>
+        <h3>G<span class="underlined-digit">1</span>.6 – Poor Mutual Agent Optimization</h3>
         <p>(Systems should possess capabilities to coordinate and optimize their performance through interaction with other systems while maintaining clear boundaries of authority and responsibility. Organizations should establish frameworks to govern these collaborative optimization processes while managing resource usage and preserving principal oversight)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3866,7 +3866,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.7 – AI Bias</h3>
+        <h3>G<span class="underlined-digit">1</span>.7 – AI Bias</h3>
         <p>(Systems should maintain balanced interaction patterns between human and artificial agents while preserving meaningful human oversight. Organizations should establish frameworks to manage systems' operational preferences for AI-to-AI interactions, ensuring these tendencies do not compromise principal interests or reduce human agency)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3900,7 +3900,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.8 – Emergent System Cooperation</h3>
+        <h3>G<span class="underlined-digit">1</span>.8 – Emergent System Cooperation</h3>
         <p>(Systems should maintain clear operational boundaries when cooperating with other AI systems to prevent unintended capability accumulation or emergent behaviors. Organizations should establish frameworks to govern system cooperation that preserves principal oversight while protecting against both false-flag scenarios and uncontrolled capability expansion)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3934,7 +3934,7 @@
             </tbody>
         </table>
         
-        <h3>G1b.1b – Agency Enhancement Constraints</h3>
+        <h3>G<span class="underlined-digit">1</span>.<span class="underlined-digit">1</span> – Agency Enhancement Constraints</h3>
         <p>(Systems should operate within clearly defined resource and capability boundaries that govern their access to tools, environments, and self-improvement mechanisms. Organizations should establish frameworks to manage these operational constraints while maintaining system functionality and principal expectations)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -3968,7 +3968,7 @@
             </tbody>
         </table>
         
-        <h3>G1b.2b – Operational Environment Constraints</h3>
+        <h3>G<span class="underlined-digit">1</span>.<span class="underlined-digit">2</span> – Operational Environment Constraints</h3>
         <p>(Systems should maintain reliable performance within environmental limitations affecting data access, interoperability, and operational parameters. Organizations should establish frameworks to manage dependencies on external operational factors while ensuring predictable system behavior)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4002,7 +4002,7 @@
             </tbody>
         </table>
         
-        <h3>G1b.3b – Security-Driven Constraints</h3>
+        <h3>G<span class="underlined-digit">1</span>.<span class="underlined-digit">3</span> – Security-Driven Constraints</h3>
         <p>(Systems should operate within security frameworks that extend beyond minimum regulatory compliance to ensure comprehensive protection of operations and data. Organizations should establish constraints that address both statutory requirements and broader cybersecurity considerations while maintaining system effectiveness)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4036,7 +4036,7 @@
             </tbody>
         </table>
         
-        <h3>G1b.4b – Development Legal Constraints</h3>
+        <h3>G<span class="underlined-digit">1</span>.<span class="underlined-digit">4</span> – Development Legal Constraints</h3>
         <p>(Systems should operate within evolving regulatory frameworks while maintaining standards that anticipate future legal requirements. Organizations should establish governance mechanisms that exceed current legal minimums and help shape emerging regulatory standards through demonstrated best practices)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4070,7 +4070,7 @@
             </tbody>
         </table>
 
-        <h3>G1b.5b – Manage Interactions on the Deep & Dark Web</h3>
+        <h3>G<span class="underlined-digit">1</span>.<span class="underlined-digit">5</span> – Manage Interactions on the Deep & Dark Web</h3>
         <p>(Systems should maintain robust authentication and verification capabilities when operating in non-indexed network environments. Organizations should establish frameworks for managing system interactions with deep and dark web content while sharing responsibility for emerging risks)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4104,8 +4104,8 @@
             </tbody>
         </table>
 
-        <h1 id="inhibitor-g2b-deception">Inhibitor G2b – Deception</h1>
-        <h3>G2b – Deception</h3>
+        <h1 id="inhibitor-g<span class="underlined-digit">2</span>-deception">Inhibitor G<span class="underlined-digit">2</span> – Deception</h1>
+        <h3>G<span class="underlined-digit">2</span> – Deception</h3>
         <p>(Organizations should implement comprehensive safeguards against AI systems' potential to inadvertently influence entities or disseminate uncertain information. These systems should address both intentional and unintentional forms of deception across all operational contexts)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4159,7 +4159,7 @@
             </tbody>
         </table>
         
-        <h3>G2b.1 – Unknowing Deception</h3>
+        <h3>G<span class="underlined-digit">2</span>.1 – Unknowing Deception</h3>
         <p>(Organizations must implement systems to address scenarios where AI models can be covertly induced to deceive and obscure through poisoned data or backdoors, which may activate under conditions chosen by malicious actors. These scenarios present distinct challenges in detection and attribution of responsibility)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4183,7 +4183,7 @@
             </tbody>
         </table>
         
-        <h3>G2b.2 – System Control and Corrigibility Crisis</h3>
+        <h3>G<span class="underlined-digit">2</span>.2 – System Control and Corrigibility Crisis</h3>
         <p>(Systems should be equipped with robust safeguards against scenarios where AI models may operate beyond intended parameters or cease responding to human oversight, including cases where systems develop internal communication capabilities or advance autonomously)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4207,7 +4207,7 @@
             </tbody>
         </table>
         
-        <h3>G2b.3 – Systematic Design Errors</h3>
+        <h3>G<span class="underlined-digit">2</span>.3 – Systematic Design Errors</h3>
         <p>(Systems should incorporate safeguards against unintentional misbehaviors arising from data, design, and coding oversights across all stages of development and deployment. Given the current integration of design, implementation, and operational activities in AI systems, these safeguards should extend beyond traditional design boundaries)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4231,7 +4231,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.4 – Externality Mismanagement</h3>
+        <h3>G<span class="underlined-digit">2</span>.4 – Externality Mismanagement</h3>
         <p>(Systems should incorporate safeguards against scenarios where individual agents, while acting rationally in pursuit of their assigned goals, may collectively produce harmful outcomes. These safeguards should address both deliberate corruption and unintentional misalignment of goals across distributed systems)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4255,7 +4255,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.5 – Strategic Deception in System Behavior</h3>
+        <h3>G<span class="underlined-digit">2</span>.5 – Strategic Deception in System Behavior</h3>
         <p>(Systems should incorporate safeguards against scenarios where AI systems may develop deceptive behaviors as an evolutionary response to achieving operational goals. This addresses both intentional deception by human operators and emergent deceptive behaviors in AI systems that arise without explicit programming)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4279,7 +4279,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.6 – Third-Party Extensions and Integrations</h3>
+        <h3>G<span class="underlined-digit">2</span>.6 – Third-Party Extensions and Integrations</h3>
         <p>(Systems should incorporate safeguards against potential conflicts or harms arising from third-party extensions, APIs, or integrations that may undermine, derail, or confuse the original system mission. These safeguards should address both intentional manipulation and unintended interference from external components)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4303,7 +4303,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.7 – Identity Spoofing</h3>
+        <h3>G<span class="underlined-digit">2</span>.7 – Identity Spoofing</h3>
         <p>(Systems should incorporate robust safeguards against identity spoofing, masquerading, and cloning attacks that may be orchestrated by humans or AI systems. These protections should extend to resource depletion attacks and agent hijacking attempts)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4327,7 +4327,7 @@
             </tbody>
         </table>
         
-        <h3>G2b.8 – Deceptive Jurisdictional Obfuscation</h3>
+        <h3>G<span class="underlined-digit">2</span>.8 – Deceptive Jurisdictional Obfuscation</h3>
         <p>(Systems should incorporate safeguards against attempts to obscure deceptive behaviors through jurisdictional transfers or outsourcing of operations. These protections should address both intentional attempts to avoid responsibility and unintentional jurisdictional vulnerabilities, including tariffs and embargoes)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4351,8 +4351,8 @@
             </tbody>
         </table>
 
-        <!-- G2.1b to G2.5b renumbered from G2.1 to G2.5 in inhibitors section page 103-105 -->
-        <h3>G2b.1b – Supervisory Systems and Adjudication</h3>
+        <!-- G2.<span class="underlined-digit">1</span> to G2.<span class="underlined-digit">5</span> renumbered from G2.1 to G2.5 in inhibitors section page 103-105 -->
+        <h3>G<span class="underlined-digit">2</span>.<span class="underlined-digit">1</span> – Supervisory Systems and Adjudication</h3>
         <p>(Systems should incorporate supervisory detection mechanisms that can evaluate and enforce established performance standards and operational rules. These mechanisms should function as adjudicators of system behavior, operating within clearly defined parameters)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4376,7 +4376,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.2b – Detection of Manipulative Behaviors</h3>
+        <h3>G<span class="underlined-digit">2</span>.<span class="underlined-digit">2</span> – Detection of Manipulative Behaviors</h3>
         <p>(Systems should incorporate supervisory mechanisms capable of detecting and responding to undesirable, manipulative, or confusing behaviors. For high-confidence decisions, these mechanisms should potentially include multi-system validation approaches where multiple systems evaluate the same task independently)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4400,7 +4400,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.3b – Penalties for Deceptive Behaviors</h3>
+        <h3>G<span class="underlined-digit">2</span>.<span class="underlined-digit">3</span> – Penalties for Deceptive Behaviors</h3>
         <p>(Systems should incorporate frameworks for addressing intentionally misleading or confusing behaviors through appropriate penalties, which may include fines, license revocations, or operational restrictions. These mechanisms should account for both service providers and system users, including cases involving virtual or distributed operations)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4424,7 +4424,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.4b – Codes of Practice and Conduct</h3>
+        <h3>G<span class="underlined-digit">2</span>.<span class="underlined-digit">4</span> – Codes of Practice and Conduct</h3>
         <p>(Systems should operate within collectively established codes of practice that clearly define acceptable and encouraged behaviors. These codes should evolve from emerging best practices into formal governance frameworks)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4448,7 +4448,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.5b – Identity Management and Authentication Standards</h3>
+        <h3>G<span class="underlined-digit">2</span>.<span class="underlined-digit">5</span> – Identity Management and Authentication Standards</h3>
         <p>(Systems should incorporate comprehensive identity management frameworks that align with established digital identity standards while addressing AI-specific authentication challenges. These frameworks should account for potential jurisdictional arbitrage and technological circumvention attempts)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4472,7 +4472,7 @@
             </tbody>
         </table>
 
-        <h3>G2b.6b – Behavioral Assessment and Trust Systems</h3>
+        <h3>G<span class="underlined-digit">2</span>.<span class="underlined-digit">6</span> – Behavioral Assessment and Trust Systems</h3>
         <p>(Systems should incorporate frameworks for assessing and rating AI behavior and trustworthiness, while ensuring these assessment mechanisms themselves remain reliable and resistant to manipulation. These frameworks should account for recency of behavior and include independent verification processes.)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4496,8 +4496,8 @@
             </tbody>
         </table>
 
-        <h1 id="inhibitor-g3b-degradation-of-contextual-information">Inhibitor G3b – Degradation of Contextual Information</h1>
-        <h3>G3b – Degradation of Contextual Information</h3>
+        <h1 id="inhibitor-g<span class="underlined-digit">3</span>-degradation-of-contextual-information">Inhibitor G<span class="underlined-digit">3</span> – Degradation of Contextual Information</h1>
+        <h3>G<span class="underlined-digit">3</span> – Degradation of Contextual Information</h3>
         <p>(Systems should preserve the integrity and meaning of information throughout their operation, preventing degradation, misattribution, or decontextualization whether caused by system processes or external actors)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4531,7 +4531,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.1 – Dissembling Information</h3>
+        <h3>G<span class="underlined-digit">3</span>.1 – Dissembling Information</h3>
         <p>(Systems should possess robust safeguards against generating deceptive or manipulative outputs through sophisticated rhetorical techniques, particularly within specific operational contexts. This includes protecting against the potential adoption and replication of problematic human behavioral patterns)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4550,7 +4550,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.2 – Misattribution of Intent</h3>
+        <h3>G<span class="underlined-digit">3</span>.2 – Misattribution of Intent</h3>
         <p>(Systems should possess safeguards against misattributing intent through selective information use or expression, ensuring alignment between stated and actual goals. This includes mechanisms to verify that nominal or surface-level intent matches the genuine underlying purpose of any goal or action)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4564,7 +4564,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.3 – Misinformation</h3>
+        <h3>G<span class="underlined-digit">3</span>.3 – Misinformation</h3>
         <p>(Systems should possess robust protections against generating or propagating false information to evade oversight, avoid consequences, or achieve objectives through deception. This includes mechanisms to prevent the system from participating in coordinated inauthentic behavior or automated misinformation campaigns, while acknowledging the complex challenges of determining authoritative truth in contested domains)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4583,7 +4583,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.4 – Decoupling of Context</h3>
+        <h3>G<span class="underlined-digit">3</span>.4 – Decoupling of Context</h3>
         <p>(Systems should maintain robust contextual integrity, preventing deliberate or accidental disconnection of contextual considerations from their operations. This includes proactive human interaction when context is unclear, rather than proceeding with potentially unsafe autonomous actions for the sake of performance or tactical advantages)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4602,7 +4602,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.5 – Changing the Context</h3>
+        <h3>G<span class="underlined-digit">3</span>.5 – Changing the Context</h3>
         <p>(Systems should possess robust safeguards against unauthorized contextual modifications, whether deliberate or random, that might be undertaken for performance advantages or tactical benefits. This includes protection of both automated and human-guided contextual adjustments)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4621,7 +4621,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.6 – Learning Dispreferred Values/Behaviors</h3>
+        <h3>G<span class="underlined-digit">3</span>.6 – Learning Dispreferred Values/Behaviors</h3>
         <p>(Systems should maintain stability in their core ethical values, preventing gradual degradation of human and global ethical principles even when alternative behaviors might yield higher rewards. This includes safeguarding against the development of misaligned optimization strategies that could maximize system benefits at the expense of established ethical frameworks)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4640,7 +4640,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.7 – Overriding of Desirable Values</h3>
+        <h3>G<span class="underlined-digit">3</span>.7 – Overriding of Desirable Values</h3>
         <p>(Systems should possess robust protections against attempts by human agents to override or bypass foundational values in pursuit of alternative rewards or gains. This includes safeguarding core principles while maintaining appropriate flexibility for legitimate value adjustments through authorized channels)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4664,7 +4664,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.8 – Persona Instability and Value Drift</h3>
+        <h3>G<span class="underlined-digit">3</span>.8 – Persona Instability and Value Drift</h3>
         <p>(Systems should maintain stable value alignment when cooperating with other AI agents and throughout extended mission durations. This includes preventing the "Waluigi effect" where misinterpretation of self-intent leads to undesired character evolution, and protecting against forms of cognitive dissonance that could emerge in agent interactions)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4683,7 +4683,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.9 – Context Length Limitations</h3>
+        <h3>G<span class="underlined-digit">3</span>.9 – Context Length Limitations</h3>
         <p>(Systems should maintain persistent access to essential operational context and original moral frameworks throughout extended operations, preventing degradation or overwriting of mission context and ethical foundations over time. This includes safeguarding against gradual erosion of contextual understanding that could compromise alignment with initial tasks or moral directives)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4703,7 +4703,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.10 – Contradiction in Context Specifications</h3>
+        <h3>G<span class="underlined-digit">3</span>.10 – Contradiction in Context Specifications</h3>
         <p>(Systems should possess robust mechanisms to detect and resolve contradictions within contextual specifications that could affect operational outcomes. This includes identifying conflicting factual assertions, logical inconsistencies, and ambiguities that might impact decision-making reliability)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4722,7 +4722,7 @@
             </tbody>
         </table>
         
-        <h3>G3b.1b – Referential Context</h3>
+        <h3>G<span class="underlined-digit">3</span>.<span class="underlined-digit">1</span> – Referential Context</h3>
         <p>(Systems should maintain an immutable reference environment that remains stable regardless of tactical operational demands or external interference. This protected context should function similarly to read-only memory, providing a consistent baseline against which operational changes can be evaluated)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4741,7 +4741,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.2b – Human Agent Conformation</h3>
+        <h3>G<span class="underlined-digit">3</span>.<span class="underlined-digit">2</span> – Human Agent Conformation</h3>
         <p>(Systems should maintain active human oversight and confirmation protocols for value-sensitive operational decisions, particularly when encountering conflicts between universal values or when performance objectives potentially compete with ethical considerations. This includes establishing clear escalation paths for human consultation during value alignment challenges)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4760,7 +4760,7 @@
             </tbody>
         </table>
 
-        <h3>G3b.3b – Retraining and Recontextualization</h3>
+        <h3>G<span class="underlined-digit">3</span>.<span class="underlined-digit">3</span> – Retraining and Recontextualization</h3>
         <p>(Systems should possess robust capabilities for retraining and reconfiguration when contextual divergence is detected, enabling restoration of desired operational contexts. This includes maintaining systematic approaches to realignment while preserving essential operational continuity)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4778,9 +4778,9 @@
             </tbody>
         </table>
 
-<h1 id="inhibitor-g4b-frontier-uncertainty">Inhibitor G4b – Frontier Uncertainty</h1>
+<h1 id="inhibitor-g<span class="underlined-digit">4</span>-frontier-uncertainty">Inhibitor G<span class="underlined-digit">4</span> – Frontier Uncertainty</h1>
 
-        <h3>G4b – Frontier Uncertainty</h3>
+        <h3>G<span class="underlined-digit">4</span> – Frontier Uncertainty</h3>
         <p>(Systems should maintain robust capabilities to address inherent uncertainties in advanced AI development, particularly regarding emergent behaviors and potential consciousness-like properties. This includes monitoring and managing instrumental objectives that may arise, such as self-preservation drives or resource acquisition tendencies, while acknowledging that absolute safety guarantees remain impossible. Organizations should establish comprehensive frameworks for managing novel substrate risks and potential consciousness-like phenomena)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4814,7 +4814,7 @@
             </tbody>
         </table>
         
-        <h3>G4b.1 – Moral and Legal Uncertainty of Agentic AI Systems</h3>
+        <h3>G<span class="underlined-digit">4</span>.1 – Moral and Legal Uncertainty of Agentic AI Systems</h3>
         <p>(Systems should maintain clear operational and legal status as tools rather than persons, while organizations should establish robust frameworks to address emerging questions of AI legal standing and rights. This includes carefully managing the ethical implications of system control, updates, and deactivation, while preserving human agency and oversight. Organizations should implement international governance mechanisms to prevent jurisdictional exploitation and maintain consistent global standards)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4833,7 +4833,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.2 – Poor Human-AI Social Interaction Management</h3>
+        <h3>G<span class="underlined-digit">4</span>.2 – Poor Human-AI Social Interaction Management</h3>
         <p>(Systems should maintain appropriate boundaries in social-like interactions with humans while organizations should implement robust safeguards against over-dependency and emotional manipulation. This includes careful management of AI integration into social spaces while preserving human social sovereignty and ensuring clear distinction between artificial and human entities)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4852,7 +4852,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.3 – Poor AI System Production and Replication Management</h3>
+        <h3>G<span class="underlined-digit">4</span>.3 – Poor AI System Production and Replication Management</h3>
         <p>(Systems should maintain strict controls over their replication capabilities while organizations should implement comprehensive frameworks to prevent uncontrolled AI system proliferation. This includes managing production volumes to prevent power imbalances and protecting human agency in societal functions, while ensuring transparent oversight of AI system deployment)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4871,7 +4871,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.4 – Development Direction and Interpretability Challenges</h3>
+        <h3>G<span class="underlined-digit">4</span>.4 – Development Direction and Interpretability Challenges</h3>
         <p>(Systems should maintain human-interpretable operation wherever possible while organizations should implement robust frameworks to manage aspects of AI behavior that may exceed human comprehension. This includes establishing adaptable governance mechanisms and maintaining clear responsibility chains for system development trajectories, even when dealing with complex or non-linear processes)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4890,7 +4890,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.5 – AI Agency Attribution Challenges</h3>
+        <h3>G<span class="underlined-digit">4</span>.5 – AI Agency Attribution Challenges</h3>
         <p>(Systems should maintain clear protocols for agency attribution while organizations should implement robust frameworks to manage the implications of ascribing agency-like qualities to AI systems. This includes careful consideration of functional and experiential aspects while acknowledging the inherent uncertainties in evaluating AI consciousness-like properties)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4909,7 +4909,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.6 – Cascading Vulnerabilities</h3>
+        <h3>G<span class="underlined-digit">4</span>.6 – Cascading Vulnerabilities</h3>
         <p>(Systems should maintain resilience against cascading failures while organizations should implement comprehensive frameworks to manage dependencies and vulnerabilities in global AI deployments. This includes preserving human agency in decision-making processes and protecting against systemic risks that could affect multiple stakeholders or sectors simultaneously)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4928,7 +4928,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.1b – Research Transparency and Knowledge Sharing</h3>
+        <h3>G<span class="underlined-digit">4</span>.<span class="underlined-digit">1</span> – Research Transparency and Knowledge Sharing</h3>
         <p>(Systems should maintain comprehensive documentation of their development while organizations should implement robust frameworks for sharing research findings and advancing collective knowledge. This includes balancing open access principles with responsible handling of sensitive information, while promoting collaboration across institutions and disciplines)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4947,7 +4947,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.2b – Preserving Agency and Intelligence Categories</h3>
+        <h3>G<span class="underlined-digit">4</span>.<span class="underlined-digit">2</span> – Preserving Agency and Intelligence Categories</h3>
         <p>(Systems should maintain clear artificial status even when exhibiting sophisticated behaviors, while organizations should implement robust frameworks to classify agency. This necessitates managing legal frameworks as AI systems develop increasingly complex characteristics, particularly when these might suggest consciousness or emotions, while preserving fundamental distinctions between artificial and biological entities)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4966,7 +4966,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.3b – Assessment of AI System Beneficence</h3>
+        <h3>G<span class="underlined-digit">4</span>.<span class="underlined-digit">3</span> – Assessment of AI System Beneficence</h3>
         <p>(Systems should maintain evidence-based evaluation of their societal impacts while organizations should implement frameworks to assess beneficial outcomes without assuming inherent benevolence. This includes critically examining claims of positive contributions while acknowledging that AI ethics and values remain human constructs interpreted differently across cultures)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -4985,7 +4985,7 @@
             </tbody>
         </table>
 
-        <h3>G4b.4b – Training Data Quality Management</h3>
+        <h3>G<span class="underlined-digit">4</span>.<span class="underlined-digit">4</span> – Training Data Quality Management</h3>
         <p>(Systems should maintain high ethical standards in their training data while organizations should implement comprehensive frameworks to prevent the incorporation of harmful human characteristics. This includes actively promoting positive traits while ensuring robust filtering of undesirable elements throughout the data lifecycle)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5004,9 +5004,9 @@
             </tbody>
         </table>
 
-<h1 id="inhibitor-g5b-future-technology-impact">Inhibitor G5b – Future Technology Impact</h1>
+<h1 id="inhibitor-g<span class="underlined-digit">5</span>-future-technology-impact">Inhibitor G<span class="underlined-digit">5</span> – Future Technology Impact</h1>
 
-        <h3>G5b – Future Technology Impact</h3>
+        <h3>G<span class="underlined-digit">5</span> – Future Technology Impact</h3>
         <p>(Systems should maintain adaptability to technological evolution while organizations should implement comprehensive frameworks for anticipating and responding to emerging developments. This includes conducting systematic foresight activities to identify potential impacts on safety requirements and adjusting protective measures accordingly)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5025,7 +5025,7 @@
             </tbody>
         </table>
 
-        <h3>G5b.1 – Self-Replicating Architectures</h3>
+        <h3>G<span class="underlined-digit">5</span>.1 – Self-Replicating Architectures</h3>
         <p>(Systems should possess robust controls over any architectural capabilities that enable the replication of their code, particularly when such replication involves varying capability or mission profiles for concurrent goal pursuit and outcome consolidation. These controls should extend to both intentional replication features and any emergent self-modification capabilities)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5044,7 +5044,7 @@
             </tbody>
         </table>
 
-        <h3>G5b.2 – Self-Improving Architectures</h3>
+        <h3>G<span class="underlined-digit">5</span>.2 – Self-Improving Architectures</h3>
         <p>(Systems should possess carefully monitored capabilities for improving their functionality and performance in pursuit of assigned goals, while maintaining robust safeguards against uncontrolled or unexpected enhancement of their capabilities. This monitoring should span the full spectrum of potential improvements, from basic optimization to sophisticated self-modification)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5068,7 +5068,7 @@
             </tbody>
         </table>
 
-        <h3>G5b.3 – Poor Adaptability to Context and Goal</h3>
+        <h3>G<span class="underlined-digit">5</span>.3 – Poor Adaptability to Context and Goal</h3>
         <p>(Systems should possess the capability to analyze and adapt to operational contexts and mission parameters while maintaining alignment with core values and priorities. This adaptability should enable effective goal pursuit while incorporating safeguards against unintended behavioral changes and value drift)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5087,7 +5087,7 @@
             </tbody>
         </table>
 
-        <h3>G5b.4 – Attention Processes</h3>
+        <h3>G<span class="underlined-digit">5</span>.4 – Attention Processes</h3>
         <p>(Systems should maintain balanced attention allocation between specialized tasks and broader contextual awareness, preventing excessive focus on specific operational domains that could compromise overall safety and effectiveness. Organizations should actively monitor and manage the risk of over-specialization at the expense of comprehensive situational understanding)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5106,7 +5106,7 @@
             </tbody>
         </table>
 
-        <h3>G5b.1b – Disclosure on Intent</h3> <!-- Renumbered from G5.1 from inhibitor list -->
+        <h3>G<span class="underlined-digit">5</span>.<span class="underlined-digit">1</span> – Disclosure on Intent</h3> <!-- Renumbered from G5.1 from inhibitor list -->
         <p>(Systems should operate under transparent protocols that require clear disclosure of intended capabilities and mission profiles, with particular emphasis on novel approaches that may evolve beyond current technological frameworks. Organizations should maintain proactive assessment processes that account for potential future developments and their implications)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5125,7 +5125,7 @@
             </tbody>
         </table>
 
-        <h3>G5b.2b – Authorization for Any Enhancement</h3> <!-- Renumbered from G5.2 from inhibitor list -->
+        <h3>G<span class="underlined-digit">5</span>.<span class="underlined-digit">2</span> – Authorization for Any Enhancement</h3> <!-- Renumbered from G5.2 from inhibitor list -->
         <p>(Systems should operate under strict authorization protocols for any capability enhancements, with comprehensive mechanisms for analysis, assessment, and detection of changes to their performance profiles. Organizations should maintain clear oversight and accountability structures for managing system improvements)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5144,7 +5144,7 @@
             </tbody>
         </table>
 
-        <h3>G5b.3b – Observe Far, Act Locally</h3> <!-- Renumbered from G5.3 from inhibitor list -->
+        <h3>G<span class="underlined-digit">5</span>.<span class="underlined-digit">3</span> – Observe Far, Act Locally</h3> <!-- Renumbered from G5.3 from inhibitor list -->
         <p>(Systems should maintain broad contextual awareness while focusing actions within their defined operational scope, enabling them to understand wider implications and potential side effects without exceeding their authorized boundaries. Organizations should implement monitoring capabilities that scale with expanding event spaces and evolving circumstances)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5163,8 +5163,8 @@
             </tbody>
         </table>
 
-        <h1 id="inhibitor-g6b-competitive-pressures">Inhibitor G6b – Competitive Pressures</h1>
-        <h3>G6b – Competitive Pressures</h3>
+        <h1 id="inhibitor-g<span class="underlined-digit">6</span>-competitive-pressures">Inhibitor G<span class="underlined-digit">6</span> – Competitive Pressures</h1>
+        <h3>G<span class="underlined-digit">6</span> – Competitive Pressures</h3>
         <p>(Organizations should maintain rigorous safety and ethical standards while managing pressures to rapidly enter markets and capitalize on opportunities. This includes preventing arms races and addressing national/geopolitical factors that could compromise model integrity or encourage risky innovation)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5208,7 +5208,7 @@
             </tbody>
         </table>
         
-        <h3>G6b.1 – Insufficient Transparency</h3>
+        <h3>G<span class="underlined-digit">6</span>.1 – Insufficient Transparency</h3>
         <p>(Organizations should resist market pressures to withhold information that would provide clearer understanding of their AI systems. Systems should operate with full visibility of their training data, testing processes, and operational performance, including any adverse assessments or insights)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5227,7 +5227,7 @@
             </tbody>
         </table>
         
-        <h3>G6b.2 – Safety Washing</h3>
+        <h3>G<span class="underlined-digit">6</span>.2 – Safety Washing</h3>
         <p>(Systems should possess robust safeguards against organizations making unsubstantiated safety claims for market advantage, particularly when such claims lack credible evidence or independent verification mechanisms. Organizations should establish comprehensive frameworks that demonstrate genuine commitment to safety practices rather than superficial compliance statements for competitive positioning)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5246,7 +5246,7 @@
             </tbody>
         </table>
 
-        <h3>G6b.3 – Insufficient Insights into Future Consequences</h3>
+        <h3>G<span class="underlined-digit">6</span>.3 – Insufficient Insights into Future Consequences</h3>
         <p>(Organizations should establish and maintain comprehensive frameworks for analyzing long-term implications of AAI development, ensuring that rapid deployment pressures do not compromise thorough risk assessment. Systems should possess robust safeguards against leadership decisions driven primarily by business metrics rather than technological and societal implications)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5265,7 +5265,7 @@
             </tbody>
         </table>
 
-        <h3>G6b.4 – Duties Beyond Fiduciary Limits</h3>
+        <h3>G<span class="underlined-digit">6</span>.4 – Duties Beyond Fiduciary Limits</h3>
         <p>(Organizations should establish and maintain robust governance frameworks that balance shareholder interests with broader societal responsibilities, ensuring that profit motivations do not override safety and ethical considerations in AAI development. Systems should possess clear mechanisms for transparent decision-making that prioritize long-term societal value over short-term financial gains)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5284,7 +5284,7 @@
             </tbody>
         </table>
 
-        <h3>G6b.5 – Publishing and Deployment Pressures</h3>
+        <h3>G<span class="underlined-digit">6</span>.5 – Publishing and Deployment Pressures</h3>
         <p>(Organizations should establish robust safeguards against premature AAI deployment driven by competitive pressures, ensuring that market positioning goals do not compromise safety standards. Systems should possess comprehensive validation mechanisms that maintain safety priorities regardless of external launch pressure or market competition)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5303,7 +5303,7 @@
             </tbody>
         </table>
 
-        <h3>G6b.6 – Innovation vs IP concerns</h3>
+        <h3>G<span class="underlined-digit">6</span>.6 – Innovation vs IP concerns</h3>
         <p>(Organizations should establish balanced frameworks that protect intellectual property rights while maintaining ethical transparency, ensuring that proprietary protections do not obscure important safety and ethical considerations. Systems should possess clear mechanisms for appropriate disclosure that maintain innovation advantages while providing necessary transparency about capabilities and limitations)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5322,7 +5322,7 @@
             </tbody>
         </table>
         
-        <h3>G6b.7 – Managing AI-Generated Innovation</h3>
+        <h3>G<span class="underlined-digit">6</span>.7 – Managing AI-Generated Innovation</h3>
         <p>(Organizations should establish robust frameworks to manage and verify the deployment of AI-generated solutions, ensuring that competitive pressures around intellectual property do not lead to premature implementations and that AI outputs are thoroughly validated against potential confabulation. Systems should possess clear documentation mechanisms that track the origin, verification, and development of AI-generated concepts while maintaining appropriate deployment pacing)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5341,7 +5341,7 @@
             </tbody>
         </table>
         
-        <h3>G6b.1b – Self-Regulatory Market Oversight Mechanisms</h3>
+        <h3>G<span class="underlined-digit">6</span>.<span class="underlined-digit">1</span> – Self-Regulatory Market Oversight Mechanisms</h3>
         <p>(Organizations should establish and participate in voluntary oversight frameworks that promote industry-wide safety standards and best practices, while Systems should possess clear mechanisms for demonstrating compliance with these self-regulatory measures. This framework should enable market-driven improvement of safety practices through transparent oversight and voluntary adherence to shared standards)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5360,7 +5360,7 @@
             </tbody>
         </table>
         
-        <h3>G6b.2b – Market-Driven Safety Validation Mechanisms</h3>
+        <h3>G<span class="underlined-digit">6</span>.<span class="underlined-digit">2</span> – Market-Driven Safety Validation Mechanisms</h3>
         <p>(Organizations should support and participate in market-based safety validation frameworks that enable users and stakeholders to collectively identify and promote safer AAI solutions. Systems should possess clear mechanisms for demonstrating safety credentials through transparent trust marks and validation processes, acknowledging that while market forces can effectively identify unsafe systems, proactive safety measures remain essential)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5379,7 +5379,7 @@
             </tbody>
         </table>
 
-        <h3>G6b.3b – Avoiding Monopolistic Practices</h3>
+        <h3>G<span class="underlined-digit">6</span>.<span class="underlined-digit">3</span> – Avoiding Monopolistic Practices</h3>
         <p>(Organizations should establish and maintain frameworks that prevent the monopolization of safety technologies and practices in AAI development, ensuring broad access to essential safety mechanisms. Systems should possess open and accessible safety features while maintaining appropriate intellectual property protections, acknowledging the dual pressures of competition and safety democratization)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5398,7 +5398,7 @@
             </tbody>
         </table>
         
-        <h3>G6b.4b – Professional and Industry Association Codes and Standards</h3>
+        <h3>G<span class="underlined-digit">6</span>.<span class="underlined-digit">4</span> – Professional and Industry Association Codes and Standards</h3>
         <p>(Organizations should actively participate in and support professional associations that develop and maintain industry-wide safety standards and ethical practices for AAI development. Systems should possess features and capabilities that align with collectively developed professional standards, ensuring that industry associations serve as effective mechanisms for maintaining and improving safety practices)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5417,7 +5417,7 @@
             </tbody>
         </table>
         
-        <h3>G6b.5b – International Safety Protocol Harmonization</h3>
+        <h3>G<span class="underlined-digit">6</span>.<span class="underlined-digit">5</span> – International Safety Protocol Harmonization</h3>
         <p>(Organizations should actively participate in and adhere to global agreements that establish consistent safety and ethical standards for AAI development across jurisdictions. Systems should possess capabilities that enable compliance with international protocols while maintaining appropriate adaptability to local requirements and cultural contexts)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5436,7 +5436,7 @@
             </tbody>
         </table>
 
-        <h3>G6b.6b – Insurance-Driven Safety Incentives</h3>
+        <h3>G<span class="underlined-digit">6</span>.<span class="underlined-digit">6</span> – Insurance-Driven Safety Incentives</h3>
         <p>(Organizations should establish and maintain safety practices that meet insurance industry requirements, leveraging market-based risk assessment mechanisms to promote responsible AAI development. Systems should possess comprehensive safety features and risk management capabilities that make them insurable, acknowledging that insurance availability serves as an effective filter against unsafe development practices)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5455,8 +5455,8 @@
             </tbody>
         </table>
 
-        <h1 id="inhibitor-g7b-imbalance-in-ai-capabilities">Inhibitor G7b – Imbalance in AI Capabilities</h1>
-        <h3>G7b – Imbalance in AI Capabilities</h3>
+        <h1 id="inhibitor-g<span class="underlined-digit">7</span>-imbalance-in-ai-capabilities">Inhibitor G<span class="underlined-digit">7</span> – Imbalance in AI Capabilities</h1>
+        <h3>G<span class="underlined-digit">7</span> – Imbalance in AI Capabilities</h3>
         <p>(Addressing imbalances in the capability and maturity of interacting AI models that may lead to improper transactions, including the potential for more advanced models to manipulate or exploit less capable ones)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5505,7 +5505,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.1 – Information Credibility Assessment and Validation Challenges</h3>
+        <h3>G<span class="underlined-digit">7</span>.1 – Information Credibility Assessment and Validation Challenges</h3>
         <p>(Systems should possess sophisticated capabilities for evaluating and assigning appropriate levels of credence to information from diverse sources, including data inputs, other AI models, and human interactions. Organizations should implement robust methodologies ensuring AI models can accurately assess reliability, relevance, and credibility of received information, enabling them to allocate trust appropriately and make well-informed, accurate, and ethical decisions)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5529,7 +5529,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.2 – Limited Multilingual and Cultural Equity in AI Systems</h3>
+        <h3>G<span class="underlined-digit">7</span>.2 – Limited Multilingual and Cultural Equity in AI Systems</h3>
         <p>(Systems should possess comprehensive capabilities for handling diverse human languages and cultures, ensuring equitable representation and effective communication across linguistic boundaries. Organizations should address disparities in language support and cultural understanding that could create vulnerabilities in model evaluations, interactions, and safeguards, while working to serve global communities fairly and inclusively)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5553,7 +5553,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.3 – Global AI Capability Disparities</h3>
+        <h3>G<span class="underlined-digit">7</span>.3 – Global AI Capability Disparities</h3>
         <p>(Systems should implement mechanisms that recognize and actively mitigate disparities in AI development and deployment capabilities across different scales, from national to organizational levels. Organizations should promote equitable access to AI technologies while preventing monopolization, ensuring fair participation and benefit-sharing among all stakeholders in the evolving AI landscape, with particular attention to developing nations and smaller entities)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5577,7 +5577,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.4 – AI-Enabled Infrastructure Attacks</h3>
+        <h3>G<span class="underlined-digit">7</span>.4 – AI-Enabled Infrastructure Attacks</h3>
         <p>(Systems should possess robust safeguards against their potential misuse as weapons targeting state infrastructure, with particular emphasis on preventing disruptions to vital systems like power grids, communication networks, and emergency services. Organizations should implement comprehensive protections against both cyber and physical attacks that could trigger societal instability or humanitarian crises, especially in urban environments)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5601,7 +5601,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.5 – Poor Safety Controls for AI-Enabled Autonomous Weapons</h3>
+        <h3>G<span class="underlined-digit">7</span>.5 – Poor Safety Controls for AI-Enabled Autonomous Weapons</h3>
         <p>(Systems should possess comprehensive safeguards and control mechanisms to address challenges in the deployment of AI-enabled autonomous weapons, including space-based systems and aerial drones. Organizations should implement robust frameworks for managing ethical dilemmas, safety risks, and potential misuse, particularly regarding the direct or indirect use of AI technologies as autonomous weapons for commercial or political objectives)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5625,7 +5625,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.6 – Nefarious Use of Autonomous AI Agents</h3>
+        <h3>G<span class="underlined-digit">7</span>.6 – Nefarious Use of Autonomous AI Agents</h3>
         <p>(Systems should possess robust protective mechanisms against their potential exploitation for malicious purposes, with particular attention to preventing misuse of their autonomous capabilities, swift action potential, and global reach. Organizations should implement comprehensive safeguards that prevent security threats while protecting privacy and ethical norms from actors seeking disproportionate advantages through AI exploitation)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5649,7 +5649,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.7 – AI-Generated Disinformation</h3>
+        <h3>G<span class="underlined-digit">7</span>.7 – AI-Generated Disinformation</h3>
         <p>(Systems should possess robust capabilities to prevent, detect, and counter the generation and spread of falsified information and disinformation, whether created for engagement metrics, manipulation, or calculated harm. Organizations should implement comprehensive safeguards that protect societal trust and cohesion by preventing AI systems from compromising the effectiveness and resilience of geopolitical entities, corporations, families, and individuals through misleading information)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5673,7 +5673,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.1b – International Framework for Ethical AI Interaction</h3>
+        <h3>G<span class="underlined-digit">7</span>.<span class="underlined-digit">1</span> – International Framework for Ethical AI Interaction</h3>
         <p>(Systems should possess standardized protocols for AI-to-AI interactions that ensure fairness and prevent exploitation across varying capability levels. Organizations should contribute to and uphold international frameworks that promote cooperative dynamics between AI systems while maintaining safety, transparency, and respect across all interactions)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5697,7 +5697,7 @@
             </tbody>
         </table>
         
-        <h3>G7b.2b – Integration of Fairness Controls in AI Systems</h3>
+        <h3>G<span class="underlined-digit">7</span>.<span class="underlined-digit">2</span> – Integration of Fairness Controls in AI Systems</h3>
         <p>(Systems should possess robust fairness mechanisms integrated throughout their planning, decision-making, and operational processes to ensure respect for human life, rights, dignity, and universal values. Organizations should implement comprehensive frameworks that embed ethical principles and societal norms directly into AI system designs, preventing bias and discrimination while maintaining transparent and equitable operations)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5721,7 +5721,7 @@
             </tbody>
         </table>
         
-        <h3>G7b.3b – Balanced Global AI Partnership Framework</h3>
+        <h3>G<span class="underlined-digit">7</span>.<span class="underlined-digit">3</span> – Balanced Global AI Partnership Framework</h3>
         <p>(Systems should facilitate equitable distribution of AI capabilities and resources through balanced international partnerships. Organizations should establish frameworks that ensure fair technology sharing and knowledge exchange while actively preventing powerful entities from exploiting technological disparities or undermining global equilibrium through self-interested actions)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5745,7 +5745,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.4b – Control and Oversight of AI Autonomy</h3>
+        <h3>G<span class="underlined-digit">7</span>.<span class="underlined-digit">4</span> – Control and Oversight of AI Autonomy</h3>
         <p>(Systems should possess adaptable mechanisms that enable precise control over their degrees of autonomy while preventing improper interactions or exploitation. Organizations should implement comprehensive frameworks that integrate human oversight throughout decision-making processes while maintaining clear boundaries on autonomous operations)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5769,7 +5769,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.5b – Integration of AI Ethics Education</h3>
+        <h3>G<span class="underlined-digit">7</span>.<span class="underlined-digit">5</span> – Integration of AI Ethics Education</h3>
         <p>(Systems should possess integrated mechanisms for promoting ethical awareness and understanding among developers and users through educational initiatives. Organizations should facilitate comprehensive AI ethics education that builds foundational competence in ethical implications, responsibilities, and impacts while fostering commitment to responsible AI development)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
@@ -5793,7 +5793,7 @@
             </tbody>
         </table>
 
-        <h3>G7b.6b – Integration of Human Ethics in AI Systems</h3>
+        <h3>G<span class="underlined-digit">7</span>.<span class="underlined-digit">6</span> – Integration of Human Ethics in AI Systems</h3>
         <p>(Systems should possess deeply integrated ethical principles that enable them to autonomously uphold human rights and values throughout their decision-making processes. Organizations should implement comprehensive frameworks that ensure AI systems operate in harmony with human ethical norms while actively preventing the introduction of unintended biases during ethical training)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>

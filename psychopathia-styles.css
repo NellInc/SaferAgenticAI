@@ -753,3 +753,55 @@ table tbody tr td:nth-child(4),
     min-width: 36% !important;
     max-width: 36% !important;
 }
+
+/* Fix font family for underlined digits using Unicode combining underline character */
+
+/* Enhanced font fallback for better Unicode support - targets all text elements */
+h1, h2, h3, h4, h5, h6, p, a, li, div, span, td, th {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+}
+
+/* Navigation elements font fix */
+.nav-container * {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+}
+
+/* Ensure proper rendering of combining characters */
+body {
+    font-variant-ligatures: common-ligatures;
+    font-feature-settings: "kern" 1;
+}
+
+/* Additional fallback for better Unicode character support */
+* {
+    unicode-bidi: normal;
+    font-synthesis: weight style;
+}
+/* Proper underline styling for inhibitor framework numbers */
+.underlined-digit {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+    text-decoration-color: currentColor;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/* Ensure underline looks good in headings */
+h1 .underlined-digit,
+h2 .underlined-digit, 
+h3 .underlined-digit {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* Navigation underline styling */
+.nav-container .underlined-digit {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 1px;
+}

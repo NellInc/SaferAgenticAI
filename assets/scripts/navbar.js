@@ -280,11 +280,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     }
 
+    // Function to convert 'b' suffix to CSS underlined number
+    function convertBSuffixToUnderlined(text) {
+        // Pattern matches: G<num>b or G<num>.<num>b followed by space and en dash
+        return text.replace(/G(\d+(?:\.\d+)*)b(\s|$|–)/g, (match, fullNumber, suffix) => {
+            const lastDigit = fullNumber.slice(-1);
+            const prefix = fullNumber.slice(0, -1);
+            const underlinedDigit = `<span class="underlined-digit">${lastDigit}</span>`;
+            return `G${prefix}${underlinedDigit}${suffix}`;
+        });
+    }
+
     h1Elements.forEach((h1) => {
         // Add h1 element
         const h1Item = document.createElement('li');
         h1Item.className = 'nav-item h1';
-        h1Item.textContent = h1.textContent.trim();
+        h1Item.innerHTML = h1.innerHTML;
         h1Item.addEventListener('click', () => {
             h1.scrollIntoView({ behavior: 'smooth' });
             if (window.innerWidth < 768) {
@@ -321,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (heading.tagName === 'H2') {
                     const h2Item = document.createElement('li');
                     h2Item.className = 'nav-item h2';
-                    h2Item.textContent = heading.textContent.trim();
+                    h2Item.innerHTML = heading.innerHTML;
                     h2Item.addEventListener('click', () => {
                         heading.scrollIntoView({ behavior: 'smooth' });
                         if (window.innerWidth < 768) {
@@ -332,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (heading.tagName === 'H3') {
                     const h3Item = document.createElement('li');
                     h3Item.className = 'nav-item h3';
-                    h3Item.textContent = heading.textContent.trim();
+                    h3Item.innerHTML = heading.innerHTML;
                     h3Item.addEventListener('click', () => {
                         heading.scrollIntoView({ behavior: 'smooth' });
                         if (window.innerWidth < 768) {
@@ -476,11 +487,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Only highlight the most specific active element
                 let shouldHighlight = false;
                 
-                if (activeH3 && item.classList.contains('h3') && activeH3.textContent.trim() === item.textContent) {
+                if (activeH3 && item.classList.contains('h3') && activeH3.innerHTML === item.innerHTML) {
                     shouldHighlight = true;
-                } else if (!activeH3 && activeH2 && item.classList.contains('h2') && activeH2.textContent.trim() === item.textContent) {
+                } else if (!activeH3 && activeH2 && item.classList.contains('h2') && activeH2.innerHTML === item.innerHTML) {
                     shouldHighlight = true;
-                } else if (!activeH3 && !activeH2 && item.classList.contains('h1') && activeH1.textContent.trim() === item.textContent) {
+                } else if (!activeH3 && !activeH2 && item.classList.contains('h1') && activeH1.innerHTML === item.innerHTML) {
                     shouldHighlight = true;
                 }
                 
@@ -494,15 +505,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update all current section displays
             let displayText;
             if (activeH3) {
-                displayText = `${activeH1.textContent.trim()} > ${activeH3.textContent.trim()}`;
+                displayText = `${activeH1.innerHTML} > ${activeH3.innerHTML}`;
             } else if (activeH2) {
-                displayText = `${activeH1.textContent.trim()} > ${activeH2.textContent.trim()}`;
+                displayText = `${activeH1.innerHTML} > ${activeH2.innerHTML}`;
             } else {
-                displayText = activeH1.textContent.trim();
+                displayText = activeH1.innerHTML;
             }
                 
             currentSections.forEach(section => {
-                section.textContent = displayText;
+                section.innerHTML = displayText;
             });
             
             nav.classList.add('has-active');
@@ -551,7 +562,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             navItems.forEach(item => item.classList.remove('active'));
             currentSections.forEach(section => {
-                section.textContent = '';
+                section.innerHTML = '';
             });
             nav.classList.remove('has-active');
         }

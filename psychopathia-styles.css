@@ -250,16 +250,17 @@ pre:not(:has(code.plaintext)) code {
         display: block;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        width: 100% !important; /* Let table take full viewport width */
+        width: 100% !important;
     }
 
-    /* Override rigid column widths on small screens */
-    .container.blog table th,
-    .container.blog table td {
-        min-width: unset !important;
-        max-width: unset !important;
+    /* Relax column widths & allow wrapping to prevent enormous virtual canvases */
+    table thead tr th,
+    table tbody tr td {
         width: auto !important;
-        white-space: nowrap; /* Prevent text wrapping but allow horizontal scroll */
+        min-width: unset !important;
+        max-width: 100% !important;
+        white-space: normal !important; /* allow wrapping */
+        word-break: break-word;
     }
 }
 

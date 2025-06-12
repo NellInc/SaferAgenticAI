@@ -1106,9 +1106,6 @@ code {
 
 pre {
   font-family: "Fira Code", monospace;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
 }
 
 pre code {
@@ -1116,9 +1113,6 @@ pre code {
   display: block;
   padding: 1.5vh 1.5vw !important;
   overflow-x: auto;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* ======================== Selection ===================== */
@@ -1544,4 +1538,17 @@ select {
 .before figcaption,
 .after figcaption {
   font-size: 70%;
+}
+
+/* Center citation boxes properly */
+div.container.blog pre {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+div.container.blog pre code {
+    text-align: left !important;
+    display: inline-block !important;
 }/*# sourceMappingURL=main_free.css.map */

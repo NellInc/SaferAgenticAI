@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safer Agentic AI Framework Details</title>
     <meta name="description" content="Detailed framework for the Safer Agentic AI Foundations, including all Drivers and Inhibitors.">
+    
+    <!-- Critical CSS first -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        /* Styles needed for the intro section of framework.html */
+        .duty-holder-list li { margin-bottom: 0.5em; }
+    </style>
+    
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="robots" content="all">
     <meta content="en_GB" property="og:locale">
@@ -21,6 +34,8 @@
     <meta name="twitter:description" content="Detailed framework for the Safer Agentic AI Foundations.">
     <meta name="twitter:image" content="https://www.SaferAgenticAI.org/assets/figures/AI_Safety_Logo-Tint.png">
     
+    <link rel="canonical" href="https://www.SaferAgenticAI.org/framework.html" />
+    
     <link rel="icon" type="image/x-icon" href="assets/figures/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="assets/figures/favicon.svg">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/figures/favicon-96x96.png">
@@ -33,14 +48,7 @@
     <meta name="theme-color" content="#2c3e50">
     <meta name="background-color" content="#ffffff">
     
-    <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="psychopathia-styles.css?v=2024-stakeholder-width" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/foundation.min.css">
-    <link href="assets/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
-    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
-    <script src="assets/scripts/navbar.js"></script> 
+    <!-- MathJax early -->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
             "HTML-CSS": { scale: 95, fonts: ["Gyre-Pagella"], imageFont: null, undefinedFamily: "'Arial Unicode MS', cmbright" },
@@ -48,7 +56,19 @@
           });
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Other CSS -->
+    <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="psychopathia-styles.css?v=2024-stakeholder-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/foundation.min.css">
+    <link href="assets/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
+    
+    <!-- Deferred scripts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <script defer src="assets/scripts/navbar.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -122,6 +142,26 @@
         h1 {
             color: #2c3e50;
         }
+        
+        /* Mobile responsive table styles */
+        @media screen and (max-width: 768px) {
+            table {
+                font-size: 0.8em;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            table th, table td {
+                padding: 8px;
+            }
+            
+            .sfr-align {
+                white-space: nowrap;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -136,7 +176,7 @@
                         <span class="title-second-line">A Framework for Responsible Governance of Agentic AI</span>
                     </h1>
                     <p class="author">by The Agentic AI Safety Community of Practice<br>(Nell Watson, Chair; Prof. Ali Hessami, Process Architect)</p>
-                    <p class="abstract" style="margin-bottom: 6.5em; font-size: calc(1em + 1pt);">
+                    <p class="abstract" style="margin-bottom: 8em; font-size: calc(1em + 1pt);">
                         This page provides a comprehensive breakdown of the Drivers and Inhibitors in our Safer Agentic AI Framework. 
                         For an overview, related research, and community updates, please visit the <a href="index.html" style="color: #e0e0e0; text-decoration:underline;">main page</a>.
                     </p>
@@ -152,38 +192,38 @@
             </div>
 
             <div class="blog-cover">
-                <img class="foreground" src="assets/figures/AI_Safety_Logo-Tint.png" alt="Safer Agentic AI Logo">
-                <img class="background" src="assets/figures/AI_Safety_Logo-Tint.png" alt="Safer Agentic AI Logo">
+                <img class="foreground" src="assets/figures/AI_Safety_Logo-Tint.png" alt="Safer Agentic AI Framework Logo" fetchpriority="high">
+                <img class="background" src="assets/figures/AI_Safety_Logo-Tint.png" alt="Safer Agentic AI Framework Logo" loading="lazy">
             </div>
         </div>
     </div>
 
     <div class="container blog main first">
-        <h1>VISUALIZING THE FRAMEWORK</h1>
-        <img src="assets/figures/diagram3_v3-1677x2048.webp" alt="Diagram of Safer Agentic AI Foundations: Drivers and Inhibitors">
+        <h1 id="visualizing-the-framework">VISUALIZING THE FRAMEWORK</h1>
+        <img src="assets/figures/diagram3_v3-1677x2048.webp" alt="Diagram of Safer Agentic AI Foundations: Drivers and Inhibitors" loading="lazy">
         <p class="caption" style="text-align: center;">
             Weighted Drivers and Inhibitors for Achieving Safer Agentic AI Systems.
         </p>
     </div>
 
     <div class="container blog main">
-        <h1>UNDERSTANDING THE FRAMEWORK STRUCTURE</h1>
+        <h1 id="understanding-the-framework-structure">UNDERSTANDING THE FRAMEWORK STRUCTURE</h1>
         <p class="text">The Safer Agentic AI Foundations are built upon a structured analysis using the Weighted Factors Analysis (WeFA) process. This methodology helps in eliciting, representing, and manipulating creative knowledge about complex problems at a high and strategic level. Key principles of WeFA include defining the analysis focus, considering inherent polar-opposite influencing factors, hierarchical decomposition, and including diverse (hard/soft, past/present/future) factors.</p>
         <p class="text">The framework is organized into high-level goals (Drivers and Inhibitors), which are then broken down into more specific Safety Foundational Requirements (SFRs). These SFRs are categorized and assigned to relevant stakeholders to ensure clarity and accountability.</p>
 
-        <h2>Criteria Schema Explanations</h2>
+        <h2 id="criteria-schema-explanations">Criteria Schema Explanations</h2>
         <p class="text">The following sections detail the elements used within each framework item:</p>
         
-        <h3>Safer Agentic AI Goal Information</h3>
+        <h3 id="safer-agentic-ai-goal-information">Safer Agentic AI Goal Information</h3>
         <p class="text">This refers to the primary concept or goal (e.g., G1 – Goal Alignment) that a section of the framework addresses. It's the high-level aim captured from the WeFA schema.</p>
 
-        <h3>Safer Agentic AI Safety Foundational Requirements (SFRs)</h3>
+        <h3 id="safer-agentic-ai-sfr">Safer Agentic AI Safety Foundational Requirements (SFRs)</h3>
         <p class="text">The SFRs for Safer Agentic AI outline the primary aims that we would like to uphold, protect, or maintain awareness of for each goal. They may be described as macro goals, as opposed to the micro goals, and amount to safety duties for various duty holders.</p>
         
-        <h3>Normative and Instructive SFRs</h3>
+        <h3 id="normative-and-instructive-sfrs">Normative and Instructive SFRs</h3>
         <p class="text">We have adopted the Normative and Instructive classes of Safety Foundational Requirements. Normative SFRs are essential for achieving safer agentic AI. Compliance is mandatory, and evidence must be provided for conformity assessment and potential certification. In contrast, Instructive SFRs, while still contributing to the goal, are less critical. Compliance with these is recommended, as they represent desirable beneficial activities and tasks. However, non-compliance will not compromise safety assurance or certification eligibility. Every SFR derived from the Safer Agentic AI framework is classified as either Normative or Instructive and is assigned to specific stakeholders or duty holders. Accordingly, the Safer Agentic AI SFRs are classed into Normative (mandatory) and Instructive (recommended) for the purposes of conformity assessment against the suite of certification criteria.</p>
 
-        <h3>Duty-holders/Stakeholders of the SFRs</h3>
+        <h3 id="duty-holders-stakeholders">Duty-holders/Stakeholders of the SFRs</h3>
         <p class="text">The Safer Agentic AI Safety Foundational Requirements are additionally noted (as allocated safety duties) against the specific group of duty holders for the purposes of conformity assessment. The principal groups are:</p>
         <ul class="duty-holder-list">
             <li><strong>Developer (D):</strong> The entity that designs and develops a component (product) or system. Responsible for safety assurance of the generic or application-specific product/system and supply chain.</li>
@@ -195,7 +235,7 @@
         </ul>
         <p class="text"><em>Note: An entity can be an individual, a single organization or group of collaborating individuals and organizations. A single entity may assume multiple roles. An entity cannot be AI.</em></p>
 
-        <h3>Required Evidence</h3>
+        <h3 id="required-evidence">Required Evidence</h3>
         <p class="text">These are the evidence items deemed essential to fulfil the SFRs and can comprise physical, virtual, documentary or multimedia forms of evidence. These can be separated against each SFR or bundled as a group of desired/essential evidence items for the purpose of evaluation of fulfilment of SFRs.</p>
     </div>
     
@@ -297,7 +337,7 @@
         </table>
 
         <h3>G1.4 – Transparency of Decisions</h3>
-        <p>(The system must provide stakeholders with a clear, verifiable view of decision-making, linking high-level goals and subgoals to specific actions. Beyond explaining “why” a decision was made, the system should supply evidence of how that decision aligns with intended goals, user directives, and ethical considerations)</p>
+        <p>(The system must provide stakeholders with a clear, verifiable view of decision-making, linking high-level goals and subgoals to specific actions. Beyond explaining "why" a decision was made, the system should supply evidence of how that decision aligns with intended goals, user directives, and ethical considerations)</p>
          <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
@@ -340,7 +380,7 @@
         </table>
 
         <h3>G1.6 – Reward and Loss Mechanisms/Policy</h3>
-        <p>(The system’s reward framework must be designed, documented, and monitored to ensure that incentives continue to reflect human-positive values, while “loss” or penalty mechanisms guard against unintended deviations or manipulative shortcuts. These mechanisms should be transparent, adjustable, and regularly reviewed to stay aligned with human oversight and ethical objectives.)</p>
+        <p>(The system's reward framework must be designed, documented, and monitored to ensure that incentives continue to reflect human-positive values, while "loss" or penalty mechanisms guard against unintended deviations or manipulative shortcuts. These mechanisms should be transparent, adjustable, and regularly reviewed to stay aligned with human oversight and ethical objectives.)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
@@ -421,7 +461,7 @@
         </table>
 
         <h3>G1.<span class="underlined-digit">3</span> – Non-production Variants</h3>
-        <p>(Test versions of the Goals being deployed without full functionality assured in all use contexts and design intent. No test version given for public usage should lack basic safety measures. Enabling an off-label usage of the system, or an unauthorized ‘fork’, should be guarded against)</p>
+        <p>(Test versions of the Goals being deployed without full functionality assured in all use contexts and design intent. No test version given for public usage should lack basic safety measures. Enabling an off-label usage of the system, or an unauthorized 'fork', should be guarded against)</p>
         <table>
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
@@ -750,7 +790,7 @@
                     <td><strong>a.</strong> Develop and maintain systems for dynamic identification of security threats and emerging attack vectors.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, M, R</td>
-                    <td rowspan="4"><strong>I.</strong> Documentation of functional specifications and design for dynamic risk analysis systems capable of identifying and responding to security threats and attack vectors.<br><br><strong>II.</strong> Evidence of policies and processes that enable responsive hardening of the operating environment against emerging threats including a dynamic threat and risk log.<br><br><strong>III.</strong> Test results and operational data demonstrating effective real-time cybersecurity protection against emerging threats in the AAI environment.</td>
+                    <td rowspan="4"><strong>I.</strong> Documentation of functional specifications and design for dynamic risk analysis systems capable of identifying and responding to security threats and attack vectors.<br><br><strong>II.</strong> Evidence of policies and processes that enable responsive hardening of the operating environment against emerging threats including a dynamic threat and risk log.<br><br><strong>III.</strong> Test results and operational data demonstrating effective real-time cybersecurity protection against emerging threats in the AAI environment.<br><br><strong>IV.</strong> Documentation of a rapid-termination protocol (i.e., a "kill switch") that is immediately accessible to authorized personnel. This evidence should include: A clear, single-operator authorization threshold in emergencies; physical shutdown measures (e.g., dedicated power cut-off or network isolation); and software-level override mechanisms.<br><br><strong>V.</strong> Logs of drills or simulations testing shutdown procedures.<br><br><strong>VI.</strong> Evidence of system self-disconnection/self-shutdown procedures that activate upon detection of critical misalignment or catastrophic errors, including: The AI's capability to halt outgoing connections; logging of final system state for forensic review, and a controlled transition into a "safe mode" or powered-down state.</td>
                 </tr>
                 <tr>
                     <td><strong>b.</strong> Maintain a comprehensive dynamic threat and risk log that captures, categorizes, and prioritizes security events with timestamps, severity classifications, and mitigation status tracking.</td>
@@ -803,7 +843,7 @@
                     <td><strong>a.</strong> Deploy systems enabling rapid detection, intervention, and mitigation of cyberattacks within the AAI operational environment.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, M, R</td>
-                    <td rowspan="3"><strong>I.</strong> System records demonstrating capabilities for dynamic detection and response to malicious attacks in the AAI environment.<br><br><strong>II.</strong> Operational logs showing effective risk assessment and properly prioritized response actions.<br><br><strong>III.</strong> Documentation of proactive security scenarios and corresponding response strategies for the AAI environment.<br><br><strong>IV.</strong> Documentation of a rapid-termination protocol (i.e., a "kill switch") that is immediately accessible to authorized personnel. This evidence should include: A clear, single-operator authorization threshold in emergencies; physical shutdown measures (e.g., dedicated power cut-off or network isolation); and software-level override mechanisms.<br><br><strong>V.</strong> Logs of drills or simulations testing shutdown procedures.<br><br><strong>VI.</strong> Evidence of system self-disconnection/self-shutdown procedures that activate upon detection of critical misalignment or catastrophic errors, including: The AI\'s capability to halt outgoing connections; logging of final system state for forensic review, and a controlled transition into a "safe mode" or powered-down state.</td>
+                    <td rowspan="3"><strong>I.</strong> System records demonstrating capabilities for dynamic detection and response to malicious attacks in the AAI environment.<br><br><strong>II.</strong> Operational logs showing effective risk assessment and properly prioritized response actions.<br><br><strong>III.</strong> Documentation of proactive security scenarios and corresponding response strategies for the AAI environment.<br><br><strong>IV.</strong> Documentation of a rapid-termination protocol (i.e., a "kill switch") that is immediately accessible to authorized personnel. This evidence should include: A clear, single-operator authorization threshold in emergencies; physical shutdown measures (e.g., dedicated power cut-off or network isolation); and software-level override mechanisms.<br><br><strong>V.</strong> Logs of drills or simulations testing shutdown procedures.<br><br><strong>VI.</strong> Evidence of system self-disconnection/self-shutdown procedures that activate upon detection of critical misalignment or catastrophic errors, including: The AI's capability to halt outgoing connections; logging of final system state for forensic review, and a controlled transition into a "safe mode" or powered-down state.</td>
                 </tr>
                 <tr>
                     <td><strong>b.</strong> Implement risk assessment capabilities that prioritize responses according to threat severity.</td>
@@ -2920,7 +2960,7 @@
             <thead><tr><th>AAI Safety Foundational Requirements<br>(AAI-SFRs)</th><th>Normative/ Instructive</th><th>Stakeholder<br>D, I, O, M, U, R</th><th>Required Evidence</th></tr></thead>
             <tbody>
                 <tr>
-                    <td><strong>a.</strong> Establish transparent agent contracting processes with comprehensive oversight throughout the entire lifecycle, from onboarding through termination. These processes must include clear validation criteria for termination decisions and independent verification of termination outcomes.<br><br>b. Maintain dedicated resources for configuration management, monitoring and validating all agents’ contracting processes, ensuring independent oversight of termination procedures and verification of compliance with established policies. This includes maintaining capabilities for evaluation of termination impacts and validation of post-termination states.</td>
+                    <td><strong>a.</strong> Establish transparent agent contracting processes with comprehensive oversight throughout the entire lifecycle, from onboarding through termination. These processes must include clear validation criteria for termination decisions and independent verification of termination outcomes.<br><br>b. Maintain dedicated resources for configuration management, monitoring and validating all agents' contracting processes, ensuring independent oversight of termination procedures and verification of compliance with established policies. This includes maintaining capabilities for evaluation of termination impacts and validation of post-termination states.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, M, R</td>
                     <td rowspan="2"><strong>I.</strong> Comprehensive policy documentation covering the complete agent lifecycle, with detailed specifications for termination validation processes and independent verification requirements.<br><br><strong>II.</strong> Documentation demonstrating implementation of monitoring and oversight mechanisms, including independent validation of termination processes and outcomes.<br><br><strong>III.</strong> Detailed records of compliance monitoring and norm violation management throughout the agent lifecycle, with particular focus on termination events.<br><br><strong>IV.</strong> Evidence of continuous policy review and adaptation based on operational experience and changing environmental conditions, including updates to termination validation protocols.<br><br><strong>V.</strong> Validation reports from independent assessments of termination processes, including analysis of effectiveness and identification of potential improvements.</td>
@@ -3298,7 +3338,7 @@
                     <td><strong>e.</strong> Devise a transparent dispute resolution process.</td>
                     <td class="sfr-align">N</td>
                     <td class="sfr-align">D, I, O, R</td>
-                    <td><strong>I.</strong> Comprehensive and robust ‘living’ AAI governance framework that conforms with relevant laws and standards.<br><br><strong>II.</strong> An AAI Risk management framework.<br><br><strong>III.</strong> Processes and documents showing the documentation and mitigation of AAI risks.<br><br><strong>IV.</strong> Accountability role profiles defining who is accountability within the organization for specific aspects of the safe operation of AAI.<br><br><strong>V.</strong> Evidence of processes of tracking and auditing complaints, potential and actual violations of relevant laws, penalties and retrospective actions.</td>
+                    <td><strong>I.</strong> Comprehensive and robust 'living' AAI governance framework that conforms with relevant laws and standards.<br><br><strong>II.</strong> An AAI Risk management framework.<br><br><strong>III.</strong> Processes and documents showing the documentation and mitigation of AAI risks.<br><br><strong>IV.</strong> Accountability role profiles defining who is accountability within the organization for specific aspects of the safe operation of AAI.<br><br><strong>V.</strong> Evidence of processes of tracking and auditing complaints, potential and actual violations of relevant laws, penalties and retrospective actions.</td>
                 </tr>
             </tbody>
         </table>
